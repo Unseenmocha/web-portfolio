@@ -8,25 +8,54 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap" rel="stylesheet">
 </head>
-<body>
-    <div class="flex grow justify-end">
-    <ul class="my-4 font-funnel-display flex row">
-        <li><a class="rounded-2xl mx-4 p-4 pad cursor-pointer hover:bg-gray-300">
-            About
-        </a></li>
-        <li><a class="rounded-2xl p-4 cursor-pointer hover:bg-gray-300">
-            Experience
-        </a></li>
-        <li><a class="rounded-2xl mx-4 p-4 cursor-pointer hover:bg-gray-300">
-            Projects
-        </a></li>
-        <li><a class="rounded-2xl p-4 cursor-pointer hover:bg-gray-300">
-            Skills
-        </a></li>
-        <li><a class="rounded-2xl mx-4 p-4 cursor-pointer hover:bg-gray-300">
-            Contact
-        </a></li>
-    </ul>
+<body class="bg-gradient-to-b from-jet from-5% via-raisin via-40% to-night text-platinum w-screen h-screen">
+    <div class="flex flex-col h-full scrollable">
+        <div class="flex justify-end">
+            <ul class="my-4 font-funnel-display flex row motion-opacity-in-0 motion-translate-y-in-[-200%]">
+                <li><a class="mx-4 p-4 pad cursor-pointer hover:text-flame hover:underline underline-offset-4">
+                    About
+                </a></li>
+                <li><a class="p-4 cursor-pointer hover:text-flame hover:underline underline-offset-4">
+                    Experience
+                </a></li>
+                <li><a class="mx-4 p-4 cursor-pointer hover:text-flame hover:underline underline-offset-4">
+                    Projects
+                </a></li>
+                <li><a class="p-4 cursor-pointer hover:text-flame hover:underline underline-offset-4">
+                    Skills
+                </a></li>
+                <li><a class="mx-4 p-4 cursor-pointer hover:text-flame hover:underline underline-offset-4">
+                    Contact
+                </a></li>
+            </ul>
+        </div>
+        
+        <div class="font-funnel-display mt-64">
+            <div class=" mb-8 flex row text-6xl">
+                <div id="intro" class="ml-[calc(50%-242px)] min-h-16 flex flex-row max-w-fit border-r-4 border-r-flame">
+                    <h1 id="intro-text-holder"  class="  ">
+                        <!-- Hi, I'm Andrew ✋-->
+                    </h1>
+                    <h1 id="hand" class="ml-2 hidden">✋</h1>
+                </div>
+            </div>
+            <div class="flex flex-col h-full my-32 mx-16 ">
+                <h2 class="text-4xl my-8">
+                    About
+                </h2>
+                <p class='max-w-fit text-xl'>
+                    I'm a CS Master's student at UMass Amherst. Currently interested in ML, and looking for full time 
+                </p>
+            </div>
+        </div>
+
+        <div class="flex h-full justify-end content-end">
+            <p class="place-self-end text-sm m-4">Website by Andrew Lin</p>
+        </div>
     </div>
+    
+    
+    <script src="./animations.js"></script>
+
 </body>
 </html>
