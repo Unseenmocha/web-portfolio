@@ -8,54 +8,173 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap" rel="stylesheet">
 </head>
-<body class="bg-gradient-to-b from-jet from-5% via-raisin via-40% to-night text-platinum w-screen h-screen">
-    <div class="flex flex-col h-full scrollable">
-        <div class="flex justify-end">
-            <ul class="my-4 font-funnel-display flex row motion-opacity-in-0 motion-translate-y-in-[-200%]">
-                <li><a class="mx-4 p-4 pad cursor-pointer hover:text-flame hover:underline underline-offset-4">
+<body class="bg-raisin flex flex-col grow min-h-screen bg-fixed scroll-smooth">
+
+    <!-- TOP -->
+    <div class="text-platinum bg-raisin flex flex-col h-fit">
+
+        <!-- HEADER BAR -->
+        <div class="flex justify-center grow ">
+            <ul class=" my-4 font-funnel-display flex justify-end grow max-w-screen-xl motion-delay-2000 motion-opacity-in-0 motion-translate-y-in-[-200%]" > <!--motion-opacity-in-0 motion-translate-y-in-[-200%]-->
+                <li><a href="#About" class="mx-4 p-4 pad cursor-pointer hover:text-flame underline-offset-4 duration-300">
                     About
                 </a></li>
-                <li><a class="p-4 cursor-pointer hover:text-flame hover:underline underline-offset-4">
+                <li><a href="#Experience" class="p-4 cursor-pointer hover:text-flame underline-offset-4 duration-300">
                     Experience
                 </a></li>
-                <li><a class="mx-4 p-4 cursor-pointer hover:text-flame hover:underline underline-offset-4">
+                <li><a href="#Projects" class="mx-4 p-4 cursor-pointer hover:text-flame underline-offset-4 duration-300">
                     Projects
                 </a></li>
-                <li><a class="p-4 cursor-pointer hover:text-flame hover:underline underline-offset-4">
+                <li><a class="p-4 cursor-pointer hover:text-flame underline-offset-4 duration-300">
                     Skills
                 </a></li>
-                <li><a class="mx-4 p-4 cursor-pointer hover:text-flame hover:underline underline-offset-4">
+                <li><a class="mx-4 p-4 cursor-pointer hover:text-flame underline-offset-4 duration-300">
                     Contact
                 </a></li>
             </ul>
         </div>
         
-        <div class="font-funnel-display mt-64">
-            <div class=" mb-8 flex row text-6xl">
-                <div id="intro" class="ml-[calc(50%-242px)] min-h-16 flex flex-row max-w-fit border-r-4 border-r-flame">
-                    <h1 id="intro-text-holder"  class="  ">
-                        <!-- Hi, I'm Andrew ✋-->
-                    </h1>
-                    <h1 id="hand" class="ml-2 hidden">✋</h1>
-                </div>
-            </div>
-            <div class="flex flex-col h-full my-32 mx-16 ">
-                <h2 class="text-4xl my-8">
-                    About
-                </h2>
-                <p class='max-w-fit text-xl'>
-                    I'm a CS Master's student at UMass Amherst. Currently interested in ML, and looking for full time 
-                </p>
+        <!-- INTRO -->
+        <div class="font-funnel-display mt-40 mb-16 flex grow text-6xl">
+            <div id="intro" class="ml-[calc(50%-298px)] min-h-16 flex max-w-fit border-r-4 border-r-flame">
+                <h1 id="intro-text-holder"  class="  ">
+                    <!-- Hi, I'm Andrew ✋-->
+                </h1>
+                <h1 id="hand" class="ml-2 hidden">✋</h1>
             </div>
         </div>
 
-        <div class="flex h-full justify-end content-end">
+        <!-- LINKS -->
+        <div class="flex grow justify-center items-center mb-16 ">
+            <div class="flex grow justify-between items-center max-w-lg">
+
+                <!-- EMAIL -->
+                <a href="mailto:ajlin622@gmail.com" class="motion-delay-[2400ms] motion-duration-[600ms] motion-opacity-in-0 motion-translate-x-in-[-150%]" target="_blank">
+                    <svg class="h-14 mx-4 fill-platinum stroke-platinum hover:fill-flame hover:stroke-flame duration-300" id="_1-Email" data-name="1-Email" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><title>1-Email</title><path d="M29,4H3A3,3,0,0,0,0,7V25a3,3,0,0,0,3,3H29a3,3,0,0,0,3-3V7A3,3,0,0,0,29,4Zm-.72,2L16,14.77,3.72,6ZM30,25a1,1,0,0,1-1,1H3a1,1,0,0,1-1-1V7.23l13.42,9.58a1,1,0,0,0,1.16,0L30,7.23Z"/></svg>
+                </a>
+
+                <!-- GITHUB -->
+                <a href="https://github.com/Unseenmocha" class="motion-delay-[2500ms] motion-duration-[600ms] motion-opacity-in-0 motion-translate-x-in-[-150%]" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-14 mx-4 fill-platinum hover:fill-flame duration-300" viewBox="0 0 24 24">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                
+                </a>
+
+                <!-- LINKEDIN -->
+                <a href="https://www.linkedin.com/in/andrew-lin-698634239" class="motion-delay-[2600ms] motion-duration-[600ms] motion-opacity-in-0 motion-translate-x-in-[-150]%" target="_blank">
+                    <svg class="h-12 mx-4 fill-platinum stroke-platinum ease-out hover:fill-flame hover:stroke-flame duration-300" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+                        viewBox="0 0 310 310" xml:space="preserve">
+                    <g id="XMLID_801_">
+                        <path id="XMLID_802_" d="M72.16,99.73H9.927c-2.762,0-5,2.239-5,5v199.928c0,2.762,2.238,5,5,5H72.16c2.762,0,5-2.238,5-5V104.73
+                            C77.16,101.969,74.922,99.73,72.16,99.73z"/>
+                        <path id="XMLID_803_" d="M41.066,0.341C18.422,0.341,0,18.743,0,41.362C0,63.991,18.422,82.4,41.066,82.4
+                            c22.626,0,41.033-18.41,41.033-41.038C82.1,18.743,63.692,0.341,41.066,0.341z"/>
+                        <path id="XMLID_804_" d="M230.454,94.761c-24.995,0-43.472,10.745-54.679,22.954V104.73c0-2.761-2.238-5-5-5h-59.599
+                            c-2.762,0-5,2.239-5,5v199.928c0,2.762,2.238,5,5,5h62.097c2.762,0,5-2.238,5-5v-98.918c0-33.333,9.054-46.319,32.29-46.319
+                            c25.306,0,27.317,20.818,27.317,48.034v97.204c0,2.762,2.238,5,5,5H305c2.762,0,5-2.238,5-5V194.995
+                            C310,145.43,300.549,94.761,230.454,94.761z"/>
+                    </g>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ABOUT -->
+    <div id="About" class="text-platinum bg-jet min-h-fit flex justify-center motion-delay-[2700ms] motion-duration-[600ms] motion-opacity-in-0 motion-translate-y-in-[150%]">
+        <div class="flex flex-col items-center text-center md:text-left md:flex-row md:items-start h-full my-16 grow max-w-screen-xl ">
+            <img src="../imgs/professional_headshot.png" class="w-[210px] h-[315px] mx-16 md:order-last motion-delay-[3100ms] motion-duration-[600ms] motion-opacity-in-0 motion-translate-x-in-[200%]">
+            <div class="flex flex-col items-center md:items-start mx-16">
+                <h2 class="text-4xl my-4">
+                    About
+                </h2>
+                <p class='max-w-fit text-xl my-4'>
+                    I'm a CS Master's student at UMass Amherst focusing on ML. I have experience in full stack web 
+                    development and am currently looking for full time roles in ML engineering or full stack software development.
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Experience -->
+    <div id="Experience" class="text-platinum bg-raisin min-h-fit flex justify-center motion-delay-[100ms] motion-duration-[600ms] motion-opacity-in-0 motion-translate-y-in-[150%]">
+        <div class="flex h-full my-16 grow max-w-screen-xl">
+            <div class="flex flex-col ml-16">
+                <h2 class="text-4xl my-4">
+                    Experience
+                </h2>
+
+                <div class="flex flex-row items-center my-4">
+                    <img src="../imgs/captions_logo.png" class="h-16 rounded-lg">
+                    <p class="text-2xl m-4">
+                        Captions
+                    </p>
+                </div>
+
+                <ul class="list-disc mx-24">
+                    <li>
+                        Worked as a React and Express developer on the web team for Captions, a NYC-based startup that offers AI-powered video editing tools.
+                    </li>
+                    <li>
+                        Expanded accessibility of Caption services by porting AI Music, a feature that lets users generate music based on genre, mood, and theme and add it to a video, to Web. 
+                    </li>
+                    <li>
+                        Contributed to existing React UI component library, set up the page within a NextJS server, and collaborated with Senior Engineers to implement start-to-finish flow for the feature.
+                    </li>
+                    <li>
+                        Designed and implemented RESTful APIs in Express that communicate via Axios to multiple external services to support AI Music functionality.
+                    </li>
+                    <li>
+                        Reduced team development risks by creating a CICD pipeline powered by GitHub Actions for releasing to a staging Kubernetes cluster in Google Cloud.
+                    </li>
+                </ul>
+
+
+                <div class="flex flex-row mt-16 mb-4 items-center">
+                    <img src="../imgs/LG_logo.png" class="h-16">
+                    <p class="text-2xl m-4">
+                        LG Energy Solution Vertech
+                    </p>
+                </div>
+                <ul class="list-disc mx-24">
+                    <li>
+                        Improved usability of an existing data dump by creating a data parser script in Python with Pandas to rearrange large .csv battery site data files into a more desirable format.
+                    </li>
+                    <li>
+                        Improved the usability of battery fade estimation software by designing and implementing user input checks in Python. 
+                    </li>
+                    <li>
+                        Helped with project planning by researching and presenting on the technological state of and demand for virtual power plants as well as market competition.
+                    </li>
+                </ul>
+                
+            </div>
+            
+        </div>
+    </div>
+
+    <div id="Projects" class="text-platinum bg-jet min-h-fit flex justify-center motion-delay-[2700ms] motion-duration-[600ms] motion-opacity-in-0 motion-translate-y-in-[150%]">
+        <div class="flex flex-col items-center text-center md:text-left md:flex-row md:items-start h-full my-16 grow max-w-screen-xl ">
+            <div class="flex flex-col items-center md:items-start mx-16">
+                <h2 class="text-4xl my-4">
+                    Projects
+                </h2>
+
+
+            </div>
+        </div>
+    </div>
+    
+    <div class="flex justify-center grow bg-jet text-platinum">
+        <div class="flex justify-end grow max-w-screen-xl">
             <p class="place-self-end text-sm m-4">Website by Andrew Lin</p>
         </div>
     </div>
     
-    
-    <script src="./animations.js"></script>
-
+    <script type="module" src="./animations.js"></script>
+    <script src="https://unpkg.com/taos@1.0.5/dist/taos.js"></script>
 </body>
 </html>

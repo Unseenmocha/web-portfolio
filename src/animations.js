@@ -1,25 +1,27 @@
-let introText = "Hi, I'm Andrew".split("");
+//Variables and Elements for intro animation
+let introText = "Hi, I'm Andrew Lin"
 const introHolder = document.getElementById('intro');
 const introTextElement = document.getElementById("intro-text-holder");
 const hand = document.getElementById('hand');
 
-let introDelay = 500;
+let introDelay = 400;
 let introTimeout = 50;
 
-
+//calls addChar for each character in the intro text
+//then calls wavehand
 function addChar(i, timeout) {
     if (i < introText.length) {
-        char = introText[i];
+        let char = introText.charAt(i);
         introTextElement.innerHTML += introText[i];
         i++;
         setTimeout(addChar, timeout, i, timeout);
     } else {
         hand.classList.remove('hidden')
         introHolder.classList.add('animate-cursorBlink');
-        setTimeout(waveHand, 2000);
     }
 }
 
+//calls addChar
 function animateTypeWriter() {
     let i = 0;
     introTextElement.innerHTML = "";
@@ -30,10 +32,16 @@ function animateTypeWriter() {
     setTimeout(addChar, introDelay, i, introTimeout);
 }
 
-function waveHand() {
+//when blinking animation ends, start waving animation
+introHolder.addEventListener('animationend', () => {
     hand.classList.add('animate-waving');
-    setTimeout(animateTypeWriter, 3000);
-}
+})
+
+//when waving animation ends, wait a bit, then start the whole thing over
+hand.addEventListener('animationend', () => {
+    setTimeout(animateTypeWriter, 750);
+})
 
 
+//starts animation loop
 animateTypeWriter();
