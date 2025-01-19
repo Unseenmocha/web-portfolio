@@ -5,7 +5,7 @@ module.exports = {
       transform: (content) => content.replace(/taos:/g, ''),
       files: [
         "./src/**/*.{html,js}",
-        "./imgs/**/*.{png,svg}"
+        "./src/imgs/**/*.{png,svg}"
       ]
     },
     theme: {
