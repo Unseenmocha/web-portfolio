@@ -11,7 +11,6 @@ let introTimeout = 50;
 //then calls wavehand
 function addChar(i, timeout) {
     if (i < introText.length) {
-        let char = introText.charAt(i);
         introTextElement.innerHTML += introText[i];
         i++;
         setTimeout(addChar, timeout, i, timeout);
@@ -45,3 +44,15 @@ hand.addEventListener('animationend', () => {
 
 //starts animation loop
 animateTypeWriter();
+
+
+ // use a script tag or an external JS file
+ document.addEventListener("DOMContentLoaded", (event) => {
+    gsap.registerPlugin(ScrollTrigger)
+    let tl = gsap.timeline();
+
+    tl.from(".header", {yPercent: -400, duration: 1});
+    tl.from(".header", {opacity:0, duration: 1.4}, "<");
+
+
+   });

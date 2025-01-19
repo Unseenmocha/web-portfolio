@@ -8,14 +8,14 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap" rel="stylesheet">
 </head>
-<body class="bg-raisin flex flex-col grow min-h-screen bg-fixed scroll-smooth">
+<body class="font-funnel-display bg-raisin flex flex-col grow min-h-screen bg-fixed scroll-smooth">
 
     <!-- TOP -->
-    <div class="text-platinum bg-raisin flex flex-col h-fit">
+    <div class="bg-raisin flex flex-col h-fit">
 
         <!-- HEADER BAR -->
-        <div class="flex justify-center grow ">
-            <ul class=" my-4 font-funnel-display flex justify-end grow max-w-screen-xl motion-delay-2000 motion-opacity-in-0 motion-translate-y-in-[-200%]" > <!--motion-opacity-in-0 motion-translate-y-in-[-200%]-->
+        <div class="flex justify-center grow text-gray fixed top-0 right-0">
+            <ul class="header my-4 font-funnel-display text-lg font-semibold flex justify-end grow max-w-screen-xl " > <!--motion-delay-2000 motion-opacity-in-0 motion-translate-y-in-[-200%]-->
                 <li><a href="#About" class="mx-4 p-4 pad cursor-pointer hover:text-flame underline-offset-4 duration-300">
                     About
                 </a></li>
@@ -35,8 +35,8 @@
         </div>
         
         <!-- INTRO -->
-        <div class="font-funnel-display mt-40 mb-16 flex grow text-6xl">
-            <div id="intro" class="ml-[calc(50%-298px)] min-h-16 flex max-w-fit border-r-4 border-r-flame">
+        <div class="text-platinum mt-40 mb-24 flex grow text-4xl md:text-6xl">
+            <div id="intro" class="ml-[calc(50%-170px)] md:ml-[calc(50%-298px)] min-h-8 md:min-h-16 flex max-h-fit max-w-fit md:border-r-4 border-r-2 border-r-flame duration-300">
                 <h1 id="intro-text-holder"  class="  ">
                     <!-- Hi, I'm Andrew ✋-->
                 </h1>
@@ -46,24 +46,28 @@
 
         <!-- LINKS -->
         <div class="flex grow justify-center items-center mb-16 ">
-            <div class="flex grow justify-between items-center max-w-lg">
+            <div class="flex grow justify-center items-center max-w-lg">
 
                 <!-- EMAIL -->
-                <a href="mailto:ajlin622@gmail.com" class="motion-delay-[2400ms] motion-duration-[600ms] motion-opacity-in-0 motion-translate-x-in-[-150%]" target="_blank">
-                    <svg class="h-14 mx-4 fill-platinum stroke-platinum hover:fill-flame hover:stroke-flame duration-300" id="_1-Email" data-name="1-Email" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><title>1-Email</title><path d="M29,4H3A3,3,0,0,0,0,7V25a3,3,0,0,0,3,3H29a3,3,0,0,0,3-3V7A3,3,0,0,0,29,4Zm-.72,2L16,14.77,3.72,6ZM30,25a1,1,0,0,1-1,1H3a1,1,0,0,1-1-1V7.23l13.42,9.58a1,1,0,0,0,1.16,0L30,7.23Z"/></svg>
+                <a href="mailto:ajlin622@gmail.com" class="" target="_blank"> <!-- motion-delay-[2600ms] motion-duration-[600ms] motion-opacity-in-0 motion-translate-x-in-[-100%] -->
+
+                    <svg class="h-8 md:h-12 mx-4 md:mx-12 fill-platinum stroke-platinum hover:fill-flame hover:stroke-flame duration-300" id="_1-Email" data-name="1-Email" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><title>1-Email</title><path d="M29,4H3A3,3,0,0,0,0,7V25a3,3,0,0,0,3,3H29a3,3,0,0,0,3-3V7A3,3,0,0,0,29,4Zm-.72,2L16,14.77,3.72,6ZM30,25a1,1,0,0,1-1,1H3a1,1,0,0,1-1-1V7.23l13.42,9.58a1,1,0,0,0,1.16,0L30,7.23Z"/></svg>
                 </a>
 
                 <!-- GITHUB -->
-                <a href="https://github.com/Unseenmocha" class="motion-delay-[2500ms] motion-duration-[600ms] motion-opacity-in-0 motion-translate-x-in-[-150%]" target="_blank">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-14 mx-4 fill-platinum hover:fill-flame duration-300" viewBox="0 0 24 24">
+                <a href="https://github.com/Unseenmocha" class="" target="_blank"> <!-- motion-delay-[2500ms] motion-duration-[600ms] motion-opacity-in-0 motion-translate-x-in-[-100%] -->
+
+        
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 md:h-12 mx-4 md:mx-12 fill-platinum hover:fill-flame duration-300" viewBox="0 0 24 24">
                         <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                     </svg>
                 
                 </a>
 
                 <!-- LINKEDIN -->
-                <a href="https://www.linkedin.com/in/andrew-lin-698634239" class="motion-delay-[2600ms] motion-duration-[600ms] motion-opacity-in-0 motion-translate-x-in-[-150]%" target="_blank">
-                    <svg class="h-12 mx-4 fill-platinum stroke-platinum ease-out hover:fill-flame hover:stroke-flame duration-300" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+                <a href="https://www.linkedin.com/in/andrew-lin-698634239" class="" target="_blank"> <!-- motion-delay-[2400ms] motion-duration-[600ms] motion-opacity-in-0 motion-translate-x-in-[-100%] -->
+
+                    <svg class="h-7 md:h-11 mx-4 md:mx-12 fill-platinum stroke-platinum ease-out hover:fill-flame hover:stroke-flame duration-300" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
                         viewBox="0 0 310 310" xml:space="preserve">
                     <g id="XMLID_801_">
                         <path id="XMLID_802_" d="M72.16,99.73H9.927c-2.762,0-5,2.239-5,5v199.928c0,2.762,2.238,5,5,5H72.16c2.762,0,5-2.238,5-5V104.73
@@ -83,14 +87,15 @@
     </div>
 
     <!-- ABOUT -->
-    <div id="About" class="text-platinum bg-jet min-h-fit flex justify-center motion-delay-[2700ms] motion-duration-[600ms] motion-opacity-in-0 motion-translate-y-in-[150%]">
+    <div id="About" class="text-platinum bg-jet min-h-fit flex justify-center "> <!-- motion-delay-[2700ms] motion-duration-[600ms] motion-opacity-in-0 motion-translate-y-in-[150%] -->
         <div class="flex flex-col items-center text-center md:text-left md:flex-row md:items-start h-full my-16 grow max-w-screen-xl ">
-            <img src="../imgs/professional_headshot.png" class="w-[210px] h-[315px] mx-16 md:order-last motion-delay-[3100ms] motion-duration-[600ms] motion-opacity-in-0 motion-translate-x-in-[200%]">
+            <img src="../imgs/professional_headshot.png" class="w-[210px] h-[315px] mx-16 md:order-last "> <!-- motion-delay-[3100ms] motion-duration-[600ms] motion-opacity-in-0 motion-translate-x-in-[200%] -->
+
             <div class="flex flex-col items-center md:items-start mx-16">
-                <h2 class="text-4xl my-4">
+                <h2 class="text-4xl my-8">
                     About
                 </h2>
-                <p class='max-w-fit text-xl my-4'>
+                <p class='max-w-fit text-xl mb-4'>
                     I'm a CS Master's student at UMass Amherst focusing on ML. I have experience in full stack web 
                     development and am currently looking for full time roles in ML engineering or full stack software development.
                 </p>
@@ -99,22 +104,24 @@
     </div>
 
 
-    <!-- Experience -->
-    <div id="Experience" class="text-platinum bg-raisin min-h-fit flex justify-center motion-delay-[100ms] motion-duration-[600ms] motion-opacity-in-0 motion-translate-y-in-[150%]">
-        <div class="flex h-full my-16 grow max-w-screen-xl">
-            <div class="flex flex-col ml-16">
-                <h2 class="text-4xl my-4">
+    <!-- EXPERIENCE -->
+    <div id="Experience" class="text-platinum bg-raisin min-h-fit flex justify-center "> <!-- motion-delay-[100ms] motion-duration-[600ms] motion-opacity-in-0 motion-translate-y-in-[150%] -->
+        <div class="flex h-full grow max-w-screen-xl">
+            <div class="flex flex-col mx-8 md:mx-16 items-center md:items-start">
+                <h2 class="text-4xl mt-16 mb-8">
                     Experience
                 </h2>
 
-                <div class="flex flex-row items-center my-4">
+                <div class="flex flex-row items-center mb-4 md:mb-0">
                     <img src="../imgs/captions_logo.png" class="h-16 rounded-lg">
-                    <p class="text-2xl m-4">
+                    <p class="text-2xl mx-4">
                         Captions
                     </p>
                 </div>
-
-                <ul class="list-disc mx-24">
+                <p class="text-gray text-lg font-bold  mx-12 mb-4 md:mx-20">
+                    Software Engineering Intern
+                </p>
+                <ul class="flex flex-col gap-4 list-disc mx-12 md:mx-24 text-center md:text-left">
                     <li>
                         Worked as a React and Express developer on the web team for Captions, a NYC-based startup that offers AI-powered video editing tools.
                     </li>
@@ -133,13 +140,16 @@
                 </ul>
 
 
-                <div class="flex flex-row mt-16 mb-4 items-center">
+                <div class="flex flex-row mt-16 items-center">
                     <img src="../imgs/LG_logo.png" class="h-16">
                     <p class="text-2xl m-4">
                         LG Energy Solution Vertech
                     </p>
                 </div>
-                <ul class="list-disc mx-24">
+                <p class="text-gray text-lg font-bold  mx-12 mb-4 md:mx-20">
+                    Data Science Intern 
+                </p>
+                <ul class="flex flex-col gap-4 list-disc mb-16 mx-12 md:mx-24 text-center md:text-left">
                     <li>
                         Improved usability of an existing data dump by creating a data parser script in Python with Pandas to rearrange large .csv battery site data files into a more desirable format.
                     </li>
@@ -156,10 +166,10 @@
         </div>
     </div>
 
-    <div id="Projects" class="text-platinum bg-jet min-h-fit flex justify-center motion-delay-[2700ms] motion-duration-[600ms] motion-opacity-in-0 motion-translate-y-in-[150%]">
-        <div class="flex flex-col items-center text-center md:text-left md:flex-row md:items-start h-full my-16 grow max-w-screen-xl ">
+    <div id="Projects" class="text-platinum bg-jet min-h-fit flex justify-center">  <!-- motion-delay-[2700ms] motion-duration-[600ms] motion-opacity-in-0 motion-translate-y-in-[150%] -->
+        <div class="flex flex-col items-center text-center md:text-left md:flex-row md:items-start h-full grow max-w-screen-xl ">
             <div class="flex flex-col items-center md:items-start mx-16">
-                <h2 class="text-4xl my-4">
+                <h2 class="text-4xl my-16">
                     Projects
                 </h2>
 
@@ -175,6 +185,7 @@
     </div>
     
     <script type="module" src="./animations.js"></script>
-    <script src="https://unpkg.com/taos@1.0.5/dist/taos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
 </body>
 </html>

@@ -11,11 +11,12 @@ module.exports = {
     theme: {
       colors: {
         'night': "#131315",
-        'raisin': "#26262B",
-        'jet': "#303036",
+        'raisin': "#28282a",
+        'jet': "#2E2E31",
         'flame': "#D55620",
-        'smoke': "#F5F5F5",
+        'gray': "#989898",
         'platinum': "#EAEDE8",
+        "eerie": "#1C1C1E",
       },
       extend: {
         animation: {
@@ -53,12 +54,5 @@ module.exports = {
     },
     plugins: [
       require('tailwindcss-motion'),
-      require('taos/plugin')
-    ],
-    safelist: [
-      '!duration-[0ms]',
-      '!delay-[0ms]',
-      'html.js :where([class*="taos:"]:not(.taos-init))'
     ]
-
   }
