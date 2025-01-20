@@ -1,8 +1,12 @@
 //Variables and Elements for intro animation
-let introText = "Hi, I'm Andrew Lin"
+let introText = "Hi, I'm Andrew Lin";
 const introHolder = document.getElementById('intro');
 const introTextElement = document.getElementById("intro-text-holder");
 const hand = document.getElementById('hand');
+const header_top = document.getElementById("header-top");
+const header_side = document.getElementById("header-side");
+const menu_cont = document.getElementById("menu-container");
+const menu = document.getElementById("menu");
 
 let introDelay = 400;
 let introTimeout = 50;
@@ -15,7 +19,7 @@ function addChar(i, timeout) {
         i++;
         setTimeout(addChar, timeout, i, timeout);
     } else {
-        hand.classList.remove('hidden')
+        hand.classList.remove('hidden');
         introHolder.classList.add('animate-cursorBlink');
     }
 }
@@ -27,7 +31,7 @@ function animateTypeWriter() {
     hand.classList.add('hidden');
     hand.classList.remove('animate-waving');
     introHolder.classList.add('border-r-4');
-    introHolder.classList.remove('animate-cursorBlink')
+    introHolder.classList.remove('animate-cursorBlink');
     setTimeout(addChar, introDelay, i, introTimeout);
 }
 
@@ -46,13 +50,60 @@ hand.addEventListener('animationend', () => {
 animateTypeWriter();
 
 
- // use a script tag or an external JS file
+
  document.addEventListener("DOMContentLoaded", (event) => {
     gsap.registerPlugin(ScrollTrigger)
     let tl = gsap.timeline();
+    let mm = gsap.matchMedia();
 
-    tl.from(".header", {yPercent: -400, duration: 1});
-    tl.from(".header", {opacity:0, duration: 1.4}, "<");
+    //header intro and bg color animation
+    mm.add("(min-width:768px)", () => {
+        tl.fromTo("#header-top", {yPercent: -100}, {yPercent:0, duration: 1});
+        tl.from("#header-top", {opacity:0, duration: 1.7}, "<");
 
+        gsap.to("#header-top", {
+            scrollTrigger: {
+                trigger: '#header-top',
+                start: 'top +=-50px',
+                end: 'top +=-250px',
+                scrub: true
+            },
+            backgroundColor: 'rgba(19, 19, 21, 0.4)',
+        });
+
+    });
+
+    // Small Screen Menu open and close animation
+    mm.add("(max-width:767px)", () => {
+        let menu_tl = gsap.timeline();
+        menu_tl.to('#top-rect1', {scaleY: 4, scaleX: 1.6, y: 290, x: -925, duration: 0.5,});
+        menu_tl.to('#top-rect2', {scaleY: 4, scaleX: 2.75, y: 860, x: -925, duration: 0.5,}, '<');
+        menu_tl.to('#middle-rect', {scaleY: 4, scaleX: 1.95, y: 1350, x: -925, duration: 0.5,}, '<');
+        menu_tl.to('#bottom-rect1', {scaleY: 4, scaleX: 1.25, y: 1825, x: -925, duration: 0.5,}, '<');
+        menu_tl.to('#bottom-rect2', {scaleY: 4, scaleX: 1.9, y: 2400, x: -925, duration: 0.5,}, '<');
+        menu_tl.to('#header-side', {
+            x: -330,
+            duration: 0.4,
+            ease: 'power3.out',
+            backgroundColor: 'rgba(19, 19, 21, 0.4)'
+        }, '<');
+        menu_tl.to('.menu-rect', {opacity: 0, duration: 0.25}, '-=0.15s')
+        menu_tl.fromTo('#header-text', {opacity: 0}, {opacity:1, duration:0.25}, '-=0.15s');
+        menu_tl.pause();
+
+        menu_cont.addEventListener('mouseover', () => {menu_tl.play();});
+        menu_cont.addEventListener('touchstart', () => {menu_tl.play();});
+
+        header_side.addEventListener('mouseleave',  () => {menu_tl.reverse();});
+        document.body.addEventListener('touchstart', (event) => { 
+            if (!header_side.contains(event.target)) {
+                menu_tl.reverse();
+            }
+        });
+    });
+
+
+
+    
 
    });

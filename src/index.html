@@ -14,21 +14,53 @@
     <div class="bg-raisin flex flex-col h-fit">
 
         <!-- HEADER BAR -->
-        <div class="flex justify-center grow text-gray fixed top-0 right-0">
-            <ul class="header my-4 font-funnel-display text-lg font-semibold flex justify-end grow max-w-screen-xl " > <!--motion-delay-2000 motion-opacity-in-0 motion-translate-y-in-[-200%]-->
-                <li><a href="#About" class="mx-4 p-4 pad cursor-pointer hover:text-flame underline-offset-4 duration-300">
+        <div id="menu-container" class="fixed top-0 right-0 z-20 m-4 md:pointer-events-none md:hidden overflow-visible">
+            <svg viewBox="0 0 383 297" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-16 h-12 overflow-visible">
+                <g id="menu">
+                <rect id="bottom-rect2" class="menu-rect" x="67" y="220" width="250" height="25" rx="12.5" fill="gray"/>
+                <rect id="bottom-rect1" class="menu-rect" x="67" y="220" width="250" height="25" rx="12.5" fill="gray"/>
+                <path id="middle-rect" class="menu-rect" d="M67 148.5C67 141.596 72.5964 136 79.5 136H304.5C311.404 136 317 141.596 317 148.5C317 155.404 311.404 161 304.5 161H79.5C72.5964 161 67 155.404 67 148.5Z" fill="gray"/>
+                <rect id="top-rect2" class="menu-rect" x="67" y="52" width="250" height="25" rx="12.5" fill="gray"/>
+                <rect id="top-rect1" class="menu-rect" x="67" y="52" width="250" height="25" rx="12.5" fill="gray"/>
+                </g>
+            </svg>
+        </div>
+
+        <div id="header-side" class="fixed top-0 right-[-330px] z-10 text-gray backdrop-blur-md flex min-h-screen md:pointer-events-none md:hidden">
+            <ul id="header-text" class="my-16 mx-24 text-xl font-semibold gap-16 flex flex-col" > <!--motion-delay-2000 motion-opacity-in-0 motion-translate-y-in-[-200%]-->
+                <li><a href="#About" class="m-4 cursor-pointer hover:text-flame underline-offset-4 duration-300">
                     About
                 </a></li>
-                <li><a href="#Experience" class="p-4 cursor-pointer hover:text-flame underline-offset-4 duration-300">
+                <li><a href="#Experience" class="m-4 cursor-pointer hover:text-flame underline-offset-4 duration-300">
                     Experience
                 </a></li>
-                <li><a href="#Projects" class="mx-4 p-4 cursor-pointer hover:text-flame underline-offset-4 duration-300">
+                <li><a href="#Projects" class="m-4 cursor-pointer hover:text-flame underline-offset-4 duration-300">
                     Projects
                 </a></li>
-                <li><a class="p-4 cursor-pointer hover:text-flame underline-offset-4 duration-300">
+                <li><a class="m-4 cursor-pointer hover:text-flame underline-offset-4 duration-300">
                     Skills
                 </a></li>
-                <li><a class="mx-4 p-4 cursor-pointer hover:text-flame underline-offset-4 duration-300">
+                <li><a class="m-4 cursor-pointer hover:text-flame underline-offset-4 duration-300">
+                    Contact
+                </a></li>
+            </ul>
+        </div>
+
+        <div id="header-top" class="fixed top-0 right-0 z-10 text-gray backdrop-blur-md flex min-w-[100%] justify-center grow">
+            <ul class="my-4 mx-4 text-lg font-semibold grow justify-end max-w-screen-xl pointer-events-none hidden md:flex md:pointer-events-auto"> <!--motion-delay-2000 motion-opacity-in-0 motion-translate-y-in-[-200%]-->
+                <li><a href="#About" class="m-4 cursor-pointer hover:text-flame underline-offset-4 duration-300">
+                    About
+                </a></li>
+                <li><a href="#Experience" class="m-4 cursor-pointer hover:text-flame underline-offset-4 duration-300">
+                    Experience
+                </a></li>
+                <li><a href="#Projects" class="m-4 cursor-pointer hover:text-flame underline-offset-4 duration-300">
+                    Projects
+                </a></li>
+                <li><a class="m-4 cursor-pointer hover:text-flame underline-offset-4 duration-300">
+                    Skills
+                </a></li>
+                <li><a class="m-4 cursor-pointer hover:text-flame underline-offset-4 duration-300">
                     Contact
                 </a></li>
             </ul>
