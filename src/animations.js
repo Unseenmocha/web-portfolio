@@ -5,7 +5,7 @@ const introTextElement = document.getElementById("intro-text-holder");
 const hand = document.getElementById('hand');
 const header_top = document.getElementById("header-top");
 const header_side = document.getElementById("header-side");
-const menu_cont = document.getElementById("menu-container");
+// const menu_cont = document.getElementById("menu-container");
 const menu = document.getElementById("menu");
 
 let introDelay = 400;
@@ -76,25 +76,27 @@ animateTypeWriter();
     // Small Screen Menu open and close animation
     mm.add("(max-width:767px)", () => {
         let menu_tl = gsap.timeline();
-        menu_tl.to('#top-rect1', {scaleY: 4, scaleX: 1.6, y: 290, x: -925, duration: 0.5,});
-        menu_tl.to('#top-rect2', {scaleY: 4, scaleX: 2.75, y: 860, x: -925, duration: 0.5,}, '<');
-        menu_tl.to('#middle-rect', {scaleY: 4, scaleX: 1.95, y: 1350, x: -925, duration: 0.5,}, '<');
-        menu_tl.to('#bottom-rect1', {scaleY: 4, scaleX: 1.25, y: 1825, x: -925, duration: 0.5,}, '<');
-        menu_tl.to('#bottom-rect2', {scaleY: 4, scaleX: 1.9, y: 2400, x: -925, duration: 0.5,}, '<');
+        menu_tl.to('#top-rect1', {scaleY: 4.5, scaleX: 1.75, y: 46, x: -150, duration: 0.5,});
+        menu_tl.to('#top-rect2', {scaleY: 4.5, scaleX: 3, y: 136, x: -150, duration: 0.5,}, '<');
+        menu_tl.to('#middle-rect', {scaleY: 4.5, scaleX: 2.2, y: 218, x: -150, duration: 0.5,}, '<');
+        menu_tl.to('#bottom-rect1', {scaleY: 4.5, scaleX: 1.4, y: 298, x: -150, duration: 0.5,}, '<');
+        menu_tl.to('#bottom-rect2', {scaleY: 4.5, scaleX: 2.3, y: 390, x: -150, duration: 0.5,}, '<');
         menu_tl.to('#header-side', {
             x: -330,
             duration: 0.4,
             ease: 'power3.out',
             backgroundColor: 'rgba(19, 19, 21, 0.4)'
         }, '<');
-        menu_tl.to('.menu-rect', {opacity: 0, duration: 0.25}, '-=0.15s')
-        menu_tl.fromTo('#header-text', {opacity: 0}, {opacity:1, duration:0.25}, '-=0.15s');
+        menu_tl.fromTo('#header-text', {opacity: 0}, {opacity:1, duration:0.25}, '-=0.1s');
+        menu_tl.to('.menu-rect', {opacity: 0, duration: 0.25}, '-=0.2s');
         menu_tl.pause();
 
-        menu_cont.addEventListener('mouseover', () => {menu_tl.play();});
-        menu_cont.addEventListener('touchstart', () => {menu_tl.play();});
+        menu.addEventListener('mouseover', () => {menu_tl.play();});
+        menu.addEventListener('touchstart', () => {menu_tl.play();});
 
-        header_side.addEventListener('mouseleave',  () => {menu_tl.reverse();});
+        header_side.addEventListener('mouseleave',  () => {
+            menu_tl.reverse();
+        });
         document.body.addEventListener('touchstart', (event) => { 
             if (!header_side.contains(event.target)) {
                 menu_tl.reverse();

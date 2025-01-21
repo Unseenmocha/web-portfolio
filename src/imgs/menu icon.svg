@@ -1,10 +1,9 @@
-<svg width="383" height="297" viewBox="0 0 383 297" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect width="383" height="297" fill="#1E1E1E"/>
+<svg width="330" height="800" viewBox="0 0 330 800" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g id="menu">
-<rect id="bottom_rect2" x="67" y="220" width="250" height="25" rx="12.5" fill="#D9D9D9"/>
-<rect id="bottom_rect1" x="67" y="220" width="250" height="25" rx="12.5" fill="#D9D9D9"/>
-<path id="middle_rect" d="M67 148.5C67 141.596 72.5964 136 79.5 136H304.5C311.404 136 317 141.596 317 148.5C317 155.404 311.404 161 304.5 161H79.5C72.5964 161 67 155.404 67 148.5Z" fill="#D9D9D9"/>
-<rect id="top_rect2" x="67" y="52" width="250" height="25" rx="12.5" fill="#D9D9D9"/>
-<rect id="top_rect1" x="67" y="52" width="250" height="25" rx="12.5" fill="#D9D9D9"/>
+<rect id="bottom_rect2" x="250" y="66" width="45" height="5" rx="2.5" fill="#D9D9D9"/>
+<rect id="bottom_rect1" x="250" y="66" width="45" height="5" rx="2.5" fill="#D9D9D9"/>
+<path id="middle_rect" d="M250 50.5C250 49.1193 251.119 48 252.5 48H292.5C293.881 48 295 49.1193 295 50.5V50.5C295 51.8807 293.881 53 292.5 53H252.5C251.119 53 250 51.8807 250 50.5V50.5Z" fill="#D9D9D9"/>
+<rect id="top_rect2" x="250" y="31" width="45" height="5" rx="2.5" fill="#D9D9D9"/>
+<rect id="top_rect1" x="250" y="31" width="45" height="5" rx="2.5" fill="#D9D9D9"/>
 </g>
 </svg>
