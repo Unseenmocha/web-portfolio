@@ -1,0 +1,13 @@
+<svg width="143" height="766" viewBox="0 0 143 766" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="time-line">
+<path id="v-line-3" d="M16 533L16 653" stroke="#FF6600" stroke-width="2"/>
+<path id="v-line-2" d="M16 142L16 513" stroke="#FF6600" stroke-width="2"/>
+<path id="v-line-1" d="M16 25L16 124" stroke="#FF6600" stroke-width="2"/>
+<path id="h-line-3" d="M26 523H62" stroke="#FF6600" stroke-width="2"/>
+<path id="h-line-2" d="M26 134H62" stroke="#FF6600" stroke-width="2"/>
+<path id="h-line-1" d="M26 15H130" stroke="#FF6600" stroke-width="2"/>
+<circle id="circle-3" cx="16" cy="523" r="9" stroke="#FF6600" stroke-width="2"/>
+<circle id="circle-2" cx="16" cy="134" r="9" stroke="#FF6600" stroke-width="2"/>
+<circle id="circle-1" cx="16" cy="15" r="9" stroke="#FF6600" stroke-width="2"/>
+</g>
+</svg>

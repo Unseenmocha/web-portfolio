@@ -8,26 +8,27 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap" rel="stylesheet">
 </head>
-<body class="font-funnel-display bg-raisin flex flex-col grow min-h-screen bg-fixed scroll-smooth">
+<body class="font-funnel-display bg-raisin flex flex-col grow min-h-screen bg-fixed scroll-smooth ">
 
     <!-- TOP -->
-    <div class="bg-raisin flex flex-col h-fit">
+    <div class="bg-raisin flex flex-col">
 
-        <!-- HEADER BAR -->
-        <div id="menu-container" class="fixed top-0 right-0 mx-4 md:pointer-events-none md:hidden">
+        <!-- MENU ICON -->
+        <div id="menu-container" class="fixed top-0 right-0 mx-4 lg:pointer-events-none lg:hidden">
             <svg viewBox="0 0 300 800" fill="none" xmlns="http://www.w3.org/2000/svg" width="330px" height="800px" class="z-20">
                 <g id="menu">
-                <rect id="bottom-rect2" class="menu-rect z-20" x="260" y="48" width="36" height="4" rx="2.5" fill="gray"/>
-                <rect id="bottom-rect1" class="menu-rect z-20" x="260" y="48" width="36" height="4" rx="2.5" fill="gray"/>
-                <rect id="middle-rect" class="menu-rect z-20" x="260" y="36" width="36" height="4" rx="2.5" fill="gray"/>
-                <rect id="top-rect2" class="menu-rect z-20" x="260" y="24" width="36" height="4" rx="2.5" fill="gray"/>
-                <rect id="top-rect1" class="menu-rect z-20" x="260" y="24" width="36" height="4" rx="2.5" fill="gray"/>
+                <rect id="bottom-rect2" class="menu-rect z-20" x="260" y="48" width="36" height="4" rx="2.5" fill="#EAEDE8"/>
+                <rect id="bottom-rect1" class="menu-rect z-20" x="260" y="48" width="36" height="4" rx="2.5" fill="#EAEDE8"/>
+                <rect id="middle-rect" class="menu-rect z-20" x="260" y="36" width="36" height="4" rx="2.5" fill="#EAEDE8"/>
+                <rect id="top-rect2" class="menu-rect z-20" x="260" y="24" width="36" height="4" rx="2.5" fill="#EAEDE8"/>
+                <rect id="top-rect1" class="menu-rect z-20" x="260" y="24" width="36" height="4" rx="2.5" fill="#EAEDE8"/>
                 </g>
             </svg>
         </div>
 
-        <div id="header-side" class="fixed top-0 right-[-330px] z-10 text-gray backdrop-blur-md flex min-h-screen pointer-events-auto  md:pointer-events-none md:hidden">
-            <ul id="header-text" class="my-16 ml-8 mr-24 text-xl font-semibold gap-16 flex flex-col" > <!--motion-delay-2000 motion-opacity-in-0 motion-translate-y-in-[-200%]-->
+        <!-- HEADER SIDE BAR -->
+        <div id="header-side" class="fixed top-0 right-[-330px] z-20 text-gray backdrop-blur-lg flex min-h-screen pointer-events-auto  lg:pointer-events-none lg:hidden">
+            <ul id="header-text" class="my-16 ml-8 mr-24 text-xl font-semibold gap-16 flex flex-col" > 
                 <li><a href="#About" class="m-4 cursor-pointer hover:text-flame underline-offset-4 duration-300">
                     About
                 </a></li>
@@ -46,8 +47,9 @@
             </ul>
         </div>
 
-        <div id="header-top" class="fixed top-0 right-0 z-10 text-gray backdrop-blur-md flex min-w-[100%] justify-center grow">
-            <ul class="my-4 mx-4 text-lg font-semibold grow justify-end max-w-screen-xl pointer-events-none hidden md:flex md:pointer-events-auto"> <!--motion-delay-2000 motion-opacity-in-0 motion-translate-y-in-[-200%]-->
+        <!-- HEADER BAR -->
+        <div id="header-top" class="fixed top-0 right-0 z-20 text-gray backdrop-blur-lg flex min-w-[100%] justify-center grow">
+            <ul class="m-8 text-lg font-semibold grow gap-8 justify-end max-w-screen-xl pointer-events-none hidden lg:flex lg:pointer-events-auto"> 
                 <li><a href="#About" class="m-4 cursor-pointer hover:text-flame underline-offset-4 duration-300">
                     About
                 </a></li>
@@ -66,70 +68,81 @@
             </ul>
         </div>
         
-        <!-- INTRO -->
-        <div class="text-platinum mt-40 mb-24 flex grow text-4xl md:text-6xl">
-            <div id="intro" class="ml-[calc(50%-170px)] md:ml-[calc(50%-298px)] min-h-8 md:min-h-16 flex max-h-fit max-w-fit md:border-r-4 border-r-2 border-r-flame duration-300">
-                <h1 id="intro-text-holder"  class="  ">
-                    <!-- Hi, I'm Andrew ✋-->
-                </h1>
-                <h1 id="hand" class="ml-2 hidden">✋</h1>
-            </div>
-        </div>
-
-        <!-- LINKS -->
-        <div class="flex grow justify-center items-center mb-16 ">
-            <div class="flex grow justify-center items-center max-w-lg">
-
-                <!-- EMAIL -->
-                <a href="mailto:ajlin622@gmail.com" class="" target="_blank"> <!-- motion-delay-[2600ms] motion-duration-[600ms] motion-opacity-in-0 motion-translate-x-in-[-100%] -->
-
-                    <svg class="h-8 md:h-12 mx-4 md:mx-12 fill-platinum stroke-platinum hover:fill-flame hover:stroke-flame duration-300" id="_1-Email" data-name="1-Email" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><title>1-Email</title><path d="M29,4H3A3,3,0,0,0,0,7V25a3,3,0,0,0,3,3H29a3,3,0,0,0,3-3V7A3,3,0,0,0,29,4Zm-.72,2L16,14.77,3.72,6ZM30,25a1,1,0,0,1-1,1H3a1,1,0,0,1-1-1V7.23l13.42,9.58a1,1,0,0,0,1.16,0L30,7.23Z"/></svg>
-                </a>
-
-                <!-- GITHUB -->
-                <a href="https://github.com/Unseenmocha" class="" target="_blank"> <!-- motion-delay-[2500ms] motion-duration-[600ms] motion-opacity-in-0 motion-translate-x-in-[-100%] -->
-
         
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 md:h-12 mx-4 md:mx-12 fill-platinum hover:fill-flame duration-300" viewBox="0 0 24 24">
-                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                    </svg>
-                
-                </a>
-
-                <!-- LINKEDIN -->
-                <a href="https://www.linkedin.com/in/andrew-lin-698634239" class="" target="_blank"> <!-- motion-delay-[2400ms] motion-duration-[600ms] motion-opacity-in-0 motion-translate-x-in-[-100%] -->
-
-                    <svg class="h-7 md:h-11 mx-4 md:mx-12 fill-platinum stroke-platinum ease-out hover:fill-flame hover:stroke-flame duration-300" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
-                        viewBox="0 0 310 310" xml:space="preserve">
-                    <g id="XMLID_801_">
-                        <path id="XMLID_802_" d="M72.16,99.73H9.927c-2.762,0-5,2.239-5,5v199.928c0,2.762,2.238,5,5,5H72.16c2.762,0,5-2.238,5-5V104.73
-                            C77.16,101.969,74.922,99.73,72.16,99.73z"/>
-                        <path id="XMLID_803_" d="M41.066,0.341C18.422,0.341,0,18.743,0,41.362C0,63.991,18.422,82.4,41.066,82.4
-                            c22.626,0,41.033-18.41,41.033-41.038C82.1,18.743,63.692,0.341,41.066,0.341z"/>
-                        <path id="XMLID_804_" d="M230.454,94.761c-24.995,0-43.472,10.745-54.679,22.954V104.73c0-2.761-2.238-5-5-5h-59.599
-                            c-2.762,0-5,2.239-5,5v199.928c0,2.762,2.238,5,5,5h62.097c2.762,0,5-2.238,5-5v-98.918c0-33.333,9.054-46.319,32.29-46.319
-                            c25.306,0,27.317,20.818,27.317,48.034v97.204c0,2.762,2.238,5,5,5H305c2.762,0,5-2.238,5-5V194.995
-                            C310,145.43,300.549,94.761,230.454,94.761z"/>
-                    </g>
-                    </svg>
-                </a>
+        <div class="flex flex-col justify-center items-center h-screen">
+            <!-- INTRO -->
+            <div id="intro-container" class="text-platinum mb-16 md:mb-24 flex text-3xl md:text-5xl lg:text-6xl min-w-[100%]">
+                <div id="intro" class="relative ml-[calc(50%-148px)] md:ml-[calc(50%-235px)] lg:ml-[calc(50%-298px)] min-h-12 md:min-h-16 lg:min-h-20 flex items-center max-h-fit max-w-fit md:border-r-4 border-r-2 border-r-raisin">
+                    <h1 id="intro-text-holder"  class="mb-1">
+                        <!-- Hi, I'm Andrew ✋-->
+                    </h1>
+                    <h1 id="hand" class="ml-2"></h1>
+                </div>
+            </div>
+    
+            <!-- LINKS -->
+            <div class="flex justify-center items-center">
+                <div class="flex grow justify-center items-center max-w-lg pointer-events-none">
+    
+                    <!-- EMAIL -->
+                    <a href="mailto:ajlin622@gmail.com" class="m-4 md:m-8 tilt p-4 md:p-8 link-icon z-10 rounded-md hover:bg-jet fill-platinum stroke-platinum hover:fill-flame hover:stroke-flame" target="_blank"> 
+                        <svg class="h-8 md:h-12  duration-300" id="_1-Email" data-name="1-Email" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><title>1-Email</title><path d="M29,4H3A3,3,0,0,0,0,7V25a3,3,0,0,0,3,3H29a3,3,0,0,0,3-3V7A3,3,0,0,0,29,4Zm-.72,2L16,14.77,3.72,6ZM30,25a1,1,0,0,1-1,1H3a1,1,0,0,1-1-1V7.23l13.42,9.58a1,1,0,0,0,1.16,0L30,7.23Z"/></svg>
+                    </a>
+    
+                    <!-- GITHUB -->
+                    <a href="https://github.com/Unseenmocha" class="m-4 md:m-8 tilt p-4 md:p-8 link-icon z-10 rounded-md hover:bg-jet fill-platinum hover:fill-flame" target="_blank"> 
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 md:h-12 duration-300" viewBox="0 0 24 24">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+    
+                    <!-- LINKEDIN -->
+                    <a href="https://www.linkedin.com/in/andrew-lin-698634239" class="m-4 md:m-8 p-4 md:p-8 tilt link-icon z-10 rounded-md hover:bg-jet fill-platinum stroke-platinum hover:fill-flame hover:stroke-flame" target="_blank"> 
+                        <svg class="h-7 md:h-11 duration-300" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+                            viewBox="0 0 310 310" xml:space="preserve">
+                        <g id="XMLID_801_">
+                            <path id="XMLID_802_" d="M72.16,99.73H9.927c-2.762,0-5,2.239-5,5v199.928c0,2.762,2.238,5,5,5H72.16c2.762,0,5-2.238,5-5V104.73
+                                C77.16,101.969,74.922,99.73,72.16,99.73z"/>
+                            <path id="XMLID_803_" d="M41.066,0.341C18.422,0.341,0,18.743,0,41.362C0,63.991,18.422,82.4,41.066,82.4
+                                c22.626,0,41.033-18.41,41.033-41.038C82.1,18.743,63.692,0.341,41.066,0.341z"/>
+                            <path id="XMLID_804_" d="M230.454,94.761c-24.995,0-43.472,10.745-54.679,22.954V104.73c0-2.761-2.238-5-5-5h-59.599
+                                c-2.762,0-5,2.239-5,5v199.928c0,2.762,2.238,5,5,5h62.097c2.762,0,5-2.238,5-5v-98.918c0-33.333,9.054-46.319,32.29-46.319
+                                c25.306,0,27.317,20.818,27.317,48.034v97.204c0,2.762,2.238,5,5,5H305c2.762,0,5-2.238,5-5V194.995
+                                C310,145.43,300.549,94.761,230.454,94.761z"/>
+                        </g>
+                        </svg>
+                    </a>
+                </div>
             </div>
         </div>
+
 
     </div>
 
     <!-- ABOUT -->
-    <div id="About" class="text-platinum bg-jet min-h-fit flex justify-center "> <!-- motion-delay-[2700ms] motion-duration-[600ms] motion-opacity-in-0 motion-translate-y-in-[150%] -->
-        <div class="flex flex-col items-center text-center md:text-left md:flex-row md:items-start h-full my-16 grow max-w-screen-xl ">
-            <img src="./imgs/professional_headshot.png" class="w-[210px] h-[315px] mx-16 md:order-last "> <!-- motion-delay-[3100ms] motion-duration-[600ms] motion-opacity-in-0 motion-translate-x-in-[200%] -->
+    <div id="About" class="text-platinum bg-jet lg:min-h-[calc(100vh-92px)] flex lg:justify-center scroll-mt-[92px]"> 
+        <div class="flex flex-col items-center text-center lg:text-left lg:flex-row lg:items-start h-full my-64 grow max-w-screen-xl ">
+            
+            <div class="flex lg:order-last tilt min-w-fit lg:mr-32 rounded-md" tilt-coeff="7" tilt-zoom="1.1">
+                <img id="pfp" src="./imgs/professional_headshot.png" class="w-[210px] h-[315px] lg:mr-32 rounded-md">
 
-            <div class="flex flex-col items-center md:items-start mx-16">
-                <h2 class="text-4xl my-8">
+                <svg width="344" height="448" viewBox="0 0 344 448" fill="none" xmlns="http://www.w3.org/2000/svg" class="hidden lg:block z-[-10] absolute top-[-10px] left-[-5px]">
+                    <g id="image-frame">
+                        <rect class="img-rect" x="49.3631" y="28.0834" width="208" height="313" rx="5" transform="rotate(5 49.3631 28.0834)" stroke="#FF6600" stroke-width="2"/>
+                        <rect class="img-rect" x="89.5103" y="50.1585" width="208" height="313" rx="5" transform="rotate(10 89.5103 50.1585)" stroke="#FF6600" stroke-width="2"/>
+                        <rect class="img-rect" x="126.235" y="77.2247" width="208" height="313" rx="5" transform="rotate(15 126.235 77.2247)" stroke="#FF6600" stroke-width="2"/>
+                    </g>
+                </svg>
+            </div>
+            
+            <div class="flex flex-col items-center lg:items-start mx-16">
+                <h2 id="about-title" class="text-4xl mt-16 ">
                     About
                 </h2>
-                <p class='max-w-fit text-xl mb-4'>
-                    I'm a CS Master's student at UMass Amherst focusing on ML. I have experience in full stack web 
-                    development and am currently looking for full time roles in ML engineering or full stack software development.
+                <div id="about-line" class="bg-flame min-h-[2px] w-[150px] mt-4 mb-8"></div>
+                <p id="about-desc" class='text-xl mb-4'>
+                    I'm a CS Master's student at UMass Amherst focusing on ML. I also have industry experience in full stack web 
+                    development and am currently looking for full time data science or software development development roles.
                 </p>
             </div>
         </div>
@@ -137,70 +150,117 @@
 
 
     <!-- EXPERIENCE -->
-    <div id="Experience" class="text-platinum bg-raisin min-h-fit flex justify-center "> <!-- motion-delay-[100ms] motion-duration-[600ms] motion-opacity-in-0 motion-translate-y-in-[150%] -->
+    <div id="Experience" class="text-platinum bg-raisin lg:min-h-[calc(100vh-92px)] flex justify-center scroll-mt-[92px]"> 
         <div class="flex h-full grow max-w-screen-xl">
-            <div class="flex flex-col mx-8 md:mx-16 items-center md:items-start">
-                <h2 class="text-4xl mt-16 mb-8">
+            <div class="flex flex-col mx-8 lg:mx-16 items-center lg:items-start">
+                <h2 id="experience-title" class="text-4xl mt-16 mb-4">
                     Experience
                 </h2>
+                <div id="experience-line" class="bg-flame min-h-[2px] w-[240px] ml-[20px] mb-16"></div>
 
-                <div class="flex flex-row items-center mb-4 md:mb-0">
-                    <img src="./imgs/captions_logo.png" class="h-16 rounded-lg">
-                    <p class="text-2xl mx-4">
-                        Captions
-                    </p>
+                <svg class="absolute top-[106px] left-[58px]" width="143" height="900" viewBox="0 0 143 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="time-line">
+                    <path id="v-line-1" d="M16 25L16 103" stroke="#FF6600" stroke-width="2"/>
+                    <path id="v-line-2" d="M16 122L16 568" stroke="#FF6600" stroke-width="2"/>
+                    <path id="v-line-3" d="M16 585L16 815" stroke="#FF6600" stroke-width="2"/>
+                    
+                    <path id="h-line-1" d="M26 113H54" stroke="#FF6600" stroke-width="2"/>
+                    <path id="h-line-2" d="M26 577H62" stroke="#FF6600" stroke-width="2"/>
+
+                    <path id="corner" d="M16 26V20C16 17.2386 18.2386 15 21 15H26" stroke="#FF6600" stroke-width="2"/>
+                    <circle id="circle-1" cx="16" cy="113" r="9" stroke="#FF6600" stroke-width="2"/>
+                    <circle id="circle-2" cx="16" cy="577" r="9" stroke="#FF6600" stroke-width="2"/>
+                    </g>
+                </svg>
+
+                <div class="flex flex-col ml-12">
+                    <!-- CAPTIONS -->
+                    <div id="captions-head" class="flex flex-row w-[100%] items-center mb-8">
+                        <img id="captions-img" src="./imgs/captions_logo.png" class="h-16 rounded-xl tilt">
+                        <div class="flex w-[100%] flex-col justify-center mx-4">
+                            <p id="captions-title" class="text-2xl">
+                                Captions
+                            </p>
+                            <div class="flex flex-col md:flex-row justify-between text-gray text-lg ">
+                                <p id="captions-position" class="font-bold">
+                                    Software Engineering Intern
+                                </p>
+                                <div class="flex items-center gap-2">
+                                    <p id="captions-start"> Jun 2023 </p>
+                                    <div id="captions-date-line" class="bg-flame h-[2px] w-[20px]"></div>
+                                    <p id="captions-end"> Aug 2023 </p>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                    <!-- <div class="text-5xl text-flame flex tracking-[16px] -mt-4 mb-8">. . .</div> -->
+                    
+                    <ul id="captions-bullet-list" class="flex flex-col gap-4 list-disc ml:12 lg:ml-[99px] text-left">
+                        <li class="captions-bullet">
+                            Worked as a React and Express developer on the web team for Captions, a NYC-based startup that offers AI-powered video editing tools.
+                        </li>
+                        <li class="captions-bullet">
+                            Expanded accessibility of Caption services by porting AI Music, a feature that lets users generate music based on genre, mood, and theme and add it to a video, to Web. 
+                        </li>
+                        <li class="captions-bullet">
+                            Contributed to existing React UI component library, set up the page within a NextJS server, and collaborated with Senior Engineers to implement start-to-finish flow for the feature.
+                        </li>
+                        <li class="captions-bullet">
+                            Designed and implemented RESTful APIs in Express that communicate via Axios to multiple external services to support AI Music functionality.
+                        </li>
+                        <li class="captions-bullet">
+                            Reduced team development risks by creating a CICD pipeline powered by GitHub Actions for releasing to a staging Kubernetes cluster in Google Cloud.
+                        </li>
+                    </ul>
+
+
+
+                    <!-- LG ENERGY SOLUTION VERTECH -->
+                    <div id="lg-head" class="flex flex-row w-[100%] items-center mt-16 mb-8">
+                        <img id="lg-img" src="./imgs/lg_logo.png" class="h-16 rounded-xl tilt">
+                        <div class="flex w-[100%] flex-col justify-center mx-4">
+                            <p id="lg-title" class="text-2xl">
+                                LG Energy Solution Vertech
+                            </p>
+                            <div class="flex flex-col md:flex-row justify-between text-gray text-lg ">
+                                <p id="lg-position" class="font-bold">
+                                    Data Science Intern
+                                </p>
+                                <div class="flex items-center gap-2">
+                                    <p id="lg-start"> Jul 2022 </p>
+                                    <div id="lg-date-line" class="bg-flame h-[2px] w-[20px]"></div>
+                                    <p id="lg-end"> Aug 2022 </p>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                    <ul id="lg-bullet-list" class="flex flex-col gap-4 list-disc mb-16 ml-12 lg:ml-[99px] text-left">
+                        <li class="lg-bullet">
+                            Improved usability of an existing data dump by creating a data parser script in Python with Pandas to rearrange large .csv battery site data files into a more desirable format.
+                        </li>
+                        <li class="lg-bullet">
+                            Improved the usability of battery fade estimation software by designing and implementing user input checks in Python. 
+                        </li>
+                        <li class="lg-bullet">
+                            Helped with project planning by researching and presenting on the technological state of and demand for virtual power plants as well as market competition.
+                        </li>
+                    </ul>
                 </div>
-                <p class="text-gray text-lg font-bold  mx-12 mb-4 md:mx-20">
-                    Software Engineering Intern
-                </p>
-                <ul class="flex flex-col gap-4 list-disc mx-12 md:mx-24 text-center md:text-left">
-                    <li>
-                        Worked as a React and Express developer on the web team for Captions, a NYC-based startup that offers AI-powered video editing tools.
-                    </li>
-                    <li>
-                        Expanded accessibility of Caption services by porting AI Music, a feature that lets users generate music based on genre, mood, and theme and add it to a video, to Web. 
-                    </li>
-                    <li>
-                        Contributed to existing React UI component library, set up the page within a NextJS server, and collaborated with Senior Engineers to implement start-to-finish flow for the feature.
-                    </li>
-                    <li>
-                        Designed and implemented RESTful APIs in Express that communicate via Axios to multiple external services to support AI Music functionality.
-                    </li>
-                    <li>
-                        Reduced team development risks by creating a CICD pipeline powered by GitHub Actions for releasing to a staging Kubernetes cluster in Google Cloud.
-                    </li>
-                </ul>
 
-
-                <div class="flex flex-row mt-16 items-center">
-                    <img src="./imgs/LG_logo.png" class="h-16">
-                    <p class="text-2xl m-4">
-                        LG Energy Solution Vertech
-                    </p>
-                </div>
-                <p class="text-gray text-lg font-bold  mx-12 mb-4 md:mx-20">
-                    Data Science Intern 
-                </p>
-                <ul class="flex flex-col gap-4 list-disc mb-16 mx-12 md:mx-24 text-center md:text-left">
-                    <li>
-                        Improved usability of an existing data dump by creating a data parser script in Python with Pandas to rearrange large .csv battery site data files into a more desirable format.
-                    </li>
-                    <li>
-                        Improved the usability of battery fade estimation software by designing and implementing user input checks in Python. 
-                    </li>
-                    <li>
-                        Helped with project planning by researching and presenting on the technological state of and demand for virtual power plants as well as market competition.
-                    </li>
-                </ul>
-                
             </div>
             
         </div>
     </div>
 
-    <div id="Projects" class="text-platinum bg-jet min-h-fit flex justify-center">  <!-- motion-delay-[2700ms] motion-duration-[600ms] motion-opacity-in-0 motion-translate-y-in-[150%] -->
-        <div class="flex flex-col items-center text-center md:text-left md:flex-row md:items-start h-full grow max-w-screen-xl ">
-            <div class="flex flex-col items-center md:items-start mx-16">
+    <div id="Projects" class="text-platinum bg-jet min-h-fit flex justify-center scroll-mt-[92px]">  
+        <div class="flex flex-col items-center text-center lg:text-left lg:flex-row lg:items-start h-full grow max-w-screen-xl ">
+            <div class="flex flex-col items-center lg:items-start mx-16">
                 <h2 class="text-4xl my-16">
                     Projects
                 </h2>
@@ -219,5 +279,6 @@
     <script type="module" src="./animations.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/TextPlugin.min.js"></script>
 </body>
 </html>
