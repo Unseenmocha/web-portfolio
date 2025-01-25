@@ -8,70 +8,69 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap" rel="stylesheet">
 </head>
-<body class="font-funnel-display bg-raisin flex flex-col grow min-h-screen bg-fixed scroll-smooth ">
+<body class="font-funnel-display bg-raisin flex flex-col grow min-h-screen bg-fixed">
 
-    <!-- TOP -->
-    <div class="bg-raisin flex flex-col">
+    <!-- MENU ICON -->
+    <div id="menu-container" class="fixed top-0 right-0 mx-4 lg:pointer-events-none lg:hidden">
+        <svg viewBox="0 0 300 800" fill="none" xmlns="http://www.w3.org/2000/svg" width="330px" height="800px" class="z-[100]">
+            <g id="menu">
+            <rect id="bottom-rect2" class="menu-rect z-20" x="260" y="48" width="36" height="4" rx="2.5" fill="#EAEDE8"/>
+            <rect id="bottom-rect1" class="menu-rect z-20" x="260" y="48" width="36" height="4" rx="2.5" fill="#EAEDE8"/>
+            <rect id="middle-rect" class="menu-rect z-20" x="260" y="36" width="36" height="4" rx="2.5" fill="#EAEDE8"/>
+            <rect id="top-rect2" class="menu-rect z-20" x="260" y="24" width="36" height="4" rx="2.5" fill="#EAEDE8"/>
+            <rect id="top-rect1" class="menu-rect z-20" x="260" y="24" width="36" height="4" rx="2.5" fill="#EAEDE8"/>
+            </g>
+        </svg>
+    </div>
 
-        <!-- MENU ICON -->
-        <div id="menu-container" class="fixed top-0 right-0 mx-4 lg:pointer-events-none lg:hidden">
-            <svg viewBox="0 0 300 800" fill="none" xmlns="http://www.w3.org/2000/svg" width="330px" height="800px" class="z-20">
-                <g id="menu">
-                <rect id="bottom-rect2" class="menu-rect z-20" x="260" y="48" width="36" height="4" rx="2.5" fill="#EAEDE8"/>
-                <rect id="bottom-rect1" class="menu-rect z-20" x="260" y="48" width="36" height="4" rx="2.5" fill="#EAEDE8"/>
-                <rect id="middle-rect" class="menu-rect z-20" x="260" y="36" width="36" height="4" rx="2.5" fill="#EAEDE8"/>
-                <rect id="top-rect2" class="menu-rect z-20" x="260" y="24" width="36" height="4" rx="2.5" fill="#EAEDE8"/>
-                <rect id="top-rect1" class="menu-rect z-20" x="260" y="24" width="36" height="4" rx="2.5" fill="#EAEDE8"/>
-                </g>
-            </svg>
-        </div>
+    <!-- HEADER SIDE BAR -->
+    <div id="header-side" class="header fixed top-0 right-[-330px] z-[110] text-gray backdrop-blur-lg flex min-h-screen pointer-events-auto  lg:pointer-events-none lg:hidden">
+        <ul id="header-text" class="my-16 ml-8 mr-24 text-xl font-semibold gap-16 flex flex-col" > 
+            <li><a href="#About" class="m-4 cursor-pointer hover:text-flame underline-offset-4 duration-300">
+                About
+            </a></li>
+            <li><a href="#Experience" class="m-4 cursor-pointer hover:text-flame underline-offset-4 duration-300">
+                Experience
+            </a></li>
+            <li><a href="#Projects" class="m-4 cursor-pointer hover:text-flame underline-offset-4 duration-300">
+                Projects
+            </a></li>
+            <li><a class="m-4 cursor-pointer hover:text-flame underline-offset-4 duration-300">
+                Skills
+            </a></li>
+            <li><a class="m-4 cursor-pointer hover:text-flame underline-offset-4 duration-300">
+                Contact
+            </a></li>
+        </ul>
+    </div>
 
-        <!-- HEADER SIDE BAR -->
-        <div id="header-side" class="fixed top-0 right-[-330px] z-20 text-gray backdrop-blur-lg flex min-h-screen pointer-events-auto  lg:pointer-events-none lg:hidden">
-            <ul id="header-text" class="my-16 ml-8 mr-24 text-xl font-semibold gap-16 flex flex-col" > 
-                <li><a href="#About" class="m-4 cursor-pointer hover:text-flame underline-offset-4 duration-300">
-                    About
-                </a></li>
-                <li><a href="#Experience" class="m-4 cursor-pointer hover:text-flame underline-offset-4 duration-300">
-                    Experience
-                </a></li>
-                <li><a href="#Projects" class="m-4 cursor-pointer hover:text-flame underline-offset-4 duration-300">
-                    Projects
-                </a></li>
-                <li><a class="m-4 cursor-pointer hover:text-flame underline-offset-4 duration-300">
-                    Skills
-                </a></li>
-                <li><a class="m-4 cursor-pointer hover:text-flame underline-offset-4 duration-300">
-                    Contact
-                </a></li>
-            </ul>
-        </div>
+    <!-- HEADER BAR -->
+    <div id="header-top" class="header fixed top-0 right-0 z-[110] text-gray flex min-w-[100%] justify-center grow">
+        <ul class="mx-8 my-4 text-lg font-semibold grow gap-8 justify-end max-w-screen-xl pointer-events-none hidden lg:flex lg:pointer-events-auto"> 
+            <li><a href="#About" class="m-4 cursor-pointer hover:text-flame underline-offset-4 duration-300">
+                About
+            </a></li>
+            <li><a href="#Experience" class="m-4 cursor-pointer hover:text-flame underline-offset-4 duration-300">
+                Experience
+            </a></li>
+            <li><a href="#Projects" class="m-4 cursor-pointer hover:text-flame underline-offset-4 duration-300">
+                Projects
+            </a></li>
+            <li><a class="m-4 cursor-pointer hover:text-flame underline-offset-4 duration-300">
+                Skills
+            </a></li>
+            <li><a class="m-4 cursor-pointer hover:text-flame underline-offset-4 duration-300">
+                Contact
+            </a></li>
+        </ul>
+    </div>
 
-        <!-- HEADER BAR -->
-        <div id="header-top" class="fixed top-0 right-0 z-20 text-gray backdrop-blur-lg flex min-w-[100%] justify-center grow">
-            <ul class="m-8 text-lg font-semibold grow gap-8 justify-end max-w-screen-xl pointer-events-none hidden lg:flex lg:pointer-events-auto"> 
-                <li><a href="#About" class="m-4 cursor-pointer hover:text-flame underline-offset-4 duration-300">
-                    About
-                </a></li>
-                <li><a href="#Experience" class="m-4 cursor-pointer hover:text-flame underline-offset-4 duration-300">
-                    Experience
-                </a></li>
-                <li><a href="#Projects" class="m-4 cursor-pointer hover:text-flame underline-offset-4 duration-300">
-                    Projects
-                </a></li>
-                <li><a class="m-4 cursor-pointer hover:text-flame underline-offset-4 duration-300">
-                    Skills
-                </a></li>
-                <li><a class="m-4 cursor-pointer hover:text-flame underline-offset-4 duration-300">
-                    Contact
-                </a></li>
-            </ul>
-        </div>
-        
-        
+    <!-- INTRO SECTION -->
+    <div class="bg-raisin flex flex-col justify-center">
+
         <div class="flex flex-col justify-center items-center h-screen">
             <!-- INTRO -->
-            <div id="intro-container" class="text-platinum mb-16 md:mb-24 flex text-3xl md:text-5xl lg:text-6xl min-w-[100%]">
+            <div id="intro-container" class="text-platinum flex text-3xl md:text-5xl lg:text-6xl min-w-[100%]">
                 <div id="intro" class="relative ml-[calc(50%-148px)] md:ml-[calc(50%-235px)] lg:ml-[calc(50%-298px)] min-h-12 md:min-h-16 lg:min-h-20 flex items-center max-h-fit max-w-fit md:border-r-4 border-r-2 border-r-raisin">
                     <h1 id="intro-text-holder"  class="mb-1">
                         <!-- Hi, I'm Andrew ✋-->
@@ -120,11 +119,11 @@
     </div>
 
     <!-- ABOUT -->
-    <div id="About" class="text-platinum bg-jet lg:min-h-[calc(100vh-92px)] flex lg:justify-center scroll-mt-[92px]"> 
-        <div class="flex flex-col items-center text-center lg:text-left lg:flex-row lg:items-start h-full my-64 grow max-w-screen-xl ">
+    <div id="About" class="text-platinum bg-jet h-auto lg:min-h-[100vh] flex justify-center scroll-mt-[92px]"> <!--lg:min-h-[calc(100vh-28px)]-->
+        <div class="flex flex-col h-full grow max-w-screen-xl justify-center items-center text-center my-16 lg:my-[20vh] lg:text-left lg:flex-row lg:items-start">
             
             <div class="flex lg:order-last tilt min-w-fit lg:mr-32 rounded-md" tilt-coeff="7" tilt-zoom="1.1">
-                <img id="pfp" src="./imgs/professional_headshot.png" class="w-[210px] h-[315px] lg:mr-32 rounded-md">
+                <img id="pfp" src="./imgs/professional_headshot.png" class="w-[210px] h-[315px] lg:mb-32 lg:mr-32 rounded-md">
 
                 <svg width="344" height="448" viewBox="0 0 344 448" fill="none" xmlns="http://www.w3.org/2000/svg" class="hidden lg:block z-[-10] absolute top-[-10px] left-[-5px]">
                     <g id="image-frame">
@@ -150,23 +149,23 @@
 
 
     <!-- EXPERIENCE -->
-    <div id="Experience" class="text-platinum bg-raisin lg:min-h-[calc(100vh-92px)] flex justify-center scroll-mt-[92px]"> 
-        <div class="flex h-full grow max-w-screen-xl">
-            <div class="flex flex-col mx-8 lg:mx-16 items-center lg:items-start">
+    <div id="Experience" class="text-platinum bg-raisin flex justify-center scroll-mt-[92px]">
+        <div id="experience-inner" class="flex h-full grow max-w-screen-xl ">
+            <div class="relative flex flex-col mx-8 lg:mx-16 items-center lg:items-start">
                 <h2 id="experience-title" class="text-4xl mt-16 mb-4">
                     Experience
                 </h2>
-                <div id="experience-line" class="bg-flame min-h-[2px] w-[240px] ml-[20px] mb-16"></div>
+                <div id="experience-line" class="bg-flame min-h-[2px] w-[240px] ml-0 lg:ml-[14px] mb-16"></div>
 
-                <svg class="absolute top-[106px]  hidden lg:block" width="143" height="900" viewBox="0 0 143 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="hidden lg:block absolute top-[106px] -ml-[12px]" width="143" height="900" viewBox="0 0 143 900" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g id="time-line">
                     <path id="v-line-1" d="M16 25L16 103" stroke="#FF6600" stroke-width="2"/>
                     <path id="v-line-2" d="M16 122L16 568" stroke="#FF6600" stroke-width="2"/>
                     <path id="v-line-3" d="M16 585L16 815" stroke="#FF6600" stroke-width="2"/>
                     
-                    <path id="h-line-1" d="M26 113H54" stroke="#FF6600" stroke-width="2"/>
-                    <path id="h-line-2" d="M26 577H62" stroke="#FF6600" stroke-width="2"/>
-
+                    <path id="h-line-1" d="M26 113H59" stroke="#FF6600" stroke-width="2"/>
+                    <path id="h-line-2" d="M26 577H60" stroke="#FF6600" stroke-width="2"/>
+        
                     <path id="corner" d="M16 26V20C16 17.2386 18.2386 15 21 15H26" stroke="#FF6600" stroke-width="2"/>
                     <circle id="circle-1" cx="16" cy="113" r="9" stroke="#FF6600" stroke-width="2"/>
                     <circle id="circle-2" cx="16" cy="577" r="9" stroke="#FF6600" stroke-width="2"/>
@@ -176,7 +175,9 @@
                 <div class="flex flex-col ml-12">
                     <!-- CAPTIONS -->
                     <div id="captions-head" class="flex flex-row w-[100%] items-center mb-8">
-                        <img id="captions-img" src="./imgs/captions_logo.png" class="h-16 rounded-xl tilt">
+                        <a href="https://www.captions.ai/" class="tilt" target="_blank">
+                            <img id="captions-img" src="./imgs/captions_logo.png" alt="Captions, LLC logo " class="h-16 min-w-16 rounded-xl">
+                        </a>
                         <div class="flex w-[100%] flex-col justify-center mx-4">
                             <p id="captions-title" class="text-2xl">
                                 Captions
@@ -220,7 +221,9 @@
 
                     <!-- LG ENERGY SOLUTION VERTECH -->
                     <div id="lg-head" class="flex flex-row w-[100%] items-center mt-16 mb-8">
-                        <img id="lg-img" src="./imgs/lg_logo.png" class="h-16 rounded-xl tilt">
+                        <a href="https://lgensol-vt.com/" class="tilt" target="_blank">
+                            <img id="lg-img" src="./imgs/lg_logo.png" alt="LG Energy Solution Vertech logo" class="h-16 min-w-16 rounded-xl">
+                        </a>
                         <div class="flex w-[100%] flex-col justify-center mx-4">
                             <p id="lg-title" class="text-2xl">
                                 LG Energy Solution Vertech
@@ -259,13 +262,100 @@
     </div>
 
     <div id="Projects" class="text-platinum bg-jet min-h-fit flex justify-center scroll-mt-[92px]">  
-        <div class="flex flex-col items-center text-center lg:text-left lg:flex-row lg:items-start h-full grow max-w-screen-xl ">
+        <div class="flex flex-col items-center text-center md:text-left lg:flex-row lg:items-start h-full grow max-w-screen-xl ">
             <div class="flex flex-col items-center lg:items-start mx-16">
-                <h2 class="text-4xl my-16">
+                <h2 class="text-4xl mt-16 mb-4">
                     Projects
                 </h2>
+                <div id="projects-line" class="bg-flame min-h-[2px] w-[250px] mb-16"></div>
 
+                <div class="flex min-w-[100%] flex-col items-center md:flex-row justify-between text-gray text-lg mb-4">
+                    <p class="text-2xl md:mr-16">
+                        LLMs vs Established Text Augmentation Techniques for Classification
+                    </p>
+                    <div class="flex items-center gap-2 flex-shrink-0">
+                        <p id="lg-start"> Sep 2024 </p>
+                        <div id="lg-date-line" class="bg-flame h-[2px] w-[20px]"></div>
+                        <p id="lg-end">  Dec 2024 </p>
+                    </div>
+                </div>
+                <ul class="flex flex-col gap-4 list-disc mb-16 ml-4 lg:ml-8 text-left" >
+                    <li>
+                        Compared classification improvements of various data augmentation techniques on a Spotify lyrics dataset and a 
+                        Linkedin Job Postings dataset. Both included significant class imbalances. 
+                    </li>
+                    <li>
+                        Implemented random swapping, insertion, deletion and synonym replacement and used them to augment both datasets. 
+                        Other augmentation techniques were back translation, and LLM prompted augmentation.
+                    </li>
+                    <li>
+                        Fine tuned a pre-trained BERT model and implemented and trained a BOW SVM in Pytorch on all augmented/original sets,
+                        compared f1 score performances, and generated t-SNE plots for visualization.
+                    </li>
+                </ul>
 
+                <div class="flex min-w-[100%] flex-col items-center md:flex-row justify-between text-gray text-lg mb-4">
+                    <p class="text-2xl md:mr-16">
+                        DDQN and PPO on AI Gymnasium Environments
+                    </p>
+                    <div class="flex items-center gap-2 flex-shrink-0">
+                        <p id="lg-start"> Sep 2024 </p>
+                        <div id="lg-date-line" class="bg-flame h-[2px] w-[20px]"></div>
+                        <p id="lg-end">  Dec 2024 </p>
+                    </div>
+                </div>
+                <ul class="flex flex-col gap-4 list-disc mb-16 ml-4 lg:ml-8 text-left" >
+                    <li>
+                        Implemented double DQN and PPO from scratch using Pytorch
+                    </li>
+                    <li>
+                        Trained agent using DDQN on cartpole and lunar lander, converging consistently at max return for 
+                        cartpole and frequently over 200 on lunar lander.
+                    </li>
+                    <li>
+                        Trained agent using PPO on bipedal walker and lunar lander, converging at near 300 return on bipedal 
+                        walker and near 200 on lunar lander.
+                    </li>
+                </ul>
+
+                <div class="flex min-w-[100%] flex-col items-center md:flex-row justify-between text-gray text-lg mb-4">
+                    <p class="text-2xl md:mr-16">
+                        PunchTime Employee Scheduling Web Tool
+                    </p>
+                    <div class="flex items-center gap-2 flex-shrink-0">
+                        <p id="lg-start"> Feb 2023 </p>
+                        <div id="lg-date-line" class="bg-flame h-[2px] w-[20px]"></div>
+                        <p id="lg-end">  May 2023 </p>
+                    </div>
+                </div>
+                
+                <ul class="flex flex-col gap-4 list-disc mb-16 ml-4 lg:ml-8 text-left">
+                    <li>
+                        Worked in a team of 9 to design and create the web app Punch Time, an hourly employee time-tracking tool. 
+                    </li>
+                    <li>
+                        Designed parts of the data model and API and set up endpoints to support CRUD operations using Express and Mongoose to communicate with a MongoDB cluster.
+                    </li>
+                </ul>
+
+                <div class="flex min-w-[100%] flex-col items-center md:flex-row justify-between text-gray text-lg mb-4">
+                    <p class="text-2xl md:mr-16">
+                        Invego Stock Market Web Simulator
+                    </p>
+                    <div class="flex items-center gap-2 flex-shrink-0">
+                        <p id="lg-start"> Feb 2023 </p>
+                        <div id="lg-date-line" class="bg-flame h-[2px] w-[20px]"></div>
+                        <p id="lg-end">  May 2023 </p>
+                    </div>
+                </div>
+                <ul class="flex flex-col gap-4 list-disc mb-16 ml-4 lg:ml-8 text-left" >
+                    <li>
+                        Worked in a team of 4 to design and create the web app Invego, a stock market-like simulator where users manage and sell their personal stock, as well as buy and trade the stocks of other users.
+                    </li>
+                    <li>
+                        Contributed to Figma designs and HTML implementation, utilizing CSS styling and animations. Wired up routing between pages, integrated front and backend using Javascript fetch API, and updated DOM accordingly via Javascript.
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
@@ -280,5 +370,6 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/TextPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollToPlugin.min.js"></script>
 </body>
 </html>
