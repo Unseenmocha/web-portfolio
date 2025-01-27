@@ -7,12 +7,13 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
 </head>
-<body class="font-funnel-display bg-raisin flex flex-col grow min-h-screen bg-fixed">
+<body class="relative font-funnel-display bg-raisin flex flex-col grow min-w-screen min-h-screen bg-fixed overflow-x-hidden">
 
     <!-- MENU ICON -->
-    <div id="menu-container" class="fixed top-0 right-0 mx-4 lg:pointer-events-none lg:hidden">
-        <svg viewBox="0 0 300 800" fill="none" xmlns="http://www.w3.org/2000/svg" width="330px" height="800px" class="z-[100]">
+    <div id="menu-container" class="fixed top-0 right-0 mx-4 lg:pointer-events-none lg:hidden z-[30]">
+        <svg viewBox="0 0 300 800" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-[300px] sm:w-[330px] sm:h-[800px] z-[30]">
             <g id="menu">
             <rect id="bottom-rect2" class="menu-rect z-20" x="260" y="48" width="36" height="4" rx="2.5" fill="#EAEDE8"/>
             <rect id="bottom-rect1" class="menu-rect z-20" x="260" y="48" width="36" height="4" rx="2.5" fill="#EAEDE8"/>
@@ -24,54 +25,54 @@
     </div>
 
     <!-- HEADER SIDE BAR -->
-    <div id="header-side" class="header fixed top-0 right-[-330px] z-[110] text-gray backdrop-blur-lg flex min-h-screen pointer-events-auto  lg:pointer-events-none lg:hidden">
-        <ul id="header-text" class="my-16 ml-8 mr-24 text-xl font-semibold gap-16 flex flex-col" > 
-            <li><a href="#About" class="m-4 cursor-pointer hover:text-flame underline-offset-4 duration-300">
+    <div id="header-side" class="header fixed top-0 right-[-330px] z-[100] text-gray backdrop-blur-lg flex min-h-[120vh] pointer-events-auto  lg:pointer-events-none lg:hidden">
+        <ul id="header-text" class="my-16 ml-8 mr-24 text-md sm:text-xl font-semibold gap-16 flex flex-col" > 
+            <li><a href="#About" class="m-4 cursor-pointer md:hover:text-flame underline-offset-4 duration-300">
                 About
             </a></li>
-            <li><a href="#Experience" class="m-4 cursor-pointer hover:text-flame underline-offset-4 duration-300">
+            <li><a href="#Experience" class="m-4 cursor-pointer md:hover:text-flame underline-offset-4 duration-300">
                 Experience
             </a></li>
-            <li><a href="#Projects" class="m-4 cursor-pointer hover:text-flame underline-offset-4 duration-300">
+            <li><a href="#Projects" class="m-4 cursor-pointer md:hover:text-flame underline-offset-4 duration-300">
                 Projects
             </a></li>
-            <li><a class="m-4 cursor-pointer hover:text-flame underline-offset-4 duration-300">
+            <li><a href="#Skills" class="m-4 cursor-pointer md:hover:text-flame underline-offset-4 duration-300">
                 Skills
             </a></li>
-            <li><a class="m-4 cursor-pointer hover:text-flame underline-offset-4 duration-300">
+            <li><a href="#Contact" class="m-4 cursor-pointer md:hover:text-flame underline-offset-4 duration-300">
                 Contact
             </a></li>
         </ul>
     </div>
 
     <!-- HEADER BAR -->
-    <div id="header-top" class="header fixed top-0 right-0 z-[110] text-gray flex min-w-[100%] justify-center grow">
+    <div id="header-top" class="header fixed top-0 right-0 z-[100] text-gray flex min-w-[100%] justify-center grow">
         <ul class="mx-8 my-4 text-lg font-semibold grow gap-8 justify-end max-w-screen-xl pointer-events-none hidden lg:flex lg:pointer-events-auto"> 
-            <li><a href="#About" class="m-4 cursor-pointer hover:text-flame underline-offset-4 duration-300">
+            <li><a href="#About" class="m-4 cursor-pointer md:hover:text-flame underline-offset-4 duration-300">
                 About
             </a></li>
-            <li><a href="#Experience" class="m-4 cursor-pointer hover:text-flame underline-offset-4 duration-300">
+            <li><a href="#Experience" class="m-4 cursor-pointer md:hover:text-flame underline-offset-4 duration-300">
                 Experience
             </a></li>
-            <li><a href="#Projects" class="m-4 cursor-pointer hover:text-flame underline-offset-4 duration-300">
+            <li><a href="#Projects" class="m-4 cursor-pointer md:hover:text-flame underline-offset-4 duration-300">
                 Projects
             </a></li>
-            <li><a class="m-4 cursor-pointer hover:text-flame underline-offset-4 duration-300">
+            <li><a href="#Skills" class="m-4 cursor-pointer md:hover:text-flame underline-offset-4 duration-300">
                 Skills
             </a></li>
-            <li><a class="m-4 cursor-pointer hover:text-flame underline-offset-4 duration-300">
+            <li><a href="#Contact" class="m-4 cursor-pointer md:hover:text-flame underline-offset-4 duration-300">
                 Contact
             </a></li>
         </ul>
     </div>
 
     <!-- INTRO SECTION -->
-    <div class="bg-raisin flex flex-col justify-center">
+    <div id="top" class="bg-raisin flex flex-col justify-center">
 
-        <div class="flex flex-col justify-center items-center h-screen">
+        <div class="flex flex-col justify-center items-center min-h-[100vh]">
             <!-- INTRO -->
-            <div id="intro-container" class="text-platinum flex text-3xl md:text-5xl lg:text-6xl min-w-[100%]">
-                <div id="intro" class="relative ml-[calc(50%-148px)] md:ml-[calc(50%-235px)] lg:ml-[calc(50%-298px)] min-h-12 md:min-h-16 lg:min-h-20 flex items-center max-h-fit max-w-fit md:border-r-4 border-r-2 border-r-raisin">
+            <div id="intro-container" class="text-platinum flex text-3xl sm:text-4xl md:text-5xl lg:text-6xl min-w-[100%]">
+                <div id="intro" class="relative ml-[calc(50%-148px)] sm:ml-[calc(50%-178px)] md:ml-[calc(50%-235px)] lg:ml-[calc(50%-298px)] min-h-12 md:min-h-16 lg:min-h-20 flex items-center max-h-fit max-w-fit md:border-r-4 border-r-2 border-r-raisin">
                     <h1 id="intro-text-holder"  class="mb-1">
                         <!-- Hi, I'm Andrew ✋-->
                     </h1>
@@ -84,19 +85,19 @@
                 <div class="flex grow justify-center items-center max-w-lg pointer-events-none">
     
                     <!-- EMAIL -->
-                    <a href="mailto:ajlin622@gmail.com" class="m-4 md:m-8 tilt p-4 md:p-8 link-icon z-10 rounded-md hover:bg-jet fill-platinum stroke-platinum hover:fill-flame hover:stroke-flame" target="_blank"> 
+                    <a href="mailto:ajlin622@gmail.com" class="m-4 md:m-8 tilt p-4 md:p-8 link-icon z-[60] rounded-md bg-raisin fill-platinum stroke-platinum top-contact-link" target="_blank"> 
                         <svg class="h-8 md:h-12  duration-300" id="_1-Email" data-name="1-Email" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><title>1-Email</title><path d="M29,4H3A3,3,0,0,0,0,7V25a3,3,0,0,0,3,3H29a3,3,0,0,0,3-3V7A3,3,0,0,0,29,4Zm-.72,2L16,14.77,3.72,6ZM30,25a1,1,0,0,1-1,1H3a1,1,0,0,1-1-1V7.23l13.42,9.58a1,1,0,0,0,1.16,0L30,7.23Z"/></svg>
                     </a>
     
                     <!-- GITHUB -->
-                    <a href="https://github.com/Unseenmocha" class="m-4 md:m-8 tilt p-4 md:p-8 link-icon z-10 rounded-md hover:bg-jet fill-platinum hover:fill-flame" target="_blank"> 
+                    <a href="https://github.com/Unseenmocha" class="github m-4 md:m-8 tilt p-4 md:p-8 link-icon z-[60] rounded-md bg-raisin fill-platinum top-contact-link" target="_blank"> 
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-8 md:h-12 duration-300" viewBox="0 0 24 24">
                             <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                         </svg>
                     </a>
     
                     <!-- LINKEDIN -->
-                    <a href="https://www.linkedin.com/in/andrew-lin-698634239" class="m-4 md:m-8 p-4 md:p-8 tilt link-icon z-10 rounded-md hover:bg-jet fill-platinum stroke-platinum hover:fill-flame hover:stroke-flame" target="_blank"> 
+                    <a href="https://www.linkedin.com/in/andrew-lin-698634239" class="m-4 md:m-8 p-4 md:p-8 tilt link-icon z-[60] rounded-md bg-raisin fill-platinum stroke-platinum top-contact-link" target="_blank"> 
                         <svg class="h-7 md:h-11 duration-300" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
                             viewBox="0 0 310 310" xml:space="preserve">
                         <g id="XMLID_801_">
@@ -119,11 +120,11 @@
     </div>
 
     <!-- ABOUT -->
-    <div id="About" class="text-platinum bg-jet h-auto lg:min-h-[100vh] flex justify-center scroll-mt-[92px]"> <!--lg:min-h-[calc(100vh-28px)]-->
+    <div id="About" class="text-platinum bg-jet h-auto lg:min-h-[100vh] flex justify-center">
         <div class="flex flex-col h-full grow max-w-screen-xl justify-center items-center text-center my-16 lg:my-[20vh] lg:text-left lg:flex-row lg:items-start">
             
             <div class="flex lg:order-last tilt min-w-fit lg:mr-32 rounded-md" tilt-coeff="7" tilt-zoom="1.1">
-                <img id="pfp" src="./imgs/professional_headshot.png" class="w-[210px] h-[315px] lg:mb-32 lg:mr-32 rounded-md">
+                <img id="pfp" src="./imgs/professional_headshot.png" class="w-[105px] h-[158px] sm:w-[210px] sm:h-[315px] lg:mb-32 lg:mr-32 rounded-md">
 
                 <svg width="344" height="448" viewBox="0 0 344 448" fill="none" xmlns="http://www.w3.org/2000/svg" class="hidden lg:block z-[-10] absolute top-[-10px] left-[-5px]">
                     <g id="image-frame">
@@ -135,11 +136,11 @@
             </div>
             
             <div class="flex flex-col items-center lg:items-start mx-16">
-                <h2 id="about-title" class="text-4xl mt-16 ">
+                <h2 id="about-title" class="text-2xl sm:text-4xl mt-8 sm:mt-16 ">
                     About
                 </h2>
                 <div id="about-line" class="bg-flame min-h-[2px] w-[150px] mt-4 mb-8"></div>
-                <p id="about-desc" class='text-xl mb-4'>
+                <p id="about-desc" class='text-xs sm:text-xl mb-4'>
                     I'm a CS Master's student at UMass Amherst focusing on ML. I also have industry experience in full stack web 
                     development and am currently looking for full time data science or software development development roles.
                 </p>
@@ -149,13 +150,13 @@
 
 
     <!-- EXPERIENCE -->
-    <div id="Experience" class="text-platinum bg-raisin flex justify-center scroll-mt-[92px]">
-        <div id="experience-inner" class="flex h-full grow max-w-screen-xl ">
-            <div class="relative flex flex-col mx-8 lg:mx-16 items-center lg:items-start">
-                <h2 id="experience-title" class="text-4xl mt-16 mb-4">
+    <div id="Experience" class="text-platinum lg:max-h-[100vh] lg:min-h-[100vh] overflow-y-visible bg-raisin flex justify-center">
+        <div id="experience-inner" class="flex min-h-fit overflow-y-visible max-w-screen-xl">
+            <div class="relative flex flex-col min-h-fit overflow-y-visible mx-8 lg:mx-16 items-center lg:items-start z-0">
+                <h2 id="experience-title" class="text-2xl sm:text-4xl mt-16 mb-4">
                     Experience
                 </h2>
-                <div id="experience-line" class="bg-flame min-h-[2px] w-[240px] ml-0 lg:ml-[14px] mb-16"></div>
+                <div id="experience-line" class="bg-flame min-h-[2px] w-[175px] sm:w-[240px] ml-0 lg:ml-[14px] mb-8 sm:mb-16"></div>
 
                 <svg class="hidden lg:block absolute top-[106px] -ml-[12px]" width="143" height="900" viewBox="0 0 143 900" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g id="time-line">
@@ -172,21 +173,22 @@
                     </g>
                 </svg>
 
-                <div class="flex flex-col ml-12">
+                <div id="experience-alt-gap-element" class="flex flex-col sm:ml-12">
                     <!-- CAPTIONS -->
-                    <div id="captions-head" class="flex flex-row w-[100%] items-center mb-8">
-                        <a href="https://www.captions.ai/" class="tilt" target="_blank">
-                            <img id="captions-img" src="./imgs/captions_logo.png" alt="Captions, LLC logo " class="h-16 min-w-16 rounded-xl">
+                    <div id="captions-head" class="flex flex-col justify-center sm:justify-start sm:flex-row md:w-[100%] items-center mb-8">
+                        <a href="https://www.captions.ai/" target="_blank">
+                            <img id="captions-img" src="./imgs/captions_logo.png" alt="Captions, LLC logo " class="tilt h-16 min-w-16 rounded-xl mb-2">
                         </a>
-                        <div class="flex w-[100%] flex-col justify-center mx-4">
-                            <p id="captions-title" class="text-2xl">
+                        
+                        <div class="flex flex-col items-center sm:items-start md:w-[100%] justify-center mx-4">
+                            <p id="captions-title" class="text-lg sm:text-2xl">
                                 Captions
                             </p>
-                            <div class="flex flex-col md:flex-row justify-between text-gray text-lg ">
+                            <div class="flex flex-col items-center md:items-start md:flex-row sm:min-w-[100%] sm:justify-between text-gray text-sm sm:text-lg ">
                                 <p id="captions-position" class="font-bold">
                                     Software Engineering Intern
                                 </p>
-                                <div class="flex items-center gap-2">
+                                <div class="flex items-center gap-2 text-sm sm:text-base">
                                     <p id="captions-start"> Jun 2023 </p>
                                     <div id="captions-date-line" class="bg-flame h-[2px] w-[20px]"></div>
                                     <p id="captions-end"> Aug 2023 </p>
@@ -199,7 +201,7 @@
                     
                     <!-- <div class="text-5xl text-flame flex tracking-[16px] -mt-4 mb-8">. . .</div> -->
                     
-                    <ul id="captions-bullet-list" class="flex flex-col gap-4 list-disc ml-4 lg:ml-[99px] text-left">
+                    <ul id="captions-bullet-list" class="flex flex-col gap-4 list-disc ml-[17px] lg:ml-[101px] text-xs sm:text-base">
                         <li class="captions-bullet">
                             Worked as a React and Express developer on the web team for Captions, a NYC-based startup that offers AI-powered video editing tools.
                         </li>
@@ -220,19 +222,20 @@
 
 
                     <!-- LG ENERGY SOLUTION VERTECH -->
-                    <div id="lg-head" class="flex flex-row w-[100%] items-center mt-16 mb-8">
-                        <a href="https://lgensol-vt.com/" class="tilt" target="_blank">
-                            <img id="lg-img" src="./imgs/lg_logo.png" alt="LG Energy Solution Vertech logo" class="h-16 min-w-16 rounded-xl">
+                    <div id="lg-head" class="flex flex-col sm:flex-row md:w-[100%] items-center mt-[56px] mb-8">
+                        <a href="https://lgensol-vt.com/" target="_blank">
+                            <img id="lg-img" src="./imgs/lg_logo.png" alt="LG Energy Solution Vertech logo" class="tilt h-16 min-w-16 rounded-xl mb-2 sm:mb-0">
                         </a>
-                        <div class="flex w-[100%] flex-col justify-center mx-4">
-                            <p id="lg-title" class="text-2xl">
+                        
+                        <div class="flex flex-col items-center sm:items-start md:w-[100%] justify-center mx-4">
+                            <p id="lg-title" class="text-base sm:text-2xl">
                                 LG Energy Solution Vertech
                             </p>
-                            <div class="flex flex-col md:flex-row justify-between text-gray text-lg ">
-                                <p id="lg-position" class="font-bold">
+                            <div class="flex flex-col items-center sm:items-start md:flex-row sm:min-w-[100%] sm:justify-between justify-between text-gray text-sm sm:text-lg ">
+                                <p id="lg-position max-w-fit" class="font-bold">
                                     Data Science Intern
                                 </p>
-                                <div class="flex items-center gap-2">
+                                <div class="flex items-center gap-2 text-sm sm:text-base">
                                     <p id="lg-start"> Jul 2022 </p>
                                     <div id="lg-date-line" class="bg-flame h-[2px] w-[20px]"></div>
                                     <p id="lg-end"> Aug 2022 </p>
@@ -243,7 +246,7 @@
                         
                     </div>
                     
-                    <ul id="lg-bullet-list" class="flex flex-col gap-4 list-disc mb-16 ml-4 lg:ml-[99px] text-left">
+                    <ul id="lg-bullet-list" class="flex flex-col gap-4 list-disc mb-16 ml-[17px] lg:ml-[101px] text-left text-xs sm:text-base">
                         <li class="lg-bullet">
                             Improved usability of an existing data dump by creating a data parser script in Python with Pandas to rearrange large .csv battery site data files into a more desirable format.
                         </li>
@@ -261,115 +264,224 @@
         </div>
     </div>
 
-    <div id="Projects" class="text-platinum bg-jet min-h-fit flex justify-center scroll-mt-[92px]">  
-        <div class="flex flex-col items-center text-center md:text-left lg:flex-row lg:items-start h-full grow max-w-screen-xl ">
-            <div class="flex flex-col items-center lg:items-start mx-16">
-                <h2 class="text-4xl mt-16 mb-4">
+    <div id="Projects" class="text-platinum bg-jet lg:max-h-[100vh] lg:min-h-[100vh] flex justify-center scroll-mt-[92px]">  
+        <div id="projects-inner" class="flex flex-col items-center min-h-fit text-center md:text-left lg:flex-row lg:items-start h-full grow max-w-screen-xl ">
+            <div id="projects-innermost" class="flex flex-col items-center min-h-fit lg:items-start mx-4 sm:mx-16">
+                <h2 id="projects-title" class="text-2xl sm:text-4xl mt-16 mb-4">
                     Projects
                 </h2>
-                <div id="projects-line" class="bg-flame min-h-[2px] w-[250px] mb-16"></div>
+                <div id="projects-line" class="bg-flame min-h-[2px] w-[150px] sm:w-[190px] mb-8 sm:mb-16"></div>
 
-                <div class="flex min-w-[100%] flex-col items-center md:flex-row justify-between text-gray text-lg mb-4">
-                    <p class="text-2xl md:mr-16">
-                        LLMs vs Established Text Augmentation Techniques for Classification
-                    </p>
-                    <div class="flex items-center gap-2 flex-shrink-0">
+                <!-- PROJECT 1 -->
+                <div class="flex min-w-[100%] flex-col items-center md:flex-row justify-between text-gray text-lg mb-4 bg-jet">
+                    <a href="https://github.com/Unseenmocha/LLMs-vs-Established-Text-Augmentation" class="project-title relative z-[60] flex items-start justify-between tilt text-base sm:text-xl md:text-2xl py-4 px-4 md:-ml-8 rounded-md" tilt-zoom="1.05" tilt-coeff="10" target="_blank">
+                        <p class="mx-0 sm:mx-4">LLMs vs Established Text Augmentation Techniques for Classification</p>
+                        <svg class="arrow hidden md:block absolute top-[8px] right-[8px] min-w-[16px] max-w-[16px] min-h-[16px] max-w-[16px]" viewBox="0 0 24 23" xmlns="http://www.w3.org/2000/svg">
+                            <path fill="#EAEDE8" d="M5.18636 22.1678C4.43017 22.973 3.16446 23.0127 2.35932 22.2565C1.55417 21.5003 1.51449 20.2346 2.27067 19.4295L5.18636 22.1678ZM20.6839 0.679722C21.7879 0.645103 22.711 1.51203 22.7456 2.61606L23.3098 20.6072C23.3444 21.7112 22.4775 22.6343 21.3734 22.6689C20.2694 22.7035 19.3463 21.8366 19.3117 20.7326L18.8103 4.74044L2.81812 5.24191C1.71409 5.27653 0.791037 4.4096 0.756418 3.30557C0.721798 2.20155 1.58872 1.27849 2.69275 1.24387L20.6839 0.679722ZM2.27067 19.4295L19.2887 1.30954L22.2044 4.04793L5.18636 22.1678L2.27067 19.4295Z" fill="white"/>
+                        </svg>
+                    </a>
+                    <div class="project-date flex items-center gap-2 flex-shrink-0 text-xs sm:text-base">
                         <p id="lg-start"> Sep 2024 </p>
                         <div id="lg-date-line" class="bg-flame h-[2px] w-[20px]"></div>
                         <p id="lg-end">  Dec 2024 </p>
                     </div>
                 </div>
-                <ul class="flex flex-col gap-4 list-disc mb-16 ml-4 lg:ml-8 text-left" >
-                    <li>
+                <ul class="flex flex-col gap-4 list-disc mb-16 ml-4 md:ml-[20px] text-left text-xs sm:text-base">
+                    <li class="project-bullet">
                         Compared classification improvements of various data augmentation techniques on a Spotify lyrics dataset and a 
                         Linkedin Job Postings dataset. Both included significant class imbalances. 
                     </li>
-                    <li>
+                    <li class="project-bullet">
                         Implemented random swapping, insertion, deletion and synonym replacement and used them to augment both datasets. 
                         Other augmentation techniques were back translation, and LLM prompted augmentation.
                     </li>
-                    <li>
+                    <li class="project-bullet">
                         Fine tuned a pre-trained BERT model and implemented and trained a BOW SVM in Pytorch on all augmented/original sets,
                         compared f1 score performances, and generated t-SNE plots for visualization.
                     </li>
                 </ul>
 
-                <div class="flex min-w-[100%] flex-col items-center md:flex-row justify-between text-gray text-lg mb-4">
-                    <p class="text-2xl md:mr-16">
-                        DDQN and PPO on AI Gymnasium Environments
-                    </p>
-                    <div class="flex items-center gap-2 flex-shrink-0">
+                <!-- PROJECT 2 -->
+                <div class="flex min-w-[100%] flex-col items-center md:flex-row justify-between text-gray text-lg mb-4 bg-jet">
+                    <a href="https://github.com/Unseenmocha/DQN-and-PPO-on-AI-GYM-Envs" class="project-title z-[60] relative flex items-start justify-between tilt text-base sm:text-xl md:text-2xl md:mr-16 py-4 px-8 md:-ml-8 rounded-md" tilt-zoom="1.05" tilt-coeff="10" target="_blank">
+                        <p class="mx-0 sm:mx-4">DDQN and PPO on AI Gymnasium Environments</p>
+                        <svg class="arrow hidden md:block absolute top-[8px] right-[8px] min-w-[16px] max-w-[16px] min-h-[16px] max-w-[16px]" viewBox="0 0 24 23" xmlns="http://www.w3.org/2000/svg">
+                            <path fill="#EAEDE8" d="M5.18636 22.1678C4.43017 22.973 3.16446 23.0127 2.35932 22.2565C1.55417 21.5003 1.51449 20.2346 2.27067 19.4295L5.18636 22.1678ZM20.6839 0.679722C21.7879 0.645103 22.711 1.51203 22.7456 2.61606L23.3098 20.6072C23.3444 21.7112 22.4775 22.6343 21.3734 22.6689C20.2694 22.7035 19.3463 21.8366 19.3117 20.7326L18.8103 4.74044L2.81812 5.24191C1.71409 5.27653 0.791037 4.4096 0.756418 3.30557C0.721798 2.20155 1.58872 1.27849 2.69275 1.24387L20.6839 0.679722ZM2.27067 19.4295L19.2887 1.30954L22.2044 4.04793L5.18636 22.1678L2.27067 19.4295Z" fill="white"/>
+                        </svg>
+                    </a>
+                    <div class="project-date flex items-center gap-2 flex-shrink-0 text-xs sm:text-base">
                         <p id="lg-start"> Sep 2024 </p>
                         <div id="lg-date-line" class="bg-flame h-[2px] w-[20px]"></div>
                         <p id="lg-end">  Dec 2024 </p>
                     </div>
                 </div>
-                <ul class="flex flex-col gap-4 list-disc mb-16 ml-4 lg:ml-8 text-left" >
-                    <li>
+                <ul class="flex flex-col gap-4 list-disc mb-16 ml-4 md:ml-[20px] text-left text-xs sm:text-base" >
+                    <li class="project-bullet">
                         Implemented double DQN and PPO from scratch using Pytorch
                     </li>
-                    <li>
+                    <li class="project-bullet">
                         Trained agent using DDQN on cartpole and lunar lander, converging consistently at max return for 
                         cartpole and frequently over 200 on lunar lander.
                     </li>
-                    <li>
+                    <li class="project-bullet">
                         Trained agent using PPO on bipedal walker and lunar lander, converging at near 300 return on bipedal 
                         walker and near 200 on lunar lander.
                     </li>
                 </ul>
 
-                <div class="flex min-w-[100%] flex-col items-center md:flex-row justify-between text-gray text-lg mb-4">
-                    <p class="text-2xl md:mr-16">
-                        PunchTime Employee Scheduling Web Tool
-                    </p>
-                    <div class="flex items-center gap-2 flex-shrink-0">
+                <!-- PROJECT 3 -->
+                <div class="flex  items-start min-w-[100%] flex-col items-center md:flex-row justify-between text-gray text-lg mb-4 bg-jet">
+                    <a href="https://github.com/atdykema/EmployeeTimeTracker-CS320" class="project-title z-[60] relative flex items-start justify-between tilt text-base sm:text-xl md:text-2xl md:mr-16 py-4 px-8 md:-ml-8 md:-ml-4 rounded-md" tilt-zoom="1.05" tilt-coeff="10" target="_blank">
+                        <p class="mr-0 sm:mr-4">PunchTime Employee Scheduling Web Tool</p>
+                        <svg class="absolute top-[8px] right-[8px] arrow hidden md:block min-w-[16px] max-w-[16px] min-h-[16px] max-w-[16px]" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path fill="#EAEDE8" d="M5.18636 22.1678C4.43017 22.973 3.16446 23.0127 2.35932 22.2565C1.55417 21.5003 1.51449 20.2346 2.27067 19.4295L5.18636 22.1678ZM20.6839 0.679722C21.7879 0.645103 22.711 1.51203 22.7456 2.61606L23.3098 20.6072C23.3444 21.7112 22.4775 22.6343 21.3734 22.6689C20.2694 22.7035 19.3463 21.8366 19.3117 20.7326L18.8103 4.74044L2.81812 5.24191C1.71409 5.27653 0.791037 4.4096 0.756418 3.30557C0.721798 2.20155 1.58872 1.27849 2.69275 1.24387L20.6839 0.679722ZM2.27067 19.4295L19.2887 1.30954L22.2044 4.04793L5.18636 22.1678L2.27067 19.4295Z" fill="white"/>
+                        </svg>
+                    </a>
+                    <div class="project-date flex items-center gap-2 flex-shrink-0 text-xs sm:text-base">
                         <p id="lg-start"> Feb 2023 </p>
                         <div id="lg-date-line" class="bg-flame h-[2px] w-[20px]"></div>
                         <p id="lg-end">  May 2023 </p>
                     </div>
                 </div>
                 
-                <ul class="flex flex-col gap-4 list-disc mb-16 ml-4 lg:ml-8 text-left">
-                    <li>
+                <ul class="flex flex-col gap-4 list-disc mb-16 ml-4 md:ml-[20px] text-left text-xs sm:text-base">
+                    <li class="project-bullet">
                         Worked in a team of 9 to design and create the web app Punch Time, an hourly employee time-tracking tool. 
                     </li>
-                    <li>
+                    <li class="project-bullet">
                         Designed parts of the data model and API and set up endpoints to support CRUD operations using Express and Mongoose to communicate with a MongoDB cluster.
                     </li>
                 </ul>
 
-                <div class="flex min-w-[100%] flex-col items-center md:flex-row justify-between text-gray text-lg mb-4">
-                    <p class="text-2xl md:mr-16">
-                        Invego Stock Market Web Simulator
-                    </p>
-                    <div class="flex items-center gap-2 flex-shrink-0">
+                <!-- PROJECT 4 -->
+                <div class="flex items-start justify-between min-w-[100%] flex-col items-center md:flex-row justify-between text-gray text-lg mb-2 bg-jet">
+                    <a href="https://github.com/Unseenmocha/Invego" class="project-title z-[60] relative flex items-start tilt text-base sm:text-xl md:text-2xl md:mr-16 py-4 px-8 md:-ml-8 md:-ml-4 rounded-md" tilt-zoom="1.05" tilt-coeff="10" target="_blank">
+                        <p class="mr-0 sm:mr-4">Invego Stock Market Web Simulator</p>
+                        <svg class="absolute top-[8px] right-[8px] arrow hidden md:block min-w-[16px] max-w-[16px] min-h-[16px] max-w-[16px]" viewBox="0 0 24 23" xmlns="http://www.w3.org/2000/svg">
+                            <path fill="#EAEDE8" d="M5.18636 22.1678C4.43017 22.973 3.16446 23.0127 2.35932 22.2565C1.55417 21.5003 1.51449 20.2346 2.27067 19.4295L5.18636 22.1678ZM20.6839 0.679722C21.7879 0.645103 22.711 1.51203 22.7456 2.61606L23.3098 20.6072C23.3444 21.7112 22.4775 22.6343 21.3734 22.6689C20.2694 22.7035 19.3463 21.8366 19.3117 20.7326L18.8103 4.74044L2.81812 5.24191C1.71409 5.27653 0.791037 4.4096 0.756418 3.30557C0.721798 2.20155 1.58872 1.27849 2.69275 1.24387L20.6839 0.679722ZM2.27067 19.4295L19.2887 1.30954L22.2044 4.04793L5.18636 22.1678L2.27067 19.4295Z" fill="white"/>
+                        </svg>
+                    </a>
+                    <div class="project-date flex items-center gap-2 flex-shrink-0 text-xs sm:text-base">
                         <p id="lg-start"> Feb 2023 </p>
                         <div id="lg-date-line" class="bg-flame h-[2px] w-[20px]"></div>
                         <p id="lg-end">  May 2023 </p>
                     </div>
                 </div>
-                <ul class="flex flex-col gap-4 list-disc mb-16 ml-4 lg:ml-8 text-left" >
-                    <li>
+                <ul class="flex flex-col gap-4 list-disc mb-16 ml-4 md:ml-[20px] text-left text-xs sm:text-base" >
+                    <li class="project-bullet">
                         Worked in a team of 4 to design and create the web app Invego, a stock market-like simulator where users manage and sell their personal stock, as well as buy and trade the stocks of other users.
                     </li>
-                    <li>
+                    <li class="project-bullet">
                         Contributed to Figma designs and HTML implementation, utilizing CSS styling and animations. Wired up routing between pages, integrated front and backend using Javascript fetch API, and updated DOM accordingly via Javascript.
                     </li>
                 </ul>
             </div>
         </div>
     </div>
+
+    <div id="Skills" class="text-platinum bg-raisin flex justify-center scroll-mt-[92px]">
+        <div id="skills-inner" class="flex flex-col items-center min-h-fit text-center md:text-left lg:flex-row justify-center h-full grow max-w-screen-xl ">
+            <div class="flex flex-col items-center min-h-fit mx-16">
+                <h2 id="skills-title" class="text-2xl sm:text-4xl mt-16 mb-4">
+                    Skills
+                </h2>
+                <div id="skills-line" class="bg-flame min-h-[2px] w-[90px] sm:w-[130px] mb-16"></div>
+
+                <div id="loop-top" class="flex relative items-center gap-2 sm:gap-4 md:gap-8 overflow-hidden text-xl h-[20%] w-[100%] mb-16">
+                    <div class="skill-box-top flex items-center justify-center min-w-fit h-[100%] p-4 cursor-pointer ml-4 md:ml-8"><img class="h-6 md:h-12 min-w-fit" src="./imgs/JavaScript.png" draggable=false></div>
+                    <div class="skill-box-top flex items-center justify-center min-w-fit h-[100%] p-4 cursor-pointer"><img class="h-6 md:h-12 min-w-fit" src="./imgs/TypeScript.png" draggable=false></div>
+                    <div class="skill-box-top flex items-center justify-center min-w-fit h-[100%] p-4 cursor-pointer"><img class="h-6 md:h-12 min-w-fit" src="./imgs/mongoDB.png" draggable=false></div>
+                    <div class="skill-box-top flex items-center justify-center min-w-fit h-[100%] p-4 cursor-pointer"><img class="h-12 md:h-24 min-w-fit" src="./imgs/PostgreSQL.svg" draggable=false></div>
+                    <div class="skill-box-top flex items-center justify-center min-w-fit h-[100%] p-4 cursor-pointer"><img class="h-4 md:h-8 min-w-fit" src="./imgs/tailwind.png" draggable=false></div>
+                    <div class="skill-box-top flex items-center justify-center min-w-fit h-[100%] p-4 cursor-pointer"><img class="h-10 md:h-20 min-w-fit" src="./imgs/react.png" draggable=false></div>
+                    <div class="skill-box-top flex items-center justify-center min-w-fit h-[100%] p-4 cursor-pointer"><img class="h-6 md:h-12 min-w-fit" src="./imgs/Git.png" draggable=false></div>
+                    <div class="skill-box-top flex items-center justify-center min-w-fit h-[100%] p-4 cursor-pointer"><img class="h-10 md:h-20 min-w-fit" src="./imgs/Java.png" draggable=false></div>
+                </div>
+                <div id="loop-bottom" class="flex relative items-center sm:gap-4 md:gap-8 overflow-hidden text-xl h-[20%] w-[80%] sm:w-[60%] mb-16">
+                    <div class="skill-box-bottom flex items-center justify-center min-w-fit h-[100%] p-4 cursor-pointer ml-4 md:ml-8"><img class="h-8 md:h-16 min-w-fit" src="./imgs/Pandas.png" draggable=false></div>
+                    <div class="skill-box-bottom flex items-center justify-center min-w-fit h-[100%] p-4 cursor-pointer"><img class="h-10 md:h-20 min-w-fit" src="./imgs/NumPy.png" draggable=false></div>
+                    <div class="skill-box-bottom flex items-center justify-center min-w-fit h-[100%] p-4 cursor-pointer"><img class="h-5 md:h-10 min-w-fit" src="./imgs/pytorch.png" draggable=false></div>
+                    <div class="skill-box-bottom flex items-center justify-center min-w-fit h-[100%] p-4 cursor-pointer"><img class="h-6 md:h-12 min-w-fit" src="./imgs/Python.png" draggable=false></div>
+                    <div class="skill-box-bottom flex items-center justify-center min-w-fit h-[100%] p-4 cursor-pointer"><img class="h-[4rem] md:h-[8rem] min-w-fit" src="./imgs/scikit-learn.png" draggable=false></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="Contact" class="text-platinum bg-jet flex justify-center scroll-mt-[92px]">
+        <div id="contact-inner" class="flex flex-col items-center min-h-fit text-center md:text-left lg:flex-row justify-center lg:items-start h-full grow max-w-screen-xl ">
+            <div class="flex flex-col items-center min-h-fit mx-16">
+                <h2 id="contact-title" class="text-2xl sm:text-4xl mt-16 mb-4">
+                    Contact
+                </h2>
+                <div id="contact-line" class="bg-flame min-h-[2px] w-[120px] sm:w-[180px]"></div>
+
+                <!-- LINKS -->
+                <div id="contact-links" class="flex mt-[10vh] mb-[15vh] text-md sm:text-xl">
+                    <div class="flex flex-col lg:flex-row grow justify-center items-center max-w-lg pointer-events-none">
+        
+                        <!-- EMAIL -->
+                        <a href="mailto:ajlin622@gmail.com" class="contact-link flex relative items-center m-4 tilt pointer-events-auto py-4 px-4 md:px-8 z-[60] rounded-md bg-jet fill-platinum stroke-platinum" target="_blank"> 
+                            <svg class="h-6 lg:h-8 duration-300" id="_1-Email" data-name="1-Email" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><title>1-Email</title><path d="M29,4H3A3,3,0,0,0,0,7V25a3,3,0,0,0,3,3H29a3,3,0,0,0,3-3V7A3,3,0,0,0,29,4Zm-.72,2L16,14.77,3.72,6ZM30,25a1,1,0,0,1-1,1H3a1,1,0,0,1-1-1V7.23l13.42,9.58a1,1,0,0,0,1.16,0L30,7.23Z"/></svg>
+                            <p class="pl-4 whitespace-nowrap">Send me an email</p>
+                            <svg class="arrow hidden md:block absolute top-[8px] right-[8px] min-w-[16px] max-w-[16px] min-h-[16px] max-w-[16px]" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke="transparent" d="M5.18636 22.1678C4.43017 22.973 3.16446 23.0127 2.35932 22.2565C1.55417 21.5003 1.51449 20.2346 2.27067 19.4295L5.18636 22.1678ZM20.6839 0.679722C21.7879 0.645103 22.711 1.51203 22.7456 2.61606L23.3098 20.6072C23.3444 21.7112 22.4775 22.6343 21.3734 22.6689C20.2694 22.7035 19.3463 21.8366 19.3117 20.7326L18.8103 4.74044L2.81812 5.24191C1.71409 5.27653 0.791037 4.4096 0.756418 3.30557C0.721798 2.20155 1.58872 1.27849 2.69275 1.24387L20.6839 0.679722ZM2.27067 19.4295L19.2887 1.30954L22.2044 4.04793L5.18636 22.1678L2.27067 19.4295Z" fill="white"/>
+                            </svg>
+                        </a>
+        
+                        <!-- GITHUB -->
+                        <a href="https://github.com/Unseenmocha" class="contact-link github flex relative items-center m-4 tilt pointer-events-auto py-4 px-4 md:px-8 z-[60] rounded-md bg-jet fill-platinum " target="_blank"> 
+                            <svg class="h-6 lg:h-8 duration-300" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                            <p class="pl-4 whitespace-nowrap">Check out my Github</p>
+                            <svg class="arrow hidden md:block absolute top-[8px] right-[8px] min-w-[16px] max-w-[16px] min-h-[16px] max-w-[16px]" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke="transparent" d="M5.18636 22.1678C4.43017 22.973 3.16446 23.0127 2.35932 22.2565C1.55417 21.5003 1.51449 20.2346 2.27067 19.4295L5.18636 22.1678ZM20.6839 0.679722C21.7879 0.645103 22.711 1.51203 22.7456 2.61606L23.3098 20.6072C23.3444 21.7112 22.4775 22.6343 21.3734 22.6689C20.2694 22.7035 19.3463 21.8366 19.3117 20.7326L18.8103 4.74044L2.81812 5.24191C1.71409 5.27653 0.791037 4.4096 0.756418 3.30557C0.721798 2.20155 1.58872 1.27849 2.69275 1.24387L20.6839 0.679722ZM2.27067 19.4295L19.2887 1.30954L22.2044 4.04793L5.18636 22.1678L2.27067 19.4295Z" fill="white"/>
+                            </svg>
+                        </a>
+        
+                        <!-- LINKEDIN -->
+                        <a href="https://www.linkedin.com/in/andrew-lin-698634239" class="contact-link flex relative items-center m-4 py-4 px-4 md:px-8 tilt pointer-events-auto z-[60] rounded-md bg-jet fill-platinum stroke-platinum" target="_blank"> 
+                            <svg class="h-5 lg:h-7 duration-300" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+                                viewBox="0 0 310 310" xml:space="preserve">
+                            <g id="XMLID_801_">
+                                <path id="XMLID_802_" d="M72.16,99.73H9.927c-2.762,0-5,2.239-5,5v199.928c0,2.762,2.238,5,5,5H72.16c2.762,0,5-2.238,5-5V104.73 C77.16,101.969,74.922,99.73,72.16,99.73z"/>
+                                <path id="XMLID_803_" d="M41.066,0.341C18.422,0.341,0,18.743,0,41.362C0,63.991,18.422,82.4,41.066,82.4 c22.626,0,41.033-18.41,41.033-41.038C82.1,18.743,63.692,0.341,41.066,0.341z"/>
+                                <path id="XMLID_804_" d="M230.454,94.761c-24.995,0-43.472,10.745-54.679,22.954V104.73c0-2.761-2.238-5-5-5h-59.599 c-2.762,0-5,2.239-5,5v199.928c0,2.762,2.238,5,5,5h62.097c2.762,0,5-2.238,5-5v-98.918c0-33.333,9.054-46.319,32.29-46.319
+                                                         c25.306,0,27.317,20.818,27.317,48.034v97.204c0,2.762,2.238,5,5,5H305c2.762,0,5-2.238,5-5V194.995 C310,145.43,300.549,94.761,230.454,94.761z"/>
+                            </g>
+                            </svg>
+                            <p class="pl-4 whitespace-nowrap"> Connect on Linkedin</p>
+                            <svg class="arrow hidden md:block absolute top-[8px] right-[8px] min-w-[16px] max-w-[16px] min-h-[16px] max-w-[16px]" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke="transparent" d="M5.18636 22.1678C4.43017 22.973 3.16446 23.0127 2.35932 22.2565C1.55417 21.5003 1.51449 20.2346 2.27067 19.4295L5.18636 22.1678ZM20.6839 0.679722C21.7879 0.645103 22.711 1.51203 22.7456 2.61606L23.3098 20.6072C23.3444 21.7112 22.4775 22.6343 21.3734 22.6689C20.2694 22.7035 19.3463 21.8366 19.3117 20.7326L18.8103 4.74044L2.81812 5.24191C1.71409 5.27653 0.791037 4.4096 0.756418 3.30557C0.721798 2.20155 1.58872 1.27849 2.69275 1.24387L20.6839 0.679722ZM2.27067 19.4295L19.2887 1.30954L22.2044 4.04793L5.18636 22.1678L2.27067 19.4295Z" fill="white"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="back-to-top-arrow" class="z-40 fixed bottom-12 right-12 rounded-full min-h-fit min-w-fit p-3 border-2 border-flame">
+        <svg class="arrow min-w-4 max-w-4 min-h-[16px] max-w-[16px] -rotate-45" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke="transparent" d="M5.18636 22.1678C4.43017 22.973 3.16446 23.0127 2.35932 22.2565C1.55417 21.5003 1.51449 20.2346 2.27067 19.4295L5.18636 22.1678ZM20.6839 0.679722C21.7879 0.645103 22.711 1.51203 22.7456 2.61606L23.3098 20.6072C23.3444 21.7112 22.4775 22.6343 21.3734 22.6689C20.2694 22.7035 19.3463 21.8366 19.3117 20.7326L18.8103 4.74044L2.81812 5.24191C1.71409 5.27653 0.791037 4.4096 0.756418 3.30557C0.721798 2.20155 1.58872 1.27849 2.69275 1.24387L20.6839 0.679722ZM2.27067 19.4295L19.2887 1.30954L22.2044 4.04793L5.18636 22.1678L2.27067 19.4295Z" fill="white"/>
+        </svg>
+    </div>
     
-    <div class="flex justify-center grow bg-jet text-platinum">
+    <div id="bottom-bar" class="flex justify-center grow bg-jet text-gray text-xs sm:text-sm">
         <div class="flex justify-end grow max-w-screen-xl">
-            <p class="place-self-end text-sm m-4">Website by Andrew Lin</p>
+            <p class="place-self-end m-4">Website by Andrew Lin</p>
         </div>
     </div>
     
+    <script type="module" src="./horizontalLoop.js"></script>
     <script type="module" src="./animations.js"></script>
+    
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/TextPlugin.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollToPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/Draggable.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/Observer.min.js"></script>
 </body>
 </html>

@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
+</head>
+<body class="font-funnel-display bg-raisin flex flex-col grow min-h-screen bg-fixed overflow-x-hidden">
+
+    <div id="Skills" class="text-platinum bg-raisin flex justify-center scroll-mt-[92px]">
+        <div id="skills-inner" class="flex flex-col items-center min-h-fit text-center md:text-left lg:flex-row justify-center h-full grow max-w-screen-xl ">
+            <div class="flex flex-col items-center min-h-fit mx-16">
+                <h2 id="skills-title" class="text-4xl mt-16 mb-4">
+                    Skills
+                </h2>
+                <div id="skills-line" class="bg-flame min-h-[2px] w-[120px] mb-16"></div>
+
+                <div id="loop-top" class="flex relative items-center gap-4 md:gap-8 overflow-hidden text-xl h-[20%] w-[100%] mb-16">
+                    <div class="skill-box-top flex items-center justify-center min-w-fit h-[100%] p-4 cursor-pointer ml-4 md:ml-8"><img class="h-6 md:h-12 min-w-fit" src="./imgs/JavaScript.png" draggable=false></div>
+                    <div class="skill-box-top flex items-center justify-center min-w-fit h-[100%] p-4 cursor-pointer"><img class="h-6 md:h-12 min-w-fit" src="./imgs/TypeScript.png" draggable=false></div>
+                    <div class="skill-box-top flex items-center justify-center min-w-fit h-[100%] p-4 cursor-pointer"><img class="h-6 md:h-12 min-w-fit" src="./imgs/mongoDB.png" draggable=false></div>
+                    <div class="skill-box-top flex items-center justify-center min-w-fit h-[100%] p-4 cursor-pointer"><img class="h-12 md:h-24 min-w-fit" src="./imgs/PostgreSQL.svg" draggable=false></div>
+                    <div class="skill-box-top flex items-center justify-center min-w-fit h-[100%] p-4 cursor-pointer"><img class="h-4 md:h-8 min-w-fit" src="./imgs/tailwind.png" draggable=false></div>
+                    <div class="skill-box-top flex items-center justify-center min-w-fit h-[100%] p-4 cursor-pointer"><img class="h-10 md:h-20 min-w-fit" src="./imgs/react.png" draggable=false></div>
+                    <div class="skill-box-top flex items-center justify-center min-w-fit h-[100%] p-4 cursor-pointer"><img class="h-6 md:h-12 min-w-fit" src="./imgs/Git.png" draggable=false></div>
+                    <div class="skill-box-top flex items-center justify-center min-w-fit h-[100%] p-4 cursor-pointer"><img class="h-10 md:h-20 min-w-fit" src="./imgs/Java.png" draggable=false></div>
+                </div>
+                <div id="loop-bottom" class="flex relative items-center gap-2 md:gap-8 overflow-hidden text-xl h-[20%] w-[60%] mb-16">
+                    <div class="skill-box-bottom flex items-center justify-center min-w-fit h-[100%] p-4 cursor-pointer ml-4 md:ml-8"><img class="h-8 md:h-16 min-w-fit" src="./imgs/Pandas.png" draggable=false></div>
+                    <div class="skill-box-bottom flex items-center justify-center min-w-fit h-[100%] p-4 cursor-pointer"><img class="h-10 md:h-20 min-w-fit" src="./imgs/NumPy.png" draggable=false></div>
+                    <div class="skill-box-bottom flex items-center justify-center min-w-fit h-[100%] p-4 cursor-pointer"><img class="h-5 md:h-10 min-w-fit" src="./imgs/pytorch.png" draggable=false></div>
+                    <div class="skill-box-bottom flex items-center justify-center min-w-fit h-[100%] p-4 cursor-pointer"><img class="h-6 md:h-12 min-w-fit" src="./imgs/Python.png" draggable=false></div>
+                    <div class="skill-box-bottom flex items-center justify-center min-w-fit h-[100%] p-4 cursor-pointer"><img class="h-[4rem] md:h-[8rem] min-w-fit" src="./imgs/scikit-learn.png" draggable=false></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script type="module" src="./horizontalLoop.js"></script>
+    <script type="module" src="./test.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/TextPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollToPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/Draggable.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/Observer.min.js"></script>
+</body>
+</html>
