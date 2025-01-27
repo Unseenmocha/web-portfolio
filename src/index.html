@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html class="overflow-x-hidden">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,8 +13,8 @@
 
     <!-- MENU ICON -->
     <div id="menu-container" class="fixed top-0 right-0 m-4 lg:pointer-events-none lg:hidden z-[100]">
-        <svg class="w-[52px] h-[52px]" viewBox="0 0 61 56" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <g id="menu-visible">
+        <svg id="menu-visible" class="w-[52px] h-[52px]" viewBox="0 0 61 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g >
             <rect class="menu-rect z-[100]" x="8" y="43" width="45" height="5" rx="2.5" fill="#EAEDE8"/>
             <rect class="menu-rect z-[100]" x="8" y="43" width="45" height="5" rx="2.5" fill="#EAEDE8"/>
             <path class="menu-rect z-[100]" d="M8 27.5C8 26.1193 9.11929 25 10.5 25H50.5C51.8807 25 53 26.1193 53 27.5C53 28.8807 51.8807 30 50.5 30H10.5C9.11929 30 8 28.8807 8 27.5Z" fill="#EAEDE8"/>
@@ -35,7 +35,7 @@
 
     <!-- HEADER SIDE BAR -->
     <div id="header-side" class="header fixed top-0 right-[-330px] z-[100] text-gray backdrop-blur-lg flex min-h-[120vh] pointer-events-auto  lg:pointer-events-none lg:hidden">
-        <ul id="header-text" class="my-[80px] sm:my-12 md:my-16 ml-8 mr-24 text-md sm:text-xl font-semibold gap-[68px] sm:gap-16 flex flex-col" > 
+        <ul id="header-text" class="my-[80px] ml-8 mr-24 text-md sm:text-xl font-semibold gap-[68px] sm:gap-16 flex flex-col" > 
             <li><a href="#About" class="m-4 cursor-pointer md:hover:text-flame underline-offset-4 duration-300">
                 About
             </a></li>
@@ -471,7 +471,7 @@
         </div>
     </div>
 
-    <div id="back-to-top-arrow" class="z-40 fixed bottom-12 right-12 rounded-full min-h-fit min-w-fit p-3 border-2 border-flame">
+    <div id="back-to-top-arrow" class="z-[100] fixed bottom-12 right-12 rounded-full min-h-fit min-w-fit p-3 border-2 border-flame">
         <svg class="arrow min-w-4 max-w-4 min-h-[16px] max-w-[16px] -rotate-45" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path stroke="transparent" d="M5.18636 22.1678C4.43017 22.973 3.16446 23.0127 2.35932 22.2565C1.55417 21.5003 1.51449 20.2346 2.27067 19.4295L5.18636 22.1678ZM20.6839 0.679722C21.7879 0.645103 22.711 1.51203 22.7456 2.61606L23.3098 20.6072C23.3444 21.7112 22.4775 22.6343 21.3734 22.6689C20.2694 22.7035 19.3463 21.8366 19.3117 20.7326L18.8103 4.74044L2.81812 5.24191C1.71409 5.27653 0.791037 4.4096 0.756418 3.30557C0.721798 2.20155 1.58872 1.27849 2.69275 1.24387L20.6839 0.679722ZM2.27067 19.4295L19.2887 1.30954L22.2044 4.04793L5.18636 22.1678L2.27067 19.4295Z" fill="white"/>
         </svg>

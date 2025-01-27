@@ -416,7 +416,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         .to('#top-rect1', {scaleY: 4.5, scaleX: 1.75, y: 46, x: -150, duration: 0.4, ease: 'power3.in'}, '<+=0.05s')
         .to('#menu-animated', {x:-330, opacity:1}, {x: 330, duration: 0, opacity: 1,}, '<-=0.2s')
         .fromTo('#header-side', {
-            x:330,
+            x:0,
             backgroundColor: 'rgba(19, 19, 21, 0.4)'
         }, {
             x: -330,
@@ -432,21 +432,32 @@ document.addEventListener('DOMContentLoaded', (event) => {
             target: menu,
             type: 'touch pointer',
             onHover: () => {menu_tl.play();},
-            onPress: () => {menu_tl.play();},
-        })
+            onPress: () => {
+                menu_tl.play();
+            },
+        });
 
         Observer.create({
             target: header_side,
             type: 'pointer',
             onHoverEnd: () => {menu_tl.reverse();},
+        });
+
+        const close_side_menu = (o) => {
+            setTimeout(()=>{
+                let rect = header_side.getBoundingClientRect();
+                if (!(o.x >= rect.left && o.x <= rect.right && o.y >= rect.top && o.y <=rect.bottom)) {
+                    menu_tl.reverse();
+                }
+            }, 100);
+        };
+
+        Observer.create({
+            target: document.body,
+            type: 'touch pointer',
+            onPress: close_side_menu,
+            onHover: close_side_menu,
         })
-        
-        const close_side_menu = (event) => { 
-            if (!header_side.contains(event.target)) {
-                menu_tl.reverse();
-            }
-        }
-        document.body.addEventListener('touchstart', close_side_menu);
     });
 
     
