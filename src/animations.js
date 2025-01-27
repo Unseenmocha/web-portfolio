@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     tl.add('header-out');
 
     tl.fromTo('#menu-container', {xPercent: 75}, {xPercent: 0, duration: 1}, '<');
-    tl.from('#menu', {opacity:0, duration: 1.7}, '<');
+    tl.from('#menu-visible', {opacity:0, duration: 1.7}, '<');
 
     tl.fromTo('.link-icon', {xPercent: -200}, {xPercent:0, duration: 0.7, pointerEvents: 'auto', ease: 'power3.out', stagger:0.15}, '<+=0.7s');
     tl.from('.link-icon', {opacity:0, duration: 1.3, stagger: 0.15}, '<');
@@ -76,52 +76,53 @@ document.addEventListener('DOMContentLoaded', (event) => {
     mm.add('(min-width:768px)', () => {
        
     })
-
-    //tilt animation
-    const tilt_elements = document.querySelectorAll('.tilt');
-    tilt_elements.forEach(element => {
-        gsap.set(element, {transformPerspective: 500});
-        const zoom = element.getAttribute('tilt-zoom') || 1.1;
-        Observer.create({
-            target: element,
-            type: 'pointer',
-            onMove: (o) => {
-                const {width, height, left, top } = element.getBoundingClientRect();
-                const centerX = left + width / 2;
-                const centerY = top + height / 2;
-                const deltaX = Math.min(1,(o.x - centerX) / (width / 2));
-                const deltaY = Math.min(1,(o.y - centerY) / (height / 2));
-
-                const coeff = element.getAttribute('tilt-coeff') || 20;
-
-                const rotateX = deltaY * coeff;
-                const rotateY = -deltaX * coeff;
-                gsap.to(element, {rotationX: rotateX, rotationY: rotateY, duration: 0.1});
-            },
-            onHover: () => {gsap.to(element, {scale:zoom, duration: 0.1})},
-            onHoverEnd: () => {
-                setTimeout(()=> {
-                    gsap.to(element, {scale:1, rotateX: 0, rotateY:0, duration: 0.1});
-                }, 100)},
-        })
-    });
-
-    //growing arrow animation on hover for links (if included)
-    const link_arrows = document.querySelectorAll('a .arrow');
-    link_arrows.forEach(arrow => {
-        parent = arrow.parentElement;
-        const animateArrow = gsap.from(arrow, {scale: 0, xPercent: -100, yPercent: 100, duration: 0.1, paused: true});
-        Observer.create({
-        target: parent,
-        type: 'pointer',
-        onHover: () => {animateArrow.play();},
-        onHoverEnd: () => {animateArrow.reverse();}
-        })
-    })
     
 
     //wide screen animations
     mm.add('(min-width:1024px)', () => {
+
+        //tilt animation
+        const tilt_elements = document.querySelectorAll('.tilt');
+        tilt_elements.forEach(element => {
+            gsap.set(element, {transformPerspective: 500});
+            const zoom = element.getAttribute('tilt-zoom') || 1.1;
+            Observer.create({
+                target: element,
+                type: 'pointer',
+                onMove: (o) => {
+                    const {width, height, left, top } = element.getBoundingClientRect();
+                    const centerX = left + width / 2;
+                    const centerY = top + height / 2;
+                    const deltaX = Math.min(1,(o.x - centerX) / (width / 2));
+                    const deltaY = Math.min(1,(o.y - centerY) / (height / 2));
+
+                    const coeff = element.getAttribute('tilt-coeff') || 20;
+
+                    const rotateX = deltaY * coeff;
+                    const rotateY = -deltaX * coeff;
+                    gsap.to(element, {rotationX: rotateX, rotationY: rotateY, duration: 0.1});
+                },
+                onHover: () => {gsap.to(element, {scale:zoom, duration: 0.1})},
+                onHoverEnd: () => {
+                    setTimeout(()=> {
+                        gsap.to(element, {scale:1, rotateX: 0, rotateY:0, duration: 0.1});
+                    }, 100)},
+            })
+        });
+
+        //growing arrow animation on hover for links (if included)
+        const link_arrows = document.querySelectorAll('a .arrow');
+        link_arrows.forEach(arrow => {
+            parent = arrow.parentElement;
+            const animateArrow = gsap.from(arrow, {scale: 0, xPercent: -100, yPercent: 100, duration: 0.1, paused: true});
+            Observer.create({
+            target: parent,
+            type: 'pointer',
+            onHover: () => {animateArrow.play();},
+            onHoverEnd: () => {animateArrow.reverse();}
+            })
+        })
+
         // header background darken on scroll animation
         gsap.to('#header-top', {
             scrollTrigger: {
@@ -332,10 +333,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
         gsap.from('#contact-line', {width: 0, scrollTrigger: {trigger: '#contact-line', start: 'top 90%', end: 'top 85%', scrub:1}})
         gsap.from('.contact-link', {xPercent:-50, opacity: 0, duration: 0.5, stagger:0.2, 
             scrollTrigger: {trigger: '#contact-links', start:'top 85%', toggleActions: 'play none none reverse'} })
-    });
 
-    //project section link on hover change bg color
-    let project_links = gsap.utils.toArray('.project-title');
+        //project section link on hover change bg color
+        let project_links = gsap.utils.toArray('.project-title');
         project_links.forEach((link) => {
             Observer.create({
                 target: link,
@@ -355,34 +355,35 @@ document.addEventListener('DOMContentLoaded', (event) => {
             })
         })
 
-    //contact links on hover change bg color and svg fill/stroke color
-    let contact_links = gsap.utils.toArray('.contact-link');
-    contact_links = contact_links.concat(gsap.utils.toArray('.top-contact-link'));
+        //contact links on hover change bg color and svg fill/stroke color
+        let contact_links = gsap.utils.toArray('.contact-link');
+        contact_links = contact_links.concat(gsap.utils.toArray('.top-contact-link'));
 
-    contact_links.forEach((link) => {
-        let isTop = link.classList.contains('top-contact-link');
-        let isGithub = link.classList.contains('github');
-        Observer.create({
-            target: link,
-            type: 'pointer',
-            onHover: () => {
-                gsap.to(link, {
-                    backgroundColor: isTop? colors.jet : colors.raisin, 
-                    fill: colors.flame, 
-                    stroke: isGithub ? 'transparent' : colors.flame,
-                    duration: 0.1,
-                })
-            },
-            onHoverEnd: () => {
-                gsap.to(link, {
-                    backgroundColor: isTop? colors.raisin : colors.jet,
-                    fill: colors.platinum,
-                    stroke: isGithub? 'transparent': colors.platinum,
-                    duration: 0.1,
-                })
-            }
+        contact_links.forEach((link) => {
+            let isTop = link.classList.contains('top-contact-link');
+            let isGithub = link.classList.contains('github');
+            Observer.create({
+                target: link,
+                type: 'pointer',
+                onHover: () => {
+                    gsap.to(link, {
+                        backgroundColor: isTop? colors.jet : colors.raisin, 
+                        fill: colors.flame, 
+                        stroke: isGithub ? 'transparent' : colors.flame,
+                        duration: 0.1,
+                    })
+                },
+                onHoverEnd: () => {
+                    gsap.to(link, {
+                        backgroundColor: isTop? colors.raisin : colors.jet,
+                        fill: colors.platinum,
+                        stroke: isGithub? 'transparent': colors.platinum,
+                        duration: 0.1,
+                    })
+                }
+            })
         })
-    })
+    });
 
     const setupHorizontalLoop = () => {
         const skills_top = gsap.utils.toArray(".skill-box-top");
@@ -407,34 +408,45 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     // Small Screen Menu open and close animation
     mm.add('(max-width:1023px)', () => {
-        let menu_tl = gsap.timeline();
-        menu_tl.to('#bottom-rect2', {scaleY: 4.5, scaleX: 2.3, y: 390, x: -150, duration: 0.4, ease: 'power3.in'});
-        menu_tl.to('#bottom-rect1', {scaleY: 4.5, scaleX: 1.4, y: 298, x: -150, duration: 0.4, ease: 'power3.in'}, '<+=0.05s');
-        menu_tl.to('#middle-rect', {scaleY: 4.5, scaleX: 2.2, y: 218, x: -150, duration: 0.4, ease: 'power3.in'}, '<+=0.05s');
-        menu_tl.to('#top-rect2', {scaleY: 4.5, scaleX: 3, y: 136, x: -150, duration: 0.4, ease: 'power3.in'}, '<+=0.05s');
-        menu_tl.to('#top-rect1', {scaleY: 4.5, scaleX: 1.75, y: 46, x: -150, duration: 0.4, ease: 'power3.in'}, '<+=0.05s');
-        
-        menu_tl.to('#header-side', {
+        let menu_tl = gsap.timeline()
+        .to('#bottom-rect2', {scaleY: 4.5, scaleX: 2.3, y: 390, x: -150, duration: 0.4, ease: 'power3.in'})
+        .to('#bottom-rect1', {scaleY: 4.5, scaleX: 1.4, y: 298, x: -150, duration: 0.4, ease: 'power3.in'}, '<+=0.05s')
+        .to('#middle-rect', {scaleY: 4.5, scaleX: 2.2, y: 218, x: -150, duration: 0.4, ease: 'power3.in'}, '<+=0.05s')
+        .to('#top-rect2', {scaleY: 4.5, scaleX: 3, y: 136, x: -150, duration: 0.4, ease: 'power3.in'}, '<+=0.05s')
+        .to('#top-rect1', {scaleY: 4.5, scaleX: 1.75, y: 46, x: -150, duration: 0.4, ease: 'power3.in'}, '<+=0.05s')
+        .to('#menu-animated', {x:-330, opacity:1}, {x: 330, duration: 0, opacity: 1,}, '<-=0.2s')
+        .fromTo('#header-side', {
+            x:330,
+            backgroundColor: 'rgba(19, 19, 21, 0.4)'
+        }, {
             x: -330,
             duration: 0.2,
             backgroundColor: 'rgba(19, 19, 21, 0.4)',
-        }, '<-=0.2s');
-        menu_tl.fromTo('#header-text', {opacity: 0}, {opacity:1, duration:0.2}, '-=0.1s');
-        menu_tl.to('.menu-rect', {opacity: 0, duration: 0.2}, '-=0.1s');
-        menu_tl.pause();
+        },'<-=0.1s')
+        .fromTo('#header-text', {opacity: 0}, {opacity:1, duration:0.2}, '-=0.1s')
+        .to('.menu-rect', {opacity: 0, duration: 0.2}, '-=0.1s')
+        .pause();
 
-        menu.addEventListener('mouseover', () => {menu_tl.play();});
+        let menu = document.getElementById('menu-visible');
+        Observer.create({
+            target: menu,
+            type: 'touch pointer',
+            onHover: () => {menu_tl.play();},
+            onPress: () => {menu_tl.play();},
+        })
+
+        Observer.create({
+            target: header_side,
+            type: 'pointer',
+            onHoverEnd: () => {menu_tl.reverse();},
+        })
         
-        ['mouseover', 'touchstart'].forEach((event) => {menu.addEventListener(event, () => {menu_tl.play();});});
-
-        header_side.addEventListener('mouseleave',  () => {menu_tl.reverse();});
         const close_side_menu = (event) => { 
             if (!header_side.contains(event.target)) {
                 menu_tl.reverse();
             }
         }
         document.body.addEventListener('touchstart', close_side_menu);
-        // document.body.addEventListener('mouseover', close_side_menu);
     });
 
     
@@ -510,7 +522,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
                     confetti_out = true;
                     jsConfetti.addConfetti().then(()=> {
                         jsConfetti.clearCanvas();
-                        // confetti_out = false;
                     })
                 }
                 else if (window.scrollY === 0) {
@@ -518,27 +529,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 }
             }
         })
-        // let resetConfettiTrigger = ScrollTrigger.create({
-        //     trigger: '#top',
-        //     start: 'top top',
-        //     onEnter: () => {
-        //         confetti_out = false;
-        //     }
-        // });
-    
-        // let confettiTrigger = ScrollTrigger.create({
-        //     trigger: '#bottom-bar',
-        //     start: 'top bottom-=51px',
-        //     onEnter: () => {
-        //         if (!confetti_out) {
-        //             confetti_out = true;
-        //             jsConfetti.addConfetti().then(()=> {
-        //                 jsConfetti.clearCanvas();
-        //                 // confetti_out = false;
-        //             })
-        //         }
-        //     }
-        // })
     }
     setUpConfetti();
     window.addEventListener("resize", setUpConfetti);

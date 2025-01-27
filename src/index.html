@@ -9,24 +9,33 @@
   <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
 </head>
-<body class="relative font-funnel-display bg-raisin flex flex-col grow min-w-screen min-h-screen bg-fixed overflow-x-hidden">
+<body class="relative font-funnel-display bg-raisin flex flex-col grow min-w-[100vw] min-h-screen bg-fixed overflow-x-hidden">
 
     <!-- MENU ICON -->
-    <div id="menu-container" class="fixed top-0 right-0 mx-4 lg:pointer-events-none lg:hidden z-[30]">
-        <svg viewBox="0 0 300 800" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-[300px] sm:w-[330px] sm:h-[800px] z-[30]">
-            <g id="menu">
-            <rect id="bottom-rect2" class="menu-rect z-20" x="260" y="48" width="36" height="4" rx="2.5" fill="#EAEDE8"/>
-            <rect id="bottom-rect1" class="menu-rect z-20" x="260" y="48" width="36" height="4" rx="2.5" fill="#EAEDE8"/>
-            <rect id="middle-rect" class="menu-rect z-20" x="260" y="36" width="36" height="4" rx="2.5" fill="#EAEDE8"/>
-            <rect id="top-rect2" class="menu-rect z-20" x="260" y="24" width="36" height="4" rx="2.5" fill="#EAEDE8"/>
-            <rect id="top-rect1" class="menu-rect z-20" x="260" y="24" width="36" height="4" rx="2.5" fill="#EAEDE8"/>
+    <div id="menu-container" class="fixed top-0 right-0 m-4 lg:pointer-events-none lg:hidden z-[100]">
+        <svg class="w-[52px] h-[52px]" viewBox="0 0 61 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g id="menu-visible">
+            <rect class="menu-rect z-[100]" x="8" y="43" width="45" height="5" rx="2.5" fill="#EAEDE8"/>
+            <rect class="menu-rect z-[100]" x="8" y="43" width="45" height="5" rx="2.5" fill="#EAEDE8"/>
+            <path class="menu-rect z-[100]" d="M8 27.5C8 26.1193 9.11929 25 10.5 25H50.5C51.8807 25 53 26.1193 53 27.5C53 28.8807 51.8807 30 50.5 30H10.5C9.11929 30 8 28.8807 8 27.5Z" fill="#EAEDE8"/>
+            <rect class="menu-rect z-[100]" x="8" y="8" width="45" height="5" rx="2.5" fill="#EAEDE8"/>
+            <rect class="menu-rect z-[100]" x="8" y="8" width="45" height="5" rx="2.5" fill="#EAEDE8"/>
+            </g>
+        </svg>
+        <svg id="menu-animated" viewBox="0 0 300 800" fill="none" xmlns="http://www.w3.org/2000/svg" class="fixed opacity-0 right-[-330px] top-0 w-[300px] sm:w-[330px] sm:h-[800px] z-[70]">
+            <g >
+            <rect id="bottom-rect2" class="menu-rect z-[100]" x="260" y="48" width="36" height="4" rx="2.5" fill="#EAEDE8"/>
+            <rect id="bottom-rect1" class="menu-rect z-[100" x="260" y="48" width="36" height="4" rx="2.5" fill="#EAEDE8"/>
+            <rect id="middle-rect" class="menu-rect z-[100]" x="260" y="36" width="36" height="4" rx="2.5" fill="#EAEDE8"/>
+            <rect id="top-rect2" class="menu-rect z-[100]" x="260" y="24" width="36" height="4" rx="2.5" fill="#EAEDE8"/>
+            <rect id="top-rect1" class="menu-rect z-[100]" x="260" y="24" width="36" height="4" rx="2.5" fill="#EAEDE8"/>
             </g>
         </svg>
     </div>
 
     <!-- HEADER SIDE BAR -->
     <div id="header-side" class="header fixed top-0 right-[-330px] z-[100] text-gray backdrop-blur-lg flex min-h-[120vh] pointer-events-auto  lg:pointer-events-none lg:hidden">
-        <ul id="header-text" class="my-16 ml-8 mr-24 text-md sm:text-xl font-semibold gap-16 flex flex-col" > 
+        <ul id="header-text" class="my-[80px] sm:my-12 md:my-16 ml-8 mr-24 text-md sm:text-xl font-semibold gap-[68px] sm:gap-16 flex flex-col" > 
             <li><a href="#About" class="m-4 cursor-pointer md:hover:text-flame underline-offset-4 duration-300">
                 About
             </a></li>
@@ -276,7 +285,7 @@
                 <div class="flex min-w-[100%] flex-col items-center md:flex-row justify-between text-gray text-lg mb-4 bg-jet">
                     <a href="https://github.com/Unseenmocha/LLMs-vs-Established-Text-Augmentation" class="project-title relative z-[60] flex items-start justify-between tilt text-base sm:text-xl md:text-2xl py-4 px-4 md:-ml-8 rounded-md" tilt-zoom="1.05" tilt-coeff="10" target="_blank">
                         <p class="mx-0 sm:mx-4">LLMs vs Established Text Augmentation Techniques for Classification</p>
-                        <svg class="arrow hidden md:block absolute top-[8px] right-[8px] min-w-[16px] max-w-[16px] min-h-[16px] max-w-[16px]" viewBox="0 0 24 23" xmlns="http://www.w3.org/2000/svg">
+                        <svg class="arrow hidden lg:block absolute top-[8px] right-[8px] min-w-[16px] max-w-[16px] min-h-[16px] max-w-[16px]" viewBox="0 0 24 23" xmlns="http://www.w3.org/2000/svg">
                             <path fill="#EAEDE8" d="M5.18636 22.1678C4.43017 22.973 3.16446 23.0127 2.35932 22.2565C1.55417 21.5003 1.51449 20.2346 2.27067 19.4295L5.18636 22.1678ZM20.6839 0.679722C21.7879 0.645103 22.711 1.51203 22.7456 2.61606L23.3098 20.6072C23.3444 21.7112 22.4775 22.6343 21.3734 22.6689C20.2694 22.7035 19.3463 21.8366 19.3117 20.7326L18.8103 4.74044L2.81812 5.24191C1.71409 5.27653 0.791037 4.4096 0.756418 3.30557C0.721798 2.20155 1.58872 1.27849 2.69275 1.24387L20.6839 0.679722ZM2.27067 19.4295L19.2887 1.30954L22.2044 4.04793L5.18636 22.1678L2.27067 19.4295Z" fill="white"/>
                         </svg>
                     </a>
@@ -305,7 +314,7 @@
                 <div class="flex min-w-[100%] flex-col items-center md:flex-row justify-between text-gray text-lg mb-4 bg-jet">
                     <a href="https://github.com/Unseenmocha/DQN-and-PPO-on-AI-GYM-Envs" class="project-title z-[60] relative flex items-start justify-between tilt text-base sm:text-xl md:text-2xl md:mr-16 py-4 px-8 md:-ml-8 rounded-md" tilt-zoom="1.05" tilt-coeff="10" target="_blank">
                         <p class="mx-0 sm:mx-4">DDQN and PPO on AI Gymnasium Environments</p>
-                        <svg class="arrow hidden md:block absolute top-[8px] right-[8px] min-w-[16px] max-w-[16px] min-h-[16px] max-w-[16px]" viewBox="0 0 24 23" xmlns="http://www.w3.org/2000/svg">
+                        <svg class="arrow hidden lg:block absolute top-[8px] right-[8px] min-w-[16px] max-w-[16px] min-h-[16px] max-w-[16px]" viewBox="0 0 24 23" xmlns="http://www.w3.org/2000/svg">
                             <path fill="#EAEDE8" d="M5.18636 22.1678C4.43017 22.973 3.16446 23.0127 2.35932 22.2565C1.55417 21.5003 1.51449 20.2346 2.27067 19.4295L5.18636 22.1678ZM20.6839 0.679722C21.7879 0.645103 22.711 1.51203 22.7456 2.61606L23.3098 20.6072C23.3444 21.7112 22.4775 22.6343 21.3734 22.6689C20.2694 22.7035 19.3463 21.8366 19.3117 20.7326L18.8103 4.74044L2.81812 5.24191C1.71409 5.27653 0.791037 4.4096 0.756418 3.30557C0.721798 2.20155 1.58872 1.27849 2.69275 1.24387L20.6839 0.679722ZM2.27067 19.4295L19.2887 1.30954L22.2044 4.04793L5.18636 22.1678L2.27067 19.4295Z" fill="white"/>
                         </svg>
                     </a>
@@ -333,7 +342,7 @@
                 <div class="flex  items-start min-w-[100%] flex-col items-center md:flex-row justify-between text-gray text-lg mb-4 bg-jet">
                     <a href="https://github.com/atdykema/EmployeeTimeTracker-CS320" class="project-title z-[60] relative flex items-start justify-between tilt text-base sm:text-xl md:text-2xl md:mr-16 py-4 px-8 md:-ml-8 md:-ml-4 rounded-md" tilt-zoom="1.05" tilt-coeff="10" target="_blank">
                         <p class="mr-0 sm:mr-4">PunchTime Employee Scheduling Web Tool</p>
-                        <svg class="absolute top-[8px] right-[8px] arrow hidden md:block min-w-[16px] max-w-[16px] min-h-[16px] max-w-[16px]" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <svg class="absolute top-[8px] right-[8px] arrow hidden lg:block min-w-[16px] max-w-[16px] min-h-[16px] max-w-[16px]" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path fill="#EAEDE8" d="M5.18636 22.1678C4.43017 22.973 3.16446 23.0127 2.35932 22.2565C1.55417 21.5003 1.51449 20.2346 2.27067 19.4295L5.18636 22.1678ZM20.6839 0.679722C21.7879 0.645103 22.711 1.51203 22.7456 2.61606L23.3098 20.6072C23.3444 21.7112 22.4775 22.6343 21.3734 22.6689C20.2694 22.7035 19.3463 21.8366 19.3117 20.7326L18.8103 4.74044L2.81812 5.24191C1.71409 5.27653 0.791037 4.4096 0.756418 3.30557C0.721798 2.20155 1.58872 1.27849 2.69275 1.24387L20.6839 0.679722ZM2.27067 19.4295L19.2887 1.30954L22.2044 4.04793L5.18636 22.1678L2.27067 19.4295Z" fill="white"/>
                         </svg>
                     </a>
@@ -357,7 +366,7 @@
                 <div class="flex items-start justify-between min-w-[100%] flex-col items-center md:flex-row justify-between text-gray text-lg mb-2 bg-jet">
                     <a href="https://github.com/Unseenmocha/Invego" class="project-title z-[60] relative flex items-start tilt text-base sm:text-xl md:text-2xl md:mr-16 py-4 px-8 md:-ml-8 md:-ml-4 rounded-md" tilt-zoom="1.05" tilt-coeff="10" target="_blank">
                         <p class="mr-0 sm:mr-4">Invego Stock Market Web Simulator</p>
-                        <svg class="absolute top-[8px] right-[8px] arrow hidden md:block min-w-[16px] max-w-[16px] min-h-[16px] max-w-[16px]" viewBox="0 0 24 23" xmlns="http://www.w3.org/2000/svg">
+                        <svg class="absolute top-[8px] right-[8px] arrow hidden lg:block min-w-[16px] max-w-[16px] min-h-[16px] max-w-[16px]" viewBox="0 0 24 23" xmlns="http://www.w3.org/2000/svg">
                             <path fill="#EAEDE8" d="M5.18636 22.1678C4.43017 22.973 3.16446 23.0127 2.35932 22.2565C1.55417 21.5003 1.51449 20.2346 2.27067 19.4295L5.18636 22.1678ZM20.6839 0.679722C21.7879 0.645103 22.711 1.51203 22.7456 2.61606L23.3098 20.6072C23.3444 21.7112 22.4775 22.6343 21.3734 22.6689C20.2694 22.7035 19.3463 21.8366 19.3117 20.7326L18.8103 4.74044L2.81812 5.24191C1.71409 5.27653 0.791037 4.4096 0.756418 3.30557C0.721798 2.20155 1.58872 1.27849 2.69275 1.24387L20.6839 0.679722ZM2.27067 19.4295L19.2887 1.30954L22.2044 4.04793L5.18636 22.1678L2.27067 19.4295Z" fill="white"/>
                         </svg>
                     </a>
@@ -388,21 +397,21 @@
                 <div id="skills-line" class="bg-flame min-h-[2px] w-[90px] sm:w-[130px] mb-16"></div>
 
                 <div id="loop-top" class="flex relative items-center gap-2 sm:gap-4 md:gap-8 overflow-hidden text-xl h-[20%] w-[100%] mb-16">
-                    <div class="skill-box-top flex items-center justify-center min-w-fit h-[100%] p-4 cursor-pointer ml-4 md:ml-8"><img class="h-6 md:h-12 min-w-fit" src="./imgs/JavaScript.png" draggable=false></div>
-                    <div class="skill-box-top flex items-center justify-center min-w-fit h-[100%] p-4 cursor-pointer"><img class="h-6 md:h-12 min-w-fit" src="./imgs/TypeScript.png" draggable=false></div>
-                    <div class="skill-box-top flex items-center justify-center min-w-fit h-[100%] p-4 cursor-pointer"><img class="h-6 md:h-12 min-w-fit" src="./imgs/mongoDB.png" draggable=false></div>
-                    <div class="skill-box-top flex items-center justify-center min-w-fit h-[100%] p-4 cursor-pointer"><img class="h-12 md:h-24 min-w-fit" src="./imgs/PostgreSQL.svg" draggable=false></div>
-                    <div class="skill-box-top flex items-center justify-center min-w-fit h-[100%] p-4 cursor-pointer"><img class="h-4 md:h-8 min-w-fit" src="./imgs/tailwind.png" draggable=false></div>
-                    <div class="skill-box-top flex items-center justify-center min-w-fit h-[100%] p-4 cursor-pointer"><img class="h-10 md:h-20 min-w-fit" src="./imgs/react.png" draggable=false></div>
-                    <div class="skill-box-top flex items-center justify-center min-w-fit h-[100%] p-4 cursor-pointer"><img class="h-6 md:h-12 min-w-fit" src="./imgs/Git.png" draggable=false></div>
-                    <div class="skill-box-top flex items-center justify-center min-w-fit h-[100%] p-4 cursor-pointer"><img class="h-10 md:h-20 min-w-fit" src="./imgs/Java.png" draggable=false></div>
+                    <div class="skill-box-top flex items-center justify-center min-w-fit h-[100%] p-4 cursor-pointer ml-4 md:ml-8"><img class="h-6 md:h-12 w-auto" src="./imgs/JavaScript.png" draggable=false></div>
+                    <div class="skill-box-top flex items-center justify-center min-w-fit h-[100%] p-4 cursor-pointer"><img class="h-6 md:h-12 w-auto" src="./imgs/TypeScript.png" draggable=false></div>
+                    <div class="skill-box-top flex items-center justify-center min-w-fit h-[100%] p-4 cursor-pointer"><img class="h-6 md:h-12 w-auto" src="./imgs/mongoDB.png" draggable=false></div>
+                    <div class="skill-box-top flex items-center justify-center min-w-fit h-[100%] p-4 cursor-pointer"><img class="h-12 md:h-24 w-auto" src="./imgs/PostgreSQL.svg" draggable=false></div>
+                    <div class="skill-box-top flex items-center justify-center min-w-fit h-[100%] p-4 cursor-pointer"><img class="h-4 md:h-8 w-auto" src="./imgs/tailwind.png" draggable=false></div>
+                    <div class="skill-box-top flex items-center justify-center min-w-fit h-[100%] p-4 cursor-pointer"><img class="h-10 md:h-20 w-auto" src="./imgs/react.png" draggable=false></div>
+                    <div class="skill-box-top flex items-center justify-center min-w-fit h-[100%] p-4 cursor-pointer"><img class="h-6 md:h-12 w-auto" src="./imgs/Git.png" draggable=false></div>
+                    <div class="skill-box-top flex items-center justify-center min-w-fit h-[100%] p-4 cursor-pointer"><img class="h-10 md:h-20 w-auto" src="./imgs/Java.png" draggable=false></div>
                 </div>
                 <div id="loop-bottom" class="flex relative items-center sm:gap-4 md:gap-8 overflow-hidden text-xl h-[20%] w-[80%] sm:w-[60%] mb-16">
-                    <div class="skill-box-bottom flex items-center justify-center min-w-fit h-[100%] p-4 cursor-pointer ml-4 md:ml-8"><img class="h-8 md:h-16 min-w-fit" src="./imgs/Pandas.png" draggable=false></div>
-                    <div class="skill-box-bottom flex items-center justify-center min-w-fit h-[100%] p-4 cursor-pointer"><img class="h-10 md:h-20 min-w-fit" src="./imgs/NumPy.png" draggable=false></div>
-                    <div class="skill-box-bottom flex items-center justify-center min-w-fit h-[100%] p-4 cursor-pointer"><img class="h-5 md:h-10 min-w-fit" src="./imgs/pytorch.png" draggable=false></div>
-                    <div class="skill-box-bottom flex items-center justify-center min-w-fit h-[100%] p-4 cursor-pointer"><img class="h-6 md:h-12 min-w-fit" src="./imgs/Python.png" draggable=false></div>
-                    <div class="skill-box-bottom flex items-center justify-center min-w-fit h-[100%] p-4 cursor-pointer"><img class="h-[4rem] md:h-[8rem] min-w-fit" src="./imgs/scikit-learn.png" draggable=false></div>
+                    <div class="skill-box-bottom flex items-center justify-center min-w-fit h-[100%] p-4 cursor-pointer ml-4 md:ml-8"><img class="h-8 md:h-16 w-auto" src="./imgs/Pandas.png" draggable=false></div>
+                    <div class="skill-box-bottom flex items-center justify-center min-w-fit h-[100%] p-4 cursor-pointer"><img class="h-10 md:h-20 w-auto" src="./imgs/NumPy.png" draggable=false></div>
+                    <div class="skill-box-bottom flex items-center justify-center min-w-fit h-[100%] p-4 cursor-pointer"><img class="h-5 md:h-10 w-auto" src="./imgs/pytorch.png" draggable=false></div>
+                    <div class="skill-box-bottom flex items-center justify-center min-w-fit h-[100%] p-4 cursor-pointer"><img class="h-6 md:h-12 w-auto" src="./imgs/Python.png" draggable=false></div>
+                    <div class="skill-box-bottom flex items-center justify-center min-w-fit h-[100%] p-4 cursor-pointer"><img class="h-[4rem] md:h-[8rem] w-auto" src="./imgs/scikit-learn.png" draggable=false></div>
                 </div>
             </div>
         </div>
@@ -424,7 +433,7 @@
                         <a href="mailto:ajlin622@gmail.com" class="contact-link flex relative items-center m-4 tilt pointer-events-auto py-4 px-4 md:px-8 z-[60] rounded-md bg-jet fill-platinum stroke-platinum" target="_blank"> 
                             <svg class="h-6 lg:h-8 duration-300" id="_1-Email" data-name="1-Email" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><title>1-Email</title><path d="M29,4H3A3,3,0,0,0,0,7V25a3,3,0,0,0,3,3H29a3,3,0,0,0,3-3V7A3,3,0,0,0,29,4Zm-.72,2L16,14.77,3.72,6ZM30,25a1,1,0,0,1-1,1H3a1,1,0,0,1-1-1V7.23l13.42,9.58a1,1,0,0,0,1.16,0L30,7.23Z"/></svg>
                             <p class="pl-4 whitespace-nowrap">Send me an email</p>
-                            <svg class="arrow hidden md:block absolute top-[8px] right-[8px] min-w-[16px] max-w-[16px] min-h-[16px] max-w-[16px]" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <svg class="arrow hidden lg:block absolute top-[8px] right-[8px] min-w-[16px] max-w-[16px] min-h-[16px] max-w-[16px]" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path stroke="transparent" d="M5.18636 22.1678C4.43017 22.973 3.16446 23.0127 2.35932 22.2565C1.55417 21.5003 1.51449 20.2346 2.27067 19.4295L5.18636 22.1678ZM20.6839 0.679722C21.7879 0.645103 22.711 1.51203 22.7456 2.61606L23.3098 20.6072C23.3444 21.7112 22.4775 22.6343 21.3734 22.6689C20.2694 22.7035 19.3463 21.8366 19.3117 20.7326L18.8103 4.74044L2.81812 5.24191C1.71409 5.27653 0.791037 4.4096 0.756418 3.30557C0.721798 2.20155 1.58872 1.27849 2.69275 1.24387L20.6839 0.679722ZM2.27067 19.4295L19.2887 1.30954L22.2044 4.04793L5.18636 22.1678L2.27067 19.4295Z" fill="white"/>
                             </svg>
                         </a>
@@ -435,7 +444,7 @@
                                 <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                             </svg>
                             <p class="pl-4 whitespace-nowrap">Check out my Github</p>
-                            <svg class="arrow hidden md:block absolute top-[8px] right-[8px] min-w-[16px] max-w-[16px] min-h-[16px] max-w-[16px]" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <svg class="arrow hidden lg:block absolute top-[8px] right-[8px] min-w-[16px] max-w-[16px] min-h-[16px] max-w-[16px]" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path stroke="transparent" d="M5.18636 22.1678C4.43017 22.973 3.16446 23.0127 2.35932 22.2565C1.55417 21.5003 1.51449 20.2346 2.27067 19.4295L5.18636 22.1678ZM20.6839 0.679722C21.7879 0.645103 22.711 1.51203 22.7456 2.61606L23.3098 20.6072C23.3444 21.7112 22.4775 22.6343 21.3734 22.6689C20.2694 22.7035 19.3463 21.8366 19.3117 20.7326L18.8103 4.74044L2.81812 5.24191C1.71409 5.27653 0.791037 4.4096 0.756418 3.30557C0.721798 2.20155 1.58872 1.27849 2.69275 1.24387L20.6839 0.679722ZM2.27067 19.4295L19.2887 1.30954L22.2044 4.04793L5.18636 22.1678L2.27067 19.4295Z" fill="white"/>
                             </svg>
                         </a>
@@ -452,7 +461,7 @@
                             </g>
                             </svg>
                             <p class="pl-4 whitespace-nowrap"> Connect on Linkedin</p>
-                            <svg class="arrow hidden md:block absolute top-[8px] right-[8px] min-w-[16px] max-w-[16px] min-h-[16px] max-w-[16px]" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <svg class="arrow hidden lg:block absolute top-[8px] right-[8px] min-w-[16px] max-w-[16px] min-h-[16px] max-w-[16px]" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path stroke="transparent" d="M5.18636 22.1678C4.43017 22.973 3.16446 23.0127 2.35932 22.2565C1.55417 21.5003 1.51449 20.2346 2.27067 19.4295L5.18636 22.1678ZM20.6839 0.679722C21.7879 0.645103 22.711 1.51203 22.7456 2.61606L23.3098 20.6072C23.3444 21.7112 22.4775 22.6343 21.3734 22.6689C20.2694 22.7035 19.3463 21.8366 19.3117 20.7326L18.8103 4.74044L2.81812 5.24191C1.71409 5.27653 0.791037 4.4096 0.756418 3.30557C0.721798 2.20155 1.58872 1.27849 2.69275 1.24387L20.6839 0.679722ZM2.27067 19.4295L19.2887 1.30954L22.2044 4.04793L5.18636 22.1678L2.27067 19.4295Z" fill="white"/>
                             </svg>
                         </a>
