@@ -385,6 +385,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         })
     });
 
+    //skills section horizontal loop animation
     const setupHorizontalLoop = () => {
         const skills_top = gsap.utils.toArray(".skill-box-top");
     
@@ -509,12 +510,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
         type: 'pointer, touch',
         onPress: () => {
             hoverObserver.disable();
-            gsap.to(window, {duration: 1, scrollTo: {y: 0}, overwrite: 'auto', onComplete: ()=>{hoverObserver.enable()}});
+            gsap.to(window, {duration: 1, scrollTo: {y: 0}, overwrite: 'auto', onComplete: () => { hoverObserver.enable() }});
         }
     });
 
 
-    gsap.fromTo('#back-to-top-arrow', {scale: 0}, {scale:1,duration:0.5, 
+    gsap.fromTo('#back-to-top-arrow', {scale: 0}, {scale:1, duration:0.5, display:'flex',
         scrollTrigger: {
             trigger: '#Skills', start: 'top bottom', toggleActions: 'play none none reverse'
         },
