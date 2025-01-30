@@ -2,7 +2,6 @@ import { horizontalLoop } from "./horizontalLoop.js";
 
 const header_top = document.getElementById('header-top');
 const header_side = document.getElementById('header-side');
-let confetti_out = false;
 
 let colors = {
     'night': "#131315",
@@ -484,7 +483,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
         });
         a.addEventListener("click", e => {
             e.preventDefault();
-            confetti_out = true;
             gsap.to(window, {duration: 1, scrollTo: linkST.start, overwrite: "auto"});
         });
         });
@@ -528,6 +526,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     //confetti animation for reaching the bottom
     const jsConfetti = new JSConfetti()
+    let confetti_out = false;
 
     const setUpConfetti = () => {
         let confettiObserver = Observer.create({
@@ -538,10 +537,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
                     confetti_out = true;
                     jsConfetti.addConfetti().then(()=> {
                         jsConfetti.clearCanvas();
+                        confetti_out = false;
                     })
-                }
-                else if (window.scrollY === 0) {
-                    confetti_out = false;
                 }
             }
         })
