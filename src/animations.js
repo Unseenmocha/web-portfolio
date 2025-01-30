@@ -3,7 +3,6 @@ import { horizontalLoop } from "./horizontalLoop.js";
 const header_top = document.getElementById('header-top');
 const header_side = document.getElementById('header-side');
 let confetti_out = false;
-// const isFirefox = userAgent.includes("Firefox");
 
 let colors = {
     'night': "#131315",
@@ -14,6 +13,8 @@ let colors = {
     'platinum': "#EAEDE8",
     "eerie": "#1C1C1E",
   };
+
+history.scrollRestoration = "manual";
 
 window.onbeforeunload = function () {
     window.scrollTo(0, 0);
@@ -223,7 +224,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 
                 // console.log(gap)
                 // console.log('\n')
-                if (gap < 0) {
+                if (gap < -scrollMargin) {
                     tl.to('#'+scrollPanelId, {translateY:gap, duration: duration}, "start+="+delay+"s");
                 }
             }
@@ -231,6 +232,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
             //reset timeline on resize but only on large screen size
             window.addEventListener("resize", () => {
+
+                //Reloading on resize instead of handling resetting animations seems to just work better overall
+                location.reload();
                 if (window.innerWidth >= 1024) {
                     fill_tl();
                 } else {
