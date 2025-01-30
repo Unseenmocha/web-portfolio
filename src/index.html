@@ -12,29 +12,29 @@
 <body class="relative font-funnel-display bg-raisin flex flex-col grow min-w-[100vw] min-h-screen bg-fixed overflow-x-hidden">
 
     <!-- MENU ICON -->
-    <div id="menu-container" class="fixed top-0 right-0 m-4 lg:pointer-events-none lg:hidden z-[100]">
+    <div id="menu-container" class="fixed top-0 right-0 m-4 lg:pointer-events-none lg:hidden z-100">
         <svg id="menu-visible" class="w-[52px] h-[52px]" viewBox="0 0 61 56" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g >
-            <rect class="menu-rect z-[100]" x="8" y="43" width="45" height="5" rx="2.5" fill="#EAEDE8"/>
-            <rect class="menu-rect z-[100]" x="8" y="43" width="45" height="5" rx="2.5" fill="#EAEDE8"/>
-            <path class="menu-rect z-[100]" d="M8 27.5C8 26.1193 9.11929 25 10.5 25H50.5C51.8807 25 53 26.1193 53 27.5C53 28.8807 51.8807 30 50.5 30H10.5C9.11929 30 8 28.8807 8 27.5Z" fill="#EAEDE8"/>
-            <rect class="menu-rect z-[100]" x="8" y="8" width="45" height="5" rx="2.5" fill="#EAEDE8"/>
-            <rect class="menu-rect z-[100]" x="8" y="8" width="45" height="5" rx="2.5" fill="#EAEDE8"/>
+            <rect class="menu-rect z-100" x="8" y="43" width="45" height="5" rx="2.5" fill="#EAEDE8"/>
+            <rect class="menu-rect z-100" x="8" y="43" width="45" height="5" rx="2.5" fill="#EAEDE8"/>
+            <path class="menu-rect z-100" d="M8 27.5C8 26.1193 9.11929 25 10.5 25H50.5C51.8807 25 53 26.1193 53 27.5C53 28.8807 51.8807 30 50.5 30H10.5C9.11929 30 8 28.8807 8 27.5Z" fill="#EAEDE8"/>
+            <rect class="menu-rect z-100" x="8" y="8" width="45" height="5" rx="2.5" fill="#EAEDE8"/>
+            <rect class="menu-rect z-100" x="8" y="8" width="45" height="5" rx="2.5" fill="#EAEDE8"/>
             </g>
         </svg>
-        <svg id="menu-animated" viewBox="0 0 300 800" fill="none" xmlns="http://www.w3.org/2000/svg" class="fixed opacity-0 right-[-330px] top-0 w-[300px] sm:w-[330px] sm:h-[800px] z-[70]">
+        <svg id="menu-animated" viewBox="0 0 300 800" fill="none" xmlns="http://www.w3.org/2000/svg" class="fixed opacity-0 right-[-330px] top-0 w-[300px] sm:w-[330px] sm:h-[800px] z-70">
             <g >
-            <rect id="bottom-rect2" class="menu-rect z-[100]" x="260" y="48" width="36" height="4" rx="2.5" fill="#EAEDE8"/>
-            <rect id="bottom-rect1" class="menu-rect z-[100" x="260" y="48" width="36" height="4" rx="2.5" fill="#EAEDE8"/>
-            <rect id="middle-rect" class="menu-rect z-[100]" x="260" y="36" width="36" height="4" rx="2.5" fill="#EAEDE8"/>
-            <rect id="top-rect2" class="menu-rect z-[100]" x="260" y="24" width="36" height="4" rx="2.5" fill="#EAEDE8"/>
-            <rect id="top-rect1" class="menu-rect z-[100]" x="260" y="24" width="36" height="4" rx="2.5" fill="#EAEDE8"/>
+            <rect id="bottom-rect2" class="menu-rect z-100" x="260" y="48" width="36" height="4" rx="2.5" fill="#EAEDE8"/>
+            <rect id="bottom-rect1" class="menu-rect z-100" x="260" y="48" width="36" height="4" rx="2.5" fill="#EAEDE8"/>
+            <rect id="middle-rect" class="menu-rect z-100" x="260" y="36" width="36" height="4" rx="2.5" fill="#EAEDE8"/>
+            <rect id="top-rect2" class="menu-rect z-100" x="260" y="24" width="36" height="4" rx="2.5" fill="#EAEDE8"/>
+            <rect id="top-rect1" class="menu-rect z-100" x="260" y="24" width="36" height="4" rx="2.5" fill="#EAEDE8"/>
             </g>
         </svg>
     </div>
 
     <!-- HEADER SIDE BAR -->
-    <div id="header-side" class="header fixed top-0 right-[-330px] z-[100] text-gray backdrop-blur-lg flex min-h-[120vh] pointer-events-auto  lg:pointer-events-none lg:hidden">
+    <div id="header-side" class="header fixed top-0 right-[-330px] z-100 text-gray backdrop-blur-lg flex min-h-[120vh] pointer-events-auto  lg:pointer-events-none lg:hidden">
         <ul id="header-text" class="my-[80px] ml-8 mr-24 text-md sm:text-xl font-semibold gap-[68px] sm:gap-16 flex flex-col" > 
             <li><a href="#About" class="m-4 cursor-pointer md:hover:text-flame underline-offset-4 duration-300">
                 About
@@ -55,8 +55,8 @@
     </div>
 
     <!-- HEADER BAR -->
-    <div id="header-top" class="header fixed top-0 right-0 z-[100] text-gray flex min-w-[100%] justify-center grow">
-        <ul class="mx-8 my-4 text-lg font-semibold grow gap-8 justify-end max-w-screen-xl pointer-events-none hidden lg:flex lg:pointer-events-auto"> 
+    <div id="header-top" class="header fixed top-0 right-0 z-100 text-gray flex min-w-[100%] justify-center grow">
+        <ul class="mx-8 my-4 text-lg font-semibold grow gap-8 justify-end max-w-(--breakpoint-xl) pointer-events-none hidden lg:flex lg:pointer-events-auto"> 
             <li><a href="#About" class="m-4 cursor-pointer md:hover:text-flame underline-offset-4 duration-300">
                 About
             </a></li>
@@ -94,19 +94,19 @@
                 <div class="flex grow justify-center items-center max-w-lg pointer-events-none">
     
                     <!-- EMAIL -->
-                    <a href="mailto:ajlin622@gmail.com" class="m-4 md:m-8 tilt p-4 md:p-8 link-icon z-[60] rounded-md bg-raisin fill-platinum stroke-platinum top-contact-link" target="_blank"> 
+                    <a href="mailto:ajlin622@gmail.com" class="m-4 md:m-8 tilt p-4 md:p-8 link-icon z-60 rounded-md bg-raisin fill-platinum stroke-platinum top-contact-link" target="_blank"> 
                         <svg class="h-8 md:h-12  duration-300" id="_1-Email" data-name="1-Email" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><title>1-Email</title><path d="M29,4H3A3,3,0,0,0,0,7V25a3,3,0,0,0,3,3H29a3,3,0,0,0,3-3V7A3,3,0,0,0,29,4Zm-.72,2L16,14.77,3.72,6ZM30,25a1,1,0,0,1-1,1H3a1,1,0,0,1-1-1V7.23l13.42,9.58a1,1,0,0,0,1.16,0L30,7.23Z"/></svg>
                     </a>
     
                     <!-- GITHUB -->
-                    <a href="https://github.com/Unseenmocha" class="github m-4 md:m-8 tilt p-4 md:p-8 link-icon z-[60] rounded-md bg-raisin fill-platinum top-contact-link" target="_blank"> 
+                    <a href="https://github.com/Unseenmocha" class="github m-4 md:m-8 tilt p-4 md:p-8 link-icon z-60 rounded-md bg-raisin fill-platinum top-contact-link" target="_blank"> 
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-8 md:h-12 duration-300" viewBox="0 0 24 24">
                             <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                         </svg>
                     </a>
     
                     <!-- LINKEDIN -->
-                    <a href="https://www.linkedin.com/in/andrew-lin-698634239" class="m-4 md:m-8 p-4 md:p-8 tilt link-icon z-[60] rounded-md bg-raisin fill-platinum stroke-platinum top-contact-link" target="_blank"> 
+                    <a href="https://www.linkedin.com/in/andrew-lin-698634239" class="m-4 md:m-8 p-4 md:p-8 tilt link-icon z-60 rounded-md bg-raisin fill-platinum stroke-platinum top-contact-link" target="_blank"> 
                         <svg class="h-7 md:h-11 duration-300" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
                             viewBox="0 0 310 310" xml:space="preserve">
                         <g id="XMLID_801_">
@@ -130,7 +130,7 @@
 
     <!-- ABOUT -->
     <div id="About" class="text-platinum bg-jet h-auto lg:min-h-[100vh] flex justify-center">
-        <div class="flex flex-col h-full grow max-w-screen-xl justify-center items-center text-center my-16 lg:my-[20vh] lg:text-left lg:flex-row lg:items-start">
+        <div class="flex flex-col h-full grow max-w-(--breakpoint-xl) justify-center items-center text-center my-16 lg:my-[20vh] lg:text-left lg:flex-row lg:items-start">
             
             <div class="flex lg:order-last tilt min-w-fit lg:mr-32 rounded-md" tilt-coeff="7" tilt-zoom="1.1">
                 <img id="pfp" src="./imgs/professional_headshot.png" class="w-[105px] h-[158px] sm:w-[210px] sm:h-[315px] lg:mb-32 lg:mr-32 rounded-md">
@@ -160,7 +160,7 @@
 
     <!-- EXPERIENCE -->
     <div id="Experience" class="text-platinum lg:max-h-[100vh] lg:min-h-[100vh] overflow-y-visible bg-raisin flex justify-center">
-        <div id="experience-inner" class="flex min-h-fit overflow-y-visible max-w-screen-xl">
+        <div id="experience-inner" class="flex min-h-fit overflow-y-visible max-w-(--breakpoint-xl)">
             <div class="relative flex flex-col min-h-fit overflow-y-visible mx-8 lg:mx-16 items-center lg:items-start z-0">
                 <h2 id="experience-title" class="text-2xl sm:text-4xl mt-16 mb-4">
                     Experience
@@ -274,7 +274,7 @@
     </div>
 
     <div id="Projects" class="text-platinum bg-jet lg:max-h-[100vh] lg:min-h-[100vh] flex justify-center scroll-mt-[92px]">  
-        <div id="projects-inner" class="flex flex-col items-center min-h-fit text-center md:text-left lg:flex-row lg:items-start h-full grow max-w-screen-xl ">
+        <div id="projects-inner" class="flex flex-col items-center min-h-fit text-center md:text-left lg:flex-row lg:items-start h-full grow max-w-(--breakpoint-xl) ">
             <div id="projects-innermost" class="flex flex-col items-center min-h-fit lg:items-start mx-4 sm:mx-16">
                 <h2 id="projects-title" class="text-2xl sm:text-4xl mt-16 mb-4">
                     Projects
@@ -283,13 +283,13 @@
 
                 <!-- PROJECT 1 -->
                 <div class="flex min-w-[100%] flex-col items-center md:flex-row justify-between text-gray text-lg mb-4 bg-jet">
-                    <a href="https://github.com/Unseenmocha/LLMs-vs-Established-Text-Augmentation" class="project-title relative z-[60] flex items-start justify-between tilt text-base sm:text-xl md:text-2xl py-4 px-4 md:-ml-8 rounded-md" tilt-zoom="1.05" tilt-coeff="10" target="_blank">
+                    <a href="https://github.com/Unseenmocha/LLMs-vs-Established-Text-Augmentation" class="project-title relative z-60 flex items-start justify-between tilt text-base sm:text-xl md:text-2xl py-4 px-4 md:-ml-8 rounded-md" tilt-zoom="1.05" tilt-coeff="10" target="_blank">
                         <p class="mx-0 sm:mx-4">LLMs vs Established Text Augmentation Techniques for Classification</p>
                         <svg class="arrow hidden lg:block absolute top-[8px] right-[8px] min-w-[16px] max-w-[16px] min-h-[16px] max-w-[16px]" viewBox="0 0 24 23" xmlns="http://www.w3.org/2000/svg">
                             <path fill="#EAEDE8" d="M5.18636 22.1678C4.43017 22.973 3.16446 23.0127 2.35932 22.2565C1.55417 21.5003 1.51449 20.2346 2.27067 19.4295L5.18636 22.1678ZM20.6839 0.679722C21.7879 0.645103 22.711 1.51203 22.7456 2.61606L23.3098 20.6072C23.3444 21.7112 22.4775 22.6343 21.3734 22.6689C20.2694 22.7035 19.3463 21.8366 19.3117 20.7326L18.8103 4.74044L2.81812 5.24191C1.71409 5.27653 0.791037 4.4096 0.756418 3.30557C0.721798 2.20155 1.58872 1.27849 2.69275 1.24387L20.6839 0.679722ZM2.27067 19.4295L19.2887 1.30954L22.2044 4.04793L5.18636 22.1678L2.27067 19.4295Z" fill="white"/>
                         </svg>
                     </a>
-                    <div class="project-date flex items-center gap-2 flex-shrink-0 text-xs sm:text-base">
+                    <div class="project-date flex items-center gap-2 shrink-0 text-xs sm:text-base">
                         <p id="lg-start"> Sep 2024 </p>
                         <div id="lg-date-line" class="bg-flame h-[2px] w-[20px]"></div>
                         <p id="lg-end">  Dec 2024 </p>
@@ -312,13 +312,13 @@
 
                 <!-- PROJECT 2 -->
                 <div class="flex min-w-[100%] flex-col items-center md:flex-row justify-between text-gray text-lg mb-4 bg-jet">
-                    <a href="https://github.com/Unseenmocha/DQN-and-PPO-on-AI-GYM-Envs" class="project-title z-[60] relative flex items-start justify-between tilt text-base sm:text-xl md:text-2xl md:mr-16 py-4 px-8 md:-ml-8 rounded-md" tilt-zoom="1.05" tilt-coeff="10" target="_blank">
+                    <a href="https://github.com/Unseenmocha/DQN-and-PPO-on-AI-GYM-Envs" class="project-title z-60 relative flex items-start justify-between tilt text-base sm:text-xl md:text-2xl md:mr-16 py-4 px-8 md:-ml-8 rounded-md" tilt-zoom="1.05" tilt-coeff="10" target="_blank">
                         <p class="mx-0 sm:mx-4">DDQN and PPO on AI Gymnasium Environments</p>
                         <svg class="arrow hidden lg:block absolute top-[8px] right-[8px] min-w-[16px] max-w-[16px] min-h-[16px] max-w-[16px]" viewBox="0 0 24 23" xmlns="http://www.w3.org/2000/svg">
                             <path fill="#EAEDE8" d="M5.18636 22.1678C4.43017 22.973 3.16446 23.0127 2.35932 22.2565C1.55417 21.5003 1.51449 20.2346 2.27067 19.4295L5.18636 22.1678ZM20.6839 0.679722C21.7879 0.645103 22.711 1.51203 22.7456 2.61606L23.3098 20.6072C23.3444 21.7112 22.4775 22.6343 21.3734 22.6689C20.2694 22.7035 19.3463 21.8366 19.3117 20.7326L18.8103 4.74044L2.81812 5.24191C1.71409 5.27653 0.791037 4.4096 0.756418 3.30557C0.721798 2.20155 1.58872 1.27849 2.69275 1.24387L20.6839 0.679722ZM2.27067 19.4295L19.2887 1.30954L22.2044 4.04793L5.18636 22.1678L2.27067 19.4295Z" fill="white"/>
                         </svg>
                     </a>
-                    <div class="project-date flex items-center gap-2 flex-shrink-0 text-xs sm:text-base">
+                    <div class="project-date flex items-center gap-2 shrink-0 text-xs sm:text-base">
                         <p id="lg-start"> Sep 2024 </p>
                         <div id="lg-date-line" class="bg-flame h-[2px] w-[20px]"></div>
                         <p id="lg-end">  Dec 2024 </p>
@@ -340,13 +340,13 @@
 
                 <!-- PROJECT 3 -->
                 <div class="flex  items-start min-w-[100%] flex-col items-center md:flex-row justify-between text-gray text-lg mb-4 bg-jet">
-                    <a href="https://github.com/atdykema/EmployeeTimeTracker-CS320" class="project-title z-[60] relative flex items-start justify-between tilt text-base sm:text-xl md:text-2xl md:mr-16 py-4 px-8 md:-ml-8 md:-ml-4 rounded-md" tilt-zoom="1.05" tilt-coeff="10" target="_blank">
+                    <a href="https://github.com/atdykema/EmployeeTimeTracker-CS320" class="project-title z-60 relative flex items-start justify-between tilt text-base sm:text-xl md:text-2xl md:mr-16 py-4 px-8 md:-ml-8 md:-ml-4 rounded-md" tilt-zoom="1.05" tilt-coeff="10" target="_blank">
                         <p class="mr-0 sm:mr-4">PunchTime Employee Scheduling Web Tool</p>
                         <svg class="absolute top-[8px] right-[8px] arrow hidden lg:block min-w-[16px] max-w-[16px] min-h-[16px] max-w-[16px]" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path fill="#EAEDE8" d="M5.18636 22.1678C4.43017 22.973 3.16446 23.0127 2.35932 22.2565C1.55417 21.5003 1.51449 20.2346 2.27067 19.4295L5.18636 22.1678ZM20.6839 0.679722C21.7879 0.645103 22.711 1.51203 22.7456 2.61606L23.3098 20.6072C23.3444 21.7112 22.4775 22.6343 21.3734 22.6689C20.2694 22.7035 19.3463 21.8366 19.3117 20.7326L18.8103 4.74044L2.81812 5.24191C1.71409 5.27653 0.791037 4.4096 0.756418 3.30557C0.721798 2.20155 1.58872 1.27849 2.69275 1.24387L20.6839 0.679722ZM2.27067 19.4295L19.2887 1.30954L22.2044 4.04793L5.18636 22.1678L2.27067 19.4295Z" fill="white"/>
                         </svg>
                     </a>
-                    <div class="project-date flex items-center gap-2 flex-shrink-0 text-xs sm:text-base">
+                    <div class="project-date flex items-center gap-2 shrink-0 text-xs sm:text-base">
                         <p id="lg-start"> Feb 2023 </p>
                         <div id="lg-date-line" class="bg-flame h-[2px] w-[20px]"></div>
                         <p id="lg-end">  May 2023 </p>
@@ -364,13 +364,13 @@
 
                 <!-- PROJECT 4 -->
                 <div class="flex items-start justify-between min-w-[100%] flex-col items-center md:flex-row justify-between text-gray text-lg mb-2 bg-jet">
-                    <a href="https://github.com/Unseenmocha/Invego" class="project-title z-[60] relative flex items-start tilt text-base sm:text-xl md:text-2xl md:mr-16 py-4 px-8 md:-ml-8 md:-ml-4 rounded-md" tilt-zoom="1.05" tilt-coeff="10" target="_blank">
+                    <a href="https://github.com/Unseenmocha/Invego" class="project-title z-60 relative flex items-start tilt text-base sm:text-xl md:text-2xl md:mr-16 py-4 px-8 md:-ml-8 md:-ml-4 rounded-md" tilt-zoom="1.05" tilt-coeff="10" target="_blank">
                         <p class="mr-0 sm:mr-4">Invego Stock Market Web Simulator</p>
                         <svg class="absolute top-[8px] right-[8px] arrow hidden lg:block min-w-[16px] max-w-[16px] min-h-[16px] max-w-[16px]" viewBox="0 0 24 23" xmlns="http://www.w3.org/2000/svg">
                             <path fill="#EAEDE8" d="M5.18636 22.1678C4.43017 22.973 3.16446 23.0127 2.35932 22.2565C1.55417 21.5003 1.51449 20.2346 2.27067 19.4295L5.18636 22.1678ZM20.6839 0.679722C21.7879 0.645103 22.711 1.51203 22.7456 2.61606L23.3098 20.6072C23.3444 21.7112 22.4775 22.6343 21.3734 22.6689C20.2694 22.7035 19.3463 21.8366 19.3117 20.7326L18.8103 4.74044L2.81812 5.24191C1.71409 5.27653 0.791037 4.4096 0.756418 3.30557C0.721798 2.20155 1.58872 1.27849 2.69275 1.24387L20.6839 0.679722ZM2.27067 19.4295L19.2887 1.30954L22.2044 4.04793L5.18636 22.1678L2.27067 19.4295Z" fill="white"/>
                         </svg>
                     </a>
-                    <div class="project-date flex items-center gap-2 flex-shrink-0 text-xs sm:text-base">
+                    <div class="project-date flex items-center gap-2 shrink-0 text-xs sm:text-base">
                         <p id="lg-start"> Feb 2023 </p>
                         <div id="lg-date-line" class="bg-flame h-[2px] w-[20px]"></div>
                         <p id="lg-end">  May 2023 </p>
@@ -389,7 +389,7 @@
     </div>
 
     <div id="Skills" class="text-platinum bg-raisin flex justify-center scroll-mt-[92px]">
-        <div id="skills-inner" class="flex flex-col items-center min-h-fit text-center md:text-left lg:flex-row justify-center h-full grow max-w-screen-xl ">
+        <div id="skills-inner" class="flex flex-col items-center min-h-fit text-center md:text-left lg:flex-row justify-center h-full grow max-w-(--breakpoint-xl) ">
             <div class="flex flex-col items-center min-h-fit mx-16">
                 <h2 id="skills-title" class="text-2xl sm:text-4xl mt-16 mb-4">
                     Skills
@@ -418,7 +418,7 @@
     </div>
 
     <div id="Contact" class="text-platinum bg-jet flex justify-center scroll-mt-[92px]">
-        <div id="contact-inner" class="flex flex-col items-center min-h-fit text-center md:text-left lg:flex-row justify-center lg:items-start h-full grow max-w-screen-xl ">
+        <div id="contact-inner" class="flex flex-col items-center min-h-fit text-center md:text-left lg:flex-row justify-center lg:items-start h-full grow max-w-(--breakpoint-xl) ">
             <div class="flex flex-col items-center min-h-fit mx-16">
                 <h2 id="contact-title" class="text-2xl sm:text-4xl mt-16 mb-4">
                     Contact
@@ -430,7 +430,7 @@
                     <div class="flex flex-col lg:flex-row grow justify-center items-center max-w-lg pointer-events-none">
         
                         <!-- EMAIL -->
-                        <a href="mailto:ajlin622@gmail.com" class="contact-link flex relative items-center m-4 tilt pointer-events-auto py-4 px-4 md:px-8 z-[60] rounded-md bg-jet fill-platinum stroke-platinum" target="_blank"> 
+                        <a href="mailto:ajlin622@gmail.com" class="contact-link flex relative items-center m-4 tilt pointer-events-auto py-4 px-4 md:px-8 z-60 rounded-md bg-jet fill-platinum stroke-platinum" target="_blank"> 
                             <svg class="h-6 lg:h-8 duration-300" id="_1-Email" data-name="1-Email" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><title>1-Email</title><path d="M29,4H3A3,3,0,0,0,0,7V25a3,3,0,0,0,3,3H29a3,3,0,0,0,3-3V7A3,3,0,0,0,29,4Zm-.72,2L16,14.77,3.72,6ZM30,25a1,1,0,0,1-1,1H3a1,1,0,0,1-1-1V7.23l13.42,9.58a1,1,0,0,0,1.16,0L30,7.23Z"/></svg>
                             <p class="pl-4 whitespace-nowrap">Send me an email</p>
                             <svg class="arrow hidden lg:block absolute top-[8px] right-[8px] min-w-[16px] max-w-[16px] min-h-[16px] max-w-[16px]" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -439,7 +439,7 @@
                         </a>
         
                         <!-- GITHUB -->
-                        <a href="https://github.com/Unseenmocha" class="contact-link github flex relative items-center m-4 tilt pointer-events-auto py-4 px-4 md:px-8 z-[60] rounded-md bg-jet fill-platinum " target="_blank"> 
+                        <a href="https://github.com/Unseenmocha" class="contact-link github flex relative items-center m-4 tilt pointer-events-auto py-4 px-4 md:px-8 z-60 rounded-md bg-jet fill-platinum " target="_blank"> 
                             <svg class="h-6 lg:h-8 duration-300" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                             </svg>
@@ -450,7 +450,7 @@
                         </a>
         
                         <!-- LINKEDIN -->
-                        <a href="https://www.linkedin.com/in/andrew-lin-698634239" class="contact-link flex relative items-center m-4 py-4 px-4 md:px-8 tilt pointer-events-auto z-[60] rounded-md bg-jet fill-platinum stroke-platinum" target="_blank"> 
+                        <a href="https://www.linkedin.com/in/andrew-lin-698634239" class="contact-link flex relative items-center m-4 py-4 px-4 md:px-8 tilt pointer-events-auto z-60 rounded-md bg-jet fill-platinum stroke-platinum" target="_blank"> 
                             <svg class="h-5 lg:h-7 duration-300" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
                                 viewBox="0 0 310 310" xml:space="preserve">
                             <g id="XMLID_801_">
@@ -471,14 +471,14 @@
         </div>
     </div>
 
-    <div id="back-to-top-arrow" class="z-[100] fixed bottom-12 right-12 rounded-full min-h-fit min-w-fit p-3 border-2 border-flame">
+    <div id="back-to-top-arrow" class="z-100 fixed bottom-12 right-12 rounded-full min-h-fit min-w-fit p-3 border-2 border-flame">
         <svg class="arrow min-w-4 max-w-4 min-h-[16px] max-w-[16px] -rotate-45" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path stroke="transparent" d="M5.18636 22.1678C4.43017 22.973 3.16446 23.0127 2.35932 22.2565C1.55417 21.5003 1.51449 20.2346 2.27067 19.4295L5.18636 22.1678ZM20.6839 0.679722C21.7879 0.645103 22.711 1.51203 22.7456 2.61606L23.3098 20.6072C23.3444 21.7112 22.4775 22.6343 21.3734 22.6689C20.2694 22.7035 19.3463 21.8366 19.3117 20.7326L18.8103 4.74044L2.81812 5.24191C1.71409 5.27653 0.791037 4.4096 0.756418 3.30557C0.721798 2.20155 1.58872 1.27849 2.69275 1.24387L20.6839 0.679722ZM2.27067 19.4295L19.2887 1.30954L22.2044 4.04793L5.18636 22.1678L2.27067 19.4295Z" fill="white"/>
         </svg>
     </div>
     
     <div id="bottom-bar" class="flex justify-center grow bg-jet text-gray text-xs sm:text-sm">
-        <div class="flex justify-end grow max-w-screen-xl">
+        <div class="flex justify-end grow max-w-(--breakpoint-xl)">
             <p class="place-self-end m-4">Website by Andrew Lin</p>
         </div>
     </div>

@@ -529,7 +529,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
             target: window,
             type: 'scroll',
             onChangeY: () => {
-                console.log(window.scrollY + window.innerHeight, document.documentElement.scrollHeight)
                 if ((window.scrollY + window.innerHeight >= document.documentElement.scrollHeight) && !confetti_out) {
                     confetti_out = true;
                     jsConfetti.addConfetti().then(()=> {
