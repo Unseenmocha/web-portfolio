@@ -413,12 +413,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
     // Small Screen Menu open and close animation
     mm.add('(max-width:1023px)', () => {
         let menu_tl = gsap.timeline()
-        .to('#bottom-rect2', {scaleY: 4.5, scaleX: 2.3, y: 390, x: -150, duration: 0.4, ease: 'power3.in'})
-        .to('#bottom-rect1', {scaleY: 4.5, scaleX: 1.4, y: 298, x: -150, duration: 0.4, ease: 'power3.in'}, '<+=0.05s')
-        .to('#middle-rect', {scaleY: 4.5, scaleX: 2.2, y: 218, x: -150, duration: 0.4, ease: 'power3.in'}, '<+=0.05s')
-        .to('#top-rect2', {scaleY: 4.5, scaleX: 3, y: 136, x: -150, duration: 0.4, ease: 'power3.in'}, '<+=0.05s')
-        .to('#top-rect1', {scaleY: 4.5, scaleX: 1.75, y: 46, x: -150, duration: 0.4, ease: 'power3.in'}, '<+=0.05s')
-        .to('#menu-animated', {x:-330, opacity:1}, {x: 330, duration: 0, opacity: 1,}, '<-=0.2s')
         .fromTo('#header-side', {
             x:0,
             backgroundColor: 'rgba(19, 19, 21, 0.4)'
@@ -427,6 +421,14 @@ document.addEventListener('DOMContentLoaded', (event) => {
             duration: 0.2,
             backgroundColor: 'rgba(19, 19, 21, 0.4)',
         },'<-=0.1s')
+        .to('#menu-animated', {x:-330}, {x: 330, duration: 0}, '+=0.1s')
+        .to('#menu-animated', {opacity:1, duration: 0.5}, '>-=0.2s')
+        .to('#menu-visible', {opacity: 0, duration: 0.5}, '<-=0.2s')
+        .to('#bottom-rect2', {scaleY: 4.5, scaleX: 2.3, y: 390, x: -150, duration: 0.4, ease: 'power3.in'}, '<')
+        .to('#bottom-rect1', {scaleY: 4.5, scaleX: 1.4, y: 298, x: -150, duration: 0.4, ease: 'power3.in'}, '<+=0.05s')
+        .to('#middle-rect', {scaleY: 4.5, scaleX: 2.2, y: 218, x: -150, duration: 0.4, ease: 'power3.in'}, '<+=0.05s')
+        .to('#top-rect2', {scaleY: 4.5, scaleX: 3, y: 136, x: -150, duration: 0.4, ease: 'power3.in'}, '<+=0.05s')
+        .to('#top-rect1', {scaleY: 4.5, scaleX: 1.75, y: 46, x: -150, duration: 0.4, ease: 'power3.in'}, '<+=0.05s')
         .fromTo('#header-text', {opacity: 0}, {opacity:1, duration:0.2}, '-=0.1s')
         .to('.menu-rect', {opacity: 0, duration: 0.2}, '-=0.1s')
         .pause();
