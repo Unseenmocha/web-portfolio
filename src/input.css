@@ -1,3 +1,13 @@
 @import 'tailwindcss';
+/* @config '../tailwind.config.js'; */
 
-@config '../tailwind.config.js';
+@theme {
+    --font-funnel-display: "Funnel Display";
+    --color-night: #131315;
+    --color-raisin: #28282a;
+    --color-jet: #2E2E31;
+    --color-flame: #FF6600;
+    --color-gray: #989898;
+    --color-platinum: #EAEDE8;
+    --color-eerie: #1C1C1E;
+}
