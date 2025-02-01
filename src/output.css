@@ -655,6 +655,9 @@
   .mx-16 {
     margin-inline: calc(var(--spacing) * 16);
   }
+  .my-2 {
+    margin-block: calc(var(--spacing) * 2);
+  }
   .my-4 {
     margin-block: calc(var(--spacing) * 4);
   }
@@ -819,9 +822,6 @@
   .h-16 {
     height: calc(var(--spacing) * 16);
   }
-  .h-\[4rem\] {
-    height: 4rem;
-  }
   .h-\[20\%\] {
     height: 20%;
   }
@@ -833,6 +833,9 @@
   }
   .h-\[40px\] {
     height: 40px;
+  }
+  .h-\[4rem\] {
+    height: 4rem;
   }
   .h-\[52px\] {
     height: 52px;
@@ -1116,6 +1119,91 @@
   }
   .bg-raisin {
     background-color: var(--color-raisin);
+  }
+  .bg-gradient-to-r {
+    --tw-gradient-position: to right in oklab;
+    background-image: linear-gradient(var(--tw-gradient-stops));
+  }
+  .bg-linear-\[raisin_5\%\,transparent_95\%\,raisin\] {
+    --tw-gradient-position: raisin 5%,transparent 95%,raisin;
+    background-image: linear-gradient(var(--tw-gradient-stops,raisin 5%,transparent 95%,raisin));
+  }
+  .bg-linear-\[red_5\%\,transparent_95\%\,red\] {
+    --tw-gradient-position: red 5%,transparent 95%,red;
+    background-image: linear-gradient(var(--tw-gradient-stops,red 5%,transparent 95%,red));
+  }
+  .from-raisin {
+    --tw-gradient-from: var(--color-raisin);
+    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+  }
+  .from-0\% {
+    --tw-gradient-from-position: 0%;
+  }
+  .from-1\% {
+    --tw-gradient-from-position: 1%;
+  }
+  .from-5\% {
+    --tw-gradient-from-position: 5%;
+  }
+  .from-10\% {
+    --tw-gradient-from-position: 10%;
+  }
+  .from-\[0\.001\%\] {
+    --tw-gradient-from-position: 0.001%;
+  }
+  .from-\[0\.01\%\] {
+    --tw-gradient-from-position: 0.01%;
+  }
+  .from-\[0\.1\%\] {
+    --tw-gradient-from-position: 0.1%;
+  }
+  .from-\[0\.5\%\] {
+    --tw-gradient-from-position: 0.5%;
+  }
+  .via-transparent {
+    --tw-gradient-via: transparent;
+    --tw-gradient-via-stops: var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-via) var(--tw-gradient-via-position), var(--tw-gradient-to) var(--tw-gradient-to-position);
+    --tw-gradient-stops: var(--tw-gradient-via-stops);
+  }
+  .via-5\% {
+    --tw-gradient-via-position: 5%;
+  }
+  .via-10\% {
+    --tw-gradient-via-position: 10%;
+  }
+  .via-90\% {
+    --tw-gradient-via-position: 90%;
+  }
+  .via-\[50\%\] {
+    --tw-gradient-via-position: 50%;
+  }
+  .to-raisin {
+    --tw-gradient-to: var(--color-raisin);
+    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+  }
+  .to-90\% {
+    --tw-gradient-to-position: 90%;
+  }
+  .to-95\% {
+    --tw-gradient-to-position: 95%;
+  }
+  .to-99\% {
+    --tw-gradient-to-position: 99%;
+  }
+  .to-100\% {
+    --tw-gradient-to-position: 100%;
+  }
+  .to-\[99\.5\%\] {
+    --tw-gradient-to-position: 99.5%;
+  }
+  .to-\[99\.9\%\] {
+    --tw-gradient-to-position: 99.9%;
+  }
+  .to-\[99\.99\%\] {
+    --tw-gradient-to-position: 99.99%;
+  }
+  .to-\[99\.999\%\] {
+    --tw-gradient-to-position: 99.999%;
   }
   .bg-fixed {
     background-attachment: fixed;
@@ -1878,6 +1966,48 @@
   syntax: "*";
   inherits: false;
   initial-value: solid;
+}
+@property --tw-gradient-position {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-gradient-from {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #0000;
+}
+@property --tw-gradient-via {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #0000;
+}
+@property --tw-gradient-to {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #0000;
+}
+@property --tw-gradient-stops {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-gradient-via-stops {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-gradient-from-position {
+  syntax: "<length-percentage>";
+  inherits: false;
+  initial-value: 0%;
+}
+@property --tw-gradient-via-position {
+  syntax: "<length-percentage>";
+  inherits: false;
+  initial-value: 50%;
+}
+@property --tw-gradient-to-position {
+  syntax: "<length-percentage>";
+  inherits: false;
+  initial-value: 100%;
 }
 @property --tw-font-weight {
   syntax: "*";
