@@ -166,15 +166,56 @@ document.addEventListener('DOMContentLoaded', (event) => {
             },
             
             defaults: {duration: 0.5}
-        });
+        })
+        .from('#about-title', { yPercent: 40, opacity: 0, ease: 'power3.out'})
+        .fromTo('#about-line', {width: 0}, {width:300},'<+=0.2s')
+        .from('#about-desc', {yPercent: 20, opacity: 0, ease: 'power3.out'}, '<+=0.2s')
+        .fromTo('#download-button', {scale:0}, {scale:1})
+        .from('#pfp', {yPercent:15, xPercent: 15, rotation: 15, scale:0.8, opacity: 0, ease: 'power3.out'}, '<')
+        .fromTo('.img-rect', {strokeDasharray: 1500, strokeDashoffset: 1500}, {strokeDashoffset: 0, duration: 1, stagger: 0.2})
+        
+        //Resume download button animations
+        gsap.set('#download-button-fill', {clipPath: 'circle(0px at 0px 0px'})
+        let downloadButtonTL = gsap.timeline({paused:true})
+            .to('#download-arrow', {rotation:360, transformOrigin:'center', duration:0.4})
+            .to('#download-arrow', {y:-10, duration:0.2}, '<')
+            .to('#download-rect', {y:10, duration:0.2}, '<')
+            .to('#download-arrow', {y:1, duration:0.2}, '>')
+            .to('#download-rect', {y:-1, duration:0.2}, '<')
 
-        // aboutTL.from('#About', { yPercent:40, opacity: 0, ease: 'power3.out'});
-        aboutTL.from('#about-title', { yPercent: 40, opacity: 0, ease: 'power3.out'});
-        aboutTL.fromTo('#about-line', {width: 0}, {width:300},'<+=0.2s');
-        aboutTL.from('#about-desc', {yPercent: 20, opacity: 0, ease: 'power3.out'}, '<+=0.2s');
-        aboutTL.from('#pfp', {yPercent:15, xPercent: 15, rotation: 15, scale:0.8, opacity: 0, ease: 'power3.out'},);
-        aboutTL.fromTo('.img-rect', {strokeDasharray: 1500, strokeDashoffset: 1500}, {strokeDashoffset: 0, duration: 1, stagger: 0.2});
+        let buttonFill = document.getElementById('download-button-fill');
+        let buttonOffTimeout, animationFrameId;
 
+        Observer.create({
+            target: '#download-button',
+            type: 'pointer',
+            onHover: ()=>{downloadButtonTL.play()},
+            onHoverEnd: (self) => {
+                clearTimeout(buttonOffTimeout);
+
+                //Set timeout to account for duration of onMove animation
+                buttonOffTimeout = setTimeout(() => {downloadButtonTL.reverse();
+                    const {width, height, left, top } = buttonFill.getBoundingClientRect();
+                    const x = (self.x - left);
+                    const y = (self.y - top); 
+                    gsap.to('#download-button-fill', {clipPath: 'circle(0px at '+x+'px '+y+'px)'});
+                }, 300)
+
+            },
+            onMove: (self) => {
+                //using animationFrames to limit callback rate
+                if (animationFrameId) {return;}
+
+                animationFrameId = requestAnimationFrame(() => {
+                    animationFrameId = null;
+                    const {width, height, left, top } = buttonFill.getBoundingClientRect();
+                    const x = (self.x - left);
+                    const y = (self.y - top); 
+                    gsap.to('#download-button-fill', {clipPath: 'circle(150px at '+x+'px '+y+'px)', duration:0.3});
+                })
+                
+            }
+        })
         
         /**
          * animation function for moving pinned sections (pinned sections that are too tall for the screen and must have the effect of scrolling
@@ -228,7 +269,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 }
             }
             fill_tl();
-
+            
             //reset timeline on resize but only on large screen size
             window.addEventListener("resize", () => {
 

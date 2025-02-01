@@ -745,6 +745,26 @@
   .table {
     display: table;
   }
+  .size-\[15px\] {
+    width: 15px;
+    height: 15px;
+  }
+  .size-\[20px\] {
+    width: 20px;
+    height: 20px;
+  }
+  .size-\[25px\] {
+    width: 25px;
+    height: 25px;
+  }
+  .size-\[30px\] {
+    width: 30px;
+    height: 30px;
+  }
+  .size-\[40px\] {
+    width: 40px;
+    height: 40px;
+  }
   .h-4 {
     height: calc(var(--spacing) * 4);
   }
@@ -769,14 +789,14 @@
   .h-16 {
     height: calc(var(--spacing) * 16);
   }
-  .h-\[4rem\] {
-    height: 4rem;
-  }
   .h-\[20\%\] {
     height: 20%;
   }
   .h-\[2px\] {
     height: 2px;
+  }
+  .h-\[4rem\] {
+    height: 4rem;
   }
   .h-\[52px\] {
     height: 52px;
@@ -870,6 +890,9 @@
   }
   .w-fit {
     width: fit-content;
+  }
+  .w-full {
+    width: 100%;
   }
   .max-w-\(--breakpoint-xl\) {
     max-width: var(--breakpoint-xl);
@@ -1010,7 +1033,15 @@
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
+  .border-1 {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+  }
   .border-2 {
+    border-style: var(--tw-border-style);
+    border-width: 2px;
+  }
+  .border-\[2px\] {
     border-style: var(--tw-border-style);
     border-width: 2px;
   }
@@ -1050,17 +1081,29 @@
   .stroke-platinum {
     stroke: var(--color-platinum);
   }
+  .p-2 {
+    padding: calc(var(--spacing) * 2);
+  }
   .p-3 {
     padding: calc(var(--spacing) * 3);
   }
   .p-4 {
     padding: calc(var(--spacing) * 4);
   }
+  .px-2 {
+    padding-inline: calc(var(--spacing) * 2);
+  }
   .px-4 {
     padding-inline: calc(var(--spacing) * 4);
   }
   .px-8 {
     padding-inline: calc(var(--spacing) * 8);
+  }
+  .py-1 {
+    padding-block: calc(var(--spacing) * 1);
+  }
+  .py-2 {
+    padding-block: calc(var(--spacing) * 2);
   }
   .py-4 {
     padding-block: calc(var(--spacing) * 4);
@@ -1139,6 +1182,9 @@
   }
   .underline {
     text-decoration-line: underline;
+  }
+  .underline-offset-2 {
+    text-underline-offset: 2px;
   }
   .underline-offset-4 {
     text-underline-offset: 4px;
@@ -1392,6 +1438,11 @@
       margin-left: calc(var(--spacing) * -8);
     }
   }
+  .md\:ml-2 {
+    @media (width >= 48rem) {
+      margin-left: calc(var(--spacing) * 2);
+    }
+  }
   .md\:ml-8 {
     @media (width >= 48rem) {
       margin-left: calc(var(--spacing) * 8);
@@ -1405,6 +1456,12 @@
   .md\:ml-\[calc\(50\%-235px\)\] {
     @media (width >= 48rem) {
       margin-left: calc(50% - 235px);
+    }
+  }
+  .md\:size-\[30px\] {
+    @media (width >= 48rem) {
+      width: 30px;
+      height: 30px;
     }
   }
   .md\:h-8 {
@@ -1472,6 +1529,30 @@
       gap: calc(var(--spacing) * 8);
     }
   }
+  .md\:border-2 {
+    @media (width >= 48rem) {
+      border-style: var(--tw-border-style);
+      border-width: 2px;
+    }
+  }
+  .md\:border-4 {
+    @media (width >= 48rem) {
+      border-style: var(--tw-border-style);
+      border-width: 4px;
+    }
+  }
+  .md\:border-\[2px\] {
+    @media (width >= 48rem) {
+      border-style: var(--tw-border-style);
+      border-width: 2px;
+    }
+  }
+  .md\:border-\[3px\] {
+    @media (width >= 48rem) {
+      border-style: var(--tw-border-style);
+      border-width: 3px;
+    }
+  }
   .md\:border-r-4 {
     @media (width >= 48rem) {
       border-right-style: var(--tw-border-style);
@@ -1483,9 +1564,19 @@
       padding: calc(var(--spacing) * 8);
     }
   }
+  .md\:px-4 {
+    @media (width >= 48rem) {
+      padding-inline: calc(var(--spacing) * 4);
+    }
+  }
   .md\:px-8 {
     @media (width >= 48rem) {
       padding-inline: calc(var(--spacing) * 8);
+    }
+  }
+  .md\:py-2 {
+    @media (width >= 48rem) {
+      padding-block: calc(var(--spacing) * 2);
     }
   }
   .md\:text-left {
@@ -1503,6 +1594,12 @@
     @media (width >= 48rem) {
       font-size: var(--text-5xl);
       line-height: var(--tw-leading, var(--text-5xl--line-height));
+    }
+  }
+  .md\:text-base {
+    @media (width >= 48rem) {
+      font-size: var(--text-base);
+      line-height: var(--tw-leading, var(--text-base--line-height));
     }
   }
   .md\:no-underline {
@@ -1632,6 +1729,16 @@
   .lg\:justify-center {
     @media (width >= 64rem) {
       justify-content: center;
+    }
+  }
+  .lg\:bg-flame {
+    @media (width >= 64rem) {
+      background-color: var(--color-flame);
+    }
+  }
+  .lg\:bg-raisin {
+    @media (width >= 64rem) {
+      background-color: var(--color-raisin);
     }
   }
   .lg\:text-left {
