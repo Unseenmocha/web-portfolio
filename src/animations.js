@@ -184,7 +184,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
             .to('#download-rect', {y:-1, duration:0.2}, '<')
 
         let buttonFill = document.getElementById('download-button-fill');
-        let buttonOffTimeout, animationFrameId;
+        let button = document.getElementById('download-button');
+        let buttonOffTimeout, animationFrameId, buttonPressed = false;
 
         Observer.create({
             target: '#download-button',
@@ -199,7 +200,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                     const x = (self.x - left);
                     const y = (self.y - top); 
                     gsap.to('#download-button-fill', {clipPath: 'circle(0px at '+x+'px '+y+'px)'});
-                }, 300)
+                }, 100)
 
             },
             onMove: (self) => {
@@ -214,6 +215,20 @@ document.addEventListener('DOMContentLoaded', (event) => {
                     gsap.to('#download-button-fill', {clipPath: 'circle(150px at '+x+'px '+y+'px)', duration:0.3});
                 })
                 
+            },
+            onPress: () => {
+                if (!buttonPressed) {
+                    buttonPressed = true;
+                    gsap.to('#download-button', {scale: 0.95, duration: 0.2, yoyo:true, repeat: 1});
+                    setTimeout(() => {
+                        buttonPressed = false;
+                        button.download = 'Andrew-Lin-Resume';
+                        button.href = './Andrew-Lin-Resume.pdf';
+                        button.click();
+                        button.removeAttribute('href');
+                        button.removeAttribute('download');
+                    }, 400)
+                }
             }
         })
         
