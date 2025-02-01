@@ -308,7 +308,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                             tween.progress(0);
                         })
                     }
-                }, 100)
+                }, 500)
             });
             
         }
