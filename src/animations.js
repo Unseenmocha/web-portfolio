@@ -270,25 +270,30 @@ document.addEventListener('DOMContentLoaded', (event) => {
             }
             fill_tl();
             
+            let timeout;
             //reset timeline on resize but only on large screen size
             window.addEventListener("resize", () => {
-
-                //Reloading on resize instead of handling resetting animations seems to just work better overall
-                location.reload();
-                if (window.innerWidth >= 1024) {
-                    fill_tl();
-                } else {
-                    // if screen size is less than large, set all tweens progress to 1 except for the scroll tween which we want at the beginning
-                    let children = tl.getChildren();
-                    for (let i = 0; i < children.length; ++i) {
-                        children[i].progress(1);
+                
+                //debouncing in case of too many resize calls
+                clearTimeout(timeout);
+                timeout = setTimeout(() => {
+                    //Reloading on resize instead of handling resetting animations seems to just work better overall
+                    location.reload();
+                    if (window.innerWidth >= 1024) {
+                        fill_tl();
+                    } else {
+                        // if screen size is less than large, set all tweens progress to 1 except for the scroll tween which we want at the beginning
+                        let children = tl.getChildren();
+                        for (let i = 0; i < children.length; ++i) {
+                            children[i].progress(1);
+                        }
+                        // let lastChild = children[children.length-1];
+                        // lastChild.progress(lastChild.targets().some(e => e.id === scrollPanelId) ? 0 : 1);
+                        tl.getTweensOf('#'+scrollPanelId).forEach(tween => {
+                            tween.progress(0);
+                        })
                     }
-                    // let lastChild = children[children.length-1];
-                    // lastChild.progress(lastChild.targets().some(e => e.id === scrollPanelId) ? 0 : 1);
-                    tl.getTweensOf('#'+scrollPanelId).forEach(tween => {
-                        tween.progress(0);
-                    })
-                }
+                }, 100)
             });
             
         }
