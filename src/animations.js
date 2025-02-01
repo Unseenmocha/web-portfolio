@@ -471,8 +471,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
         setTimeout(setupHorizontalLoop, 50);
     })
 
-    // Small Screen Menu open and close animation
+    
     mm.add('(max-width:1023px)', () => {
+        // Small Screen Menu open and close animation
         let menu_tl = gsap.timeline()
         .fromTo('#header-side', {
             x:0,
@@ -524,6 +525,26 @@ document.addEventListener('DOMContentLoaded', (event) => {
             type: 'touch pointer',
             onPress: close_side_menu,
             onHover: close_side_menu,
+        })
+        
+        let button = document.getElementById('download-button');
+        let buttonPressed = false;
+        Observer.create({
+            target: '#download-button',
+            onPress: () => {
+                if (!buttonPressed) {
+                    buttonPressed = true;
+                    gsap.to('#download-button', {scale: 0.95, duration: 0.2, yoyo:true, repeat: 1});
+                    setTimeout(() => {
+                        buttonPressed = false;
+                        button.download = 'Andrew-Lin-Resume';
+                        button.href = './Andrew-Lin-Resume.pdf';
+                        button.click();
+                        button.removeAttribute('href');
+                        button.removeAttribute('download');
+                    }, 400)
+                }
+            }
         })
     });
 
