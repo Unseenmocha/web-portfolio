@@ -158,5 +158,4 @@ export function setUpLargeScreenAnimations() {
       gsap.from('.contact-link', {xPercent:-50, opacity: 0, duration: 0.5, stagger:0.2, 
           scrollTrigger: {trigger: '#contact-links', start:'top 85%', toggleActions: 'play none none reverse'} })
 
-      
 }

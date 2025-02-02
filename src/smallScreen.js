@@ -81,8 +81,13 @@ export function setUpSmallScreenAnimations() {
         onPress: close_side_menu,
         onHover: close_side_menu,
     })
-    
 
+    //reset perspective on tilt elements when shifting to small screen
+    const tilt_elements = document.querySelectorAll('.tilt');
+    tilt_elements.forEach(element => {
+        gsap.set(element, {transformPerspective: 500});
+    })
+    
     // let button = document.getElementById('download-button');
     // let buttonPressed = false;
     // Observer.create({

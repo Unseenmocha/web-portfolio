@@ -25,8 +25,12 @@ document.addEventListener('DOMContentLoaded', (event) => {
     },
     (context) => {
         let { isLarge, isSmall } = context.conditions;
-        if (isLarge) {setUpLargeScreenAnimations();}
-        if (isSmall) {setUpSmallScreenAnimations();}
+        if (isLarge) {
+            setUpLargeScreenAnimations();
+        }
+        if (isSmall) {
+            setUpSmallScreenAnimations();
+        }
     })
 
     //intro typing animation (e.g. Hi, I'm Andrew Lin ✋)
