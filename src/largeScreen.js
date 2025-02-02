@@ -20,7 +20,7 @@ export function setUpLargeScreenAnimations() {
       tl.add('header-out');
 
       tl.fromTo('.link-icon', {xPercent: -200}, {xPercent:0, duration: 0.7, pointerEvents: 'auto', ease: 'power3.out', stagger:0.15}, '<+=0.7s');
-      tl.from('.link-icon', {opacity:0, duration: 1.3, stagger: 0.15}, '<');
+      tl.to('.link-icon', {opacity:1, duration: 1.3, stagger: 0.15}, '<');
 
       // header background darken on scroll animation
       gsap.to('#header-top', {
