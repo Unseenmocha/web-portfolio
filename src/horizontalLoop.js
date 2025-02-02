@@ -1,4 +1,7 @@
 /*
+
+From the GSAP documentation:
+
 This helper function makes a group of elements animate along the x-axis in a seamless, responsive loop.
 
 Features:
